@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "vibfm-state-interpreter"
 version = "0.1.0"
-description = "State Interpreter models for fixed VibFM health embeddings"
+description = "Latent encoders and State Interpreter models for PHM"
 requires-python = ">=3.10"
 dependencies = [
     "torch>=2.0",
