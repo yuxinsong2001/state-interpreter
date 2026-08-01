@@ -20,12 +20,37 @@ keeps the later replacement `AutoEncoder → VibFM` local to the encoder adapter
 ## Current baseline
 
 ```text
-z_health → MLP → health indicator + degradation-stage probabilities → RL state
+ordered z
+→ episode-specific early calibration
+→ relative distance + causal temporal features
+→ [level, trend, movement]
 ```
 
-The repository contains shape-tested model interfaces only. It does not yet
-contain extracted XJTU-SY data, model training, real embeddings, or scientific
-evaluation results.
+`RelativeTemporalStateInterpreter` is the current unsupervised online baseline.
+It has an explicit `CALIBRATING → READY` lifecycle, emits no formal state during
+calibration, and requires `reset()` before a new episode. The existing
+`MLPStateInterpreter` remains a shape-tested option for future supervised or
+multi-task experiments; it is not the selected first baseline.
+
+The first XJTU-SY engineering run now includes a trained `z=8` AutoEncoder,
+ordered latent extraction, health-indicator comparison, and online replay on
+five bearings. These results establish engineering feasibility and temporal
+consistency only; they do not prove that the output is a physical health state.
+
+```python
+from state_interpreter import RelativeTemporalStateInterpreter
+
+interpreter = RelativeTemporalStateInterpreter(
+    embedding_dim=8,
+    calibration_steps=10,
+    temporal_window=5,
+)
+
+for z_t in ordered_embeddings:
+    output = interpreter.update(z_t)
+    if output is not None:
+        state_t = output.state  # [level, trend, movement]
+```
 
 ## Development setup
 

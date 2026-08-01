@@ -4,14 +4,22 @@ from .encoders import AutoEncoderOutput, SmallConvAutoEncoder
 from .data import ChannelStandardizer, MaterializedSTFTData, materialize_stft_data
 from .models import MLPStateInterpreter, StateInterpreterOutput
 from .preprocessing import LogSTFTPreprocessor
+from .relative_temporal import (
+    InterpreterPhase,
+    RelativeTemporalStateInterpreter,
+    RelativeTemporalStateOutput,
+)
 
 __all__ = [
     "AutoEncoderOutput",
     "ChannelStandardizer",
     "MLPStateInterpreter",
     "LogSTFTPreprocessor",
+    "InterpreterPhase",
     "MaterializedSTFTData",
     "SmallConvAutoEncoder",
+    "RelativeTemporalStateInterpreter",
+    "RelativeTemporalStateOutput",
     "StateInterpreterOutput",
     "materialize_stft_data",
 ]
