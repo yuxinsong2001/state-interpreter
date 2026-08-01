@@ -62,6 +62,22 @@ python scripts/inspect_xjtu_stft.py `
   --output outputs/xjtu_stft_bearing1_1.png
 ```
 
+## First AutoEncoder baseline
+
+The first engineering baseline uses one operating condition and a bearing-wise
+split: Bearings 1_1–1_3 for training, 1_4 for validation, and 1_5 as an
+untouched holdout. Channel normalization is fitted on the training bearings
+only.
+
+```powershell
+python scripts/train_autoencoder_baseline.py `
+  --root "D:\path\to\XJTU-SY_Bearing_Datasets" `
+  --output-dir "D:\path\to\run-output" `
+  --condition 35Hz12kN `
+  --latent-dim 8 `
+  --epochs 5
+```
+
 ## Integration boundary
 
 - `SmallConvAutoEncoder` accepts `[batch, 2, 32, 32]` and exposes `encode(x)`.
