@@ -29,6 +29,8 @@
 - `xjtu_sy_dataset_assessment.md`：XJTU-SY 的适用性评估。
 - `gearbox_state_interpreter_data_audit.md`：早期 Gearbox 数据契约审计。
 - `autoencoder_baseline_z8_result.md`：首轮 `z=8` AutoEncoder 基线结果说明。
+- `latent_analysis_z8_result.md`：首轮 latent 轨迹、健康中心距离、`Δz` 与重建误差分析。
+- `health_indicator_comparison_z8_result.md`：全局距离、个体校准距离和轻量时序状态比较。
 
 ### `meetings/`：组会纪要与周报
 
