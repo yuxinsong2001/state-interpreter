@@ -34,6 +34,34 @@ python -m pip install -e .[dev]
 python -m pytest -q
 ```
 
+## XJTU-SY raw-data smoke test
+
+The dataset adapter reads raw CSV files in numeric measurement order and emits
+two-channel tensors without applying STFT or normalization:
+
+```powershell
+python scripts/smoke_test_xjtu_sy.py `
+  --root "D:\path\to\XJTU-SY_Bearing_Datasets" `
+  --condition 35Hz12kN `
+  --bearing Bearing1_1 `
+  --limit 2
+```
+
+## Log-STFT inspection
+
+The first preprocessing baseline uses a Hann window, `n_fft=1024`,
+`win_length=1024`, `hop_length=512`, `log1p` magnitude compression, and adaptive
+average pooling to `[2, 32, 32]`. No dataset-level normalization is applied at
+this stage.
+
+```powershell
+python scripts/inspect_xjtu_stft.py `
+  --root "D:\path\to\XJTU-SY_Bearing_Datasets" `
+  --condition 35Hz12kN `
+  --bearing Bearing1_1 `
+  --output outputs/xjtu_stft_bearing1_1.png
+```
+
 ## Integration boundary
 
 - `SmallConvAutoEncoder` accepts `[batch, 2, 32, 32]` and exposes `encode(x)`.
