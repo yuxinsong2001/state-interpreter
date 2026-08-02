@@ -38,6 +38,7 @@
 - `cross_condition_v2_two_arm_amendment_2026-08-02.md`：在盲测前将 v2 修订为“直接泛化 + Encoder适配”双分支联合评价；实际执行以 v2.1 为准。
 - `experiment_config_safety_layer_2026-08-02.md`：v2.1只读配置接口、划分/holdout泄漏保护、冻结工件哈希校验及测试结果。
 - `arm_a_direct_generalization_dev_result_2026-08-02.md`：冻结v1系统在第二工况 `Bearing2_1–2_4` 上的直接泛化开发结果。
+- `arm_b_target_autoencoder_training_result_2026-08-02.md`：分支B在第二工况训练同结构 `z=8` AutoEncoder的训练与验证结果。
 
 ### `meetings/`：组会纪要与周报
 

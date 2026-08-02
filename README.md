@@ -78,6 +78,13 @@ frozen source system produced positive level-vs-lifetime Spearman correlations
 of `0.887`, `0.991`, `0.974`, and `0.681`, respectively. These are development
 results only; `Bearing2_5` remains unread for the final joint blind evaluation.
 
+Arm B target-condition training is implemented in
+`scripts/train_adapted_autoencoder_v2.py`. It fitted normalization and trained
+the same `z=8` architecture on `Bearing2_1`–`Bearing2_3`, selected epoch 4 with
+`Bearing2_4` validation MSE `0.285`, and did not read `Bearing2_5`. The adapted
+checkpoint is stored in `runs/arm_b_target_autoencoder_20260802/`; State
+Interpreter development analysis is still required before joint blind testing.
+
 ## Development setup
 
 ```powershell

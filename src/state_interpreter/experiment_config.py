@@ -62,11 +62,19 @@ class CrossConditionExperimentConfig:
     calibration_steps: int
     temporal_window: int
     state_fields: tuple[str, ...]
+    n_fft: int
+    win_length: int
+    hop_length: int
+    output_size: tuple[int, int]
     source_checkpoint: FrozenArtifact
     source_config: FrozenArtifact
     arm_b_train_bearings: tuple[str, ...]
     arm_b_validation_bearing: str
     arm_b_normalization_bearings: tuple[str, ...]
+    arm_b_epochs: int
+    arm_b_batch_size: int
+    arm_b_learning_rate: float
+    arm_b_seed: int
 
     def bearings_for(self, purpose: DevelopmentPurpose) -> tuple[str, ...]:
         """Return only preregistered non-blind bearings for a development task."""
@@ -145,6 +153,26 @@ def load_cross_condition_config(
     if audit.get("signal_statistics_inspected") is not False:
         raise ValueError("blind holdout signal statistics are not isolated")
 
+    preprocessing = _mapping(
+        root.get("shared_preprocessing"), "shared_preprocessing"
+    )
+    n_fft = int(preprocessing.get("n_fft", 0))
+    win_length = int(preprocessing.get("win_length", 0))
+    hop_length = int(preprocessing.get("hop_length", 0))
+    output_size_raw = preprocessing.get("output_shape")
+    if n_fft <= 0 or win_length <= 0 or hop_length <= 0:
+        raise ValueError("STFT sizes must be positive")
+    if win_length > n_fft:
+        raise ValueError("win_length must not exceed n_fft")
+    if (
+        not isinstance(output_size_raw, list)
+        or len(output_size_raw) != 3
+        or int(output_size_raw[0]) != 2
+        or any(int(value) <= 0 for value in output_size_raw)
+    ):
+        raise ValueError("output_shape must be [2, height, width]")
+    output_size = (int(output_size_raw[1]), int(output_size_raw[2]))
+
     interpreter = _mapping(root.get("shared_interpreter"), "shared_interpreter")
     if interpreter.get("parameters_may_be_tuned") is not False:
         raise ValueError("State Interpreter parameters must remain frozen")
@@ -183,6 +211,16 @@ def load_cross_condition_config(
     split.assert_excludes_holdout(
         (str(arm_b_validation),), purpose="arm B validation"
     )
+    if arm_b.get("architecture") != "SmallConvAutoEncoder":
+        raise ValueError("arm B architecture must be SmallConvAutoEncoder")
+    arm_b_epochs = int(arm_b.get("epochs", 0))
+    arm_b_batch_size = int(arm_b.get("batch_size", 0))
+    arm_b_learning_rate = float(arm_b.get("learning_rate", 0.0))
+    arm_b_seed = int(arm_b.get("seed", -1))
+    if arm_b_epochs <= 0 or arm_b_batch_size <= 0:
+        raise ValueError("arm B epochs and batch size must be positive")
+    if arm_b_learning_rate <= 0.0 or arm_b_seed < 0:
+        raise ValueError("arm B learning rate must be positive and seed non-negative")
 
     joint = _mapping(root.get("joint_blind_evaluation"), "joint_blind_evaluation")
     if joint.get("single_script_reads_holdout_once") is not True:
@@ -204,6 +242,10 @@ def load_cross_condition_config(
         calibration_steps=int(interpreter.get("calibration_steps", 0)),
         temporal_window=int(interpreter.get("temporal_window", 0)),
         state_fields=state_fields,
+        n_fft=n_fft,
+        win_length=win_length,
+        hop_length=hop_length,
+        output_size=output_size,
         source_checkpoint=FrozenArtifact(
             path=str(arm_a.get("checkpoint", "")),
             sha256=_sha256(arm_a.get("checkpoint_sha256"), "checkpoint_sha256"),
@@ -218,6 +260,10 @@ def load_cross_condition_config(
         arm_b_train_bearings=arm_b_train,
         arm_b_validation_bearing=str(arm_b_validation),
         arm_b_normalization_bearings=arm_b_normalization,
+        arm_b_epochs=arm_b_epochs,
+        arm_b_batch_size=arm_b_batch_size,
+        arm_b_learning_rate=arm_b_learning_rate,
+        arm_b_seed=arm_b_seed,
     )
 
 
@@ -254,4 +300,3 @@ def verify_frozen_source_artifacts(
             )
         verified[name] = actual
     return verified
-

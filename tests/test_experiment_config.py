@@ -34,6 +34,12 @@ def valid_config(checkpoint_hash: str, source_config_hash: str) -> dict:
             "signal_statistics_inspected": False,
             "latent_or_state_outputs_inspected": False,
         },
+        "shared_preprocessing": {
+            "n_fft": 1024,
+            "win_length": 1024,
+            "hop_length": 512,
+            "output_shape": [2, 32, 32],
+        },
         "shared_interpreter": {
             "embedding_dim": 8,
             "calibration_steps": 15,
@@ -51,6 +57,7 @@ def valid_config(checkpoint_hash: str, source_config_hash: str) -> dict:
                 "training_allowed": False,
             },
             "arm_b_adapted_encoder": {
+                "architecture": "SmallConvAutoEncoder",
                 "train_bearings": [
                     "Bearing2_1",
                     "Bearing2_2",
@@ -62,6 +69,10 @@ def valid_config(checkpoint_hash: str, source_config_hash: str) -> dict:
                     "Bearing2_2",
                     "Bearing2_3",
                 ],
+                "epochs": 5,
+                "batch_size": 32,
+                "learning_rate": 0.001,
+                "seed": 20260801,
             },
         },
         "joint_blind_evaluation": {
@@ -102,6 +113,8 @@ def test_loads_immutable_two_arm_config(tmp_path: Path) -> None:
         "Bearing2_2",
         "Bearing2_3",
     )
+    assert config.output_size == (32, 32)
+    assert config.arm_b_epochs == 5
     with pytest.raises(FrozenInstanceError):
         config.status = "completed"
 
@@ -166,4 +179,3 @@ def test_rejects_changed_frozen_source_artifact(tmp_path: Path) -> None:
 
     with pytest.raises(ValueError, match="SHA-256 mismatch"):
         verify_frozen_source_artifacts(config, repository)
-
