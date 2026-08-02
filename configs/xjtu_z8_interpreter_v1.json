@@ -1,0 +1,35 @@
+{
+  "config_id": "xjtu_z8_interpreter_v1",
+  "locked_date": "2026-08-02",
+  "condition": "35Hz12kN",
+  "embedding_dim": 8,
+  "calibration_steps": 15,
+  "temporal_window": 10,
+  "state_fields": [
+    "level",
+    "trend",
+    "movement"
+  ],
+  "selection_data": {
+    "train_bearings": [
+      "Bearing1_1",
+      "Bearing1_2",
+      "Bearing1_3"
+    ],
+    "validation_bearing": "Bearing1_4"
+  },
+  "holdout": {
+    "bearing": "Bearing1_5",
+    "evaluated_during_selection": false
+  },
+  "selection_metrics": {
+    "train_mean_spearman_rho": 0.9708185607993758,
+    "train_min_spearman_rho": 0.9543771955743785,
+    "validation_spearman_rho": 0.8489488430415958,
+    "validation_smoothness": 0.6197138131435412,
+    "validation_trend_noise": 0.012191972786647303,
+    "validation_ready_fraction": 0.8770491803278688
+  },
+  "selection_rationale": "Near-best validation trend with five fewer calibration samples than 20/10, comparable smoothness, lower trend noise, and more usable READY states.",
+  "warning": "Locked for one-time holdout evaluation; do not change after inspecting Bearing1_5."
+}

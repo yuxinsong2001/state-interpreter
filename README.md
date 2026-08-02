@@ -42,8 +42,8 @@ from state_interpreter import RelativeTemporalStateInterpreter
 
 interpreter = RelativeTemporalStateInterpreter(
     embedding_dim=8,
-    calibration_steps=10,
-    temporal_window=5,
+    calibration_steps=15,
+    temporal_window=10,
 )
 
 for z_t in ordered_embeddings:
@@ -51,6 +51,11 @@ for z_t in ordered_embeddings:
     if output is not None:
         state_t = output.state  # [level, trend, movement]
 ```
+
+The first validation-only sensitivity sweep locked these parameters before
+holdout evaluation. The machine-readable decision record is
+`configs/xjtu_z8_interpreter_v1.json`; `Bearing1_5` was excluded from parameter
+selection.
 
 ## Development setup
 
