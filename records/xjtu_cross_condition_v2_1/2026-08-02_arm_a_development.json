@@ -1,0 +1,31 @@
+{
+  "record_type": "experiment_gate",
+  "config_id": "xjtu_cross_condition_v2_1",
+  "date": "2026-08-02",
+  "gate": "arm_a_development_inference",
+  "status": "completed",
+  "configuration_modified": false,
+  "experiment_id": "arm_a_direct_generalization_dev_20260802",
+  "result_directory": "runs/arm_a_direct_generalization_dev_20260802",
+  "evaluated_bearings": ["Bearing2_1", "Bearing2_2", "Bearing2_3", "Bearing2_4"],
+  "blind_holdout": {
+    "bearing": "Bearing2_5",
+    "raw_data_read": false,
+    "latent_or_state_outputs_inspected": false
+  },
+  "model_changed": false,
+  "normalization_refitted": false,
+  "interpreter_changed": false,
+  "full_test_result": {
+    "passed": 58,
+    "failed": 0,
+    "errors": 0
+  },
+  "level_spearman_rho": {
+    "Bearing2_1": 0.8873145126968364,
+    "Bearing2_2": 0.9910963724176493,
+    "Bearing2_3": 0.9739991234272379,
+    "Bearing2_4": 0.6813186813186813
+  },
+  "next_gate": "arm_b_target_autoencoder_training"
+}

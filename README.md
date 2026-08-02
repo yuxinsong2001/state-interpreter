@@ -72,6 +72,12 @@ leakage guards are implemented in `state_interpreter.experiment_config`; gate
 completion is recorded separately under `records/` without rewriting the
 locked configuration.
 
+Arm A development inference is implemented in
+`scripts/run_direct_generalization_v2.py`. On `Bearing2_1`–`Bearing2_4`, the
+frozen source system produced positive level-vs-lifetime Spearman correlations
+of `0.887`, `0.991`, `0.974`, and `0.681`, respectively. These are development
+results only; `Bearing2_5` remains unread for the final joint blind evaluation.
+
 ## Development setup
 
 ```powershell
