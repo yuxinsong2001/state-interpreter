@@ -1,0 +1,28 @@
+{
+  "record_type": "experiment_gate",
+  "config_id": "xjtu_cross_condition_v2_1",
+  "date": "2026-08-02",
+  "gate": "arm_b_development_inference",
+  "status": "completed",
+  "configuration_modified": false,
+  "experiment_id": "arm_b_adapted_encoder_dev_20260802",
+  "result_directory": "runs/arm_b_adapted_encoder_dev_20260802",
+  "evaluated_bearings": ["Bearing2_1", "Bearing2_2", "Bearing2_3", "Bearing2_4"],
+  "blind_holdout": {
+    "bearing": "Bearing2_5",
+    "raw_data_read": false,
+    "latent_or_state_outputs_inspected": false
+  },
+  "sample_count": 1227,
+  "full_test_result": {"passed": 62, "failed": 0, "errors": 0},
+  "arm_b_level_spearman_rho": {
+    "Bearing2_1": 0.9135101905707665,
+    "Bearing2_2": 0.9942236318240099,
+    "Bearing2_3": 0.9790770810325602,
+    "Bearing2_4": 0.9932844932844932
+  },
+  "mean_arm_b_minus_arm_a_rho": 0.08659167671285622,
+  "config_sha256": "788b4c25ae32c4eee4f4237df372f0087f57f30608a00a3cb09e2acb217ceae3",
+  "checkpoint_sha256": "479f66d07916fc43556da3b74a4eae35c42f58424ff1307b76a8dafcca4f818c",
+  "next_gate": "joint_evaluation_script_tested_without_holdout"
+}

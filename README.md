@@ -85,6 +85,14 @@ the same `z=8` architecture on `Bearing2_1`–`Bearing2_3`, selected epoch 4 wit
 checkpoint is stored in `runs/arm_b_target_autoencoder_20260802/`; State
 Interpreter development analysis is still required before joint blind testing.
 
+Arm B development inference is implemented in
+`scripts/run_adapted_encoder_development_v2.py`. With the adapted encoder and
+the still-frozen interpreter, `Bearing2_1`–`Bearing2_4` produced level Spearman
+correlations of `0.914`, `0.994`, `0.979`, and `0.993`. Relative to arm A, the
+per-bearing changes were `+0.026`, `+0.003`, `+0.005`, and `+0.312`. These are
+development results; `Bearing2_5` remains unread until the single joint blind
+evaluation.
+
 ## Development setup
 
 ```powershell

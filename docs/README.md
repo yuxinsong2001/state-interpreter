@@ -71,3 +71,5 @@
 - handover 中的本目录保留完整研究与汇报资料，并作为文档整理来源。
 - 代码仓库中的 `docs/` 便于结合实现、测试和实验工件阅读。
 - `work_log.md` 和 `presentation_notes.md` 属于个人持续记录，只保留在 handover 仓库，不进行双份维护。
+
+最新实验：`experiments/arm_b_adapted_encoder_dev_result_2026-08-02.md` 记录目标工况 Encoder 配合固定 State Interpreter 的开发集结果及 Arm A/B 比较。
