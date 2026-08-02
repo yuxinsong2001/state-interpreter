@@ -33,7 +33,8 @@
 - `health_indicator_comparison_z8_result.md`：全局距离、个体校准距离和轻量时序状态比较。
 - `relative_temporal_state_interpreter_v1.md`：第一版在线 State Interpreter 的生命周期、接口和真实重放结果。
 - `interpreter_parameter_sensitivity_2026-08-02.md`：12组参数敏感性、稳定区域和 validation-only 参数锁定。
-- `locked_holdout_evaluation_2026-08-02.md`：锁定 `15/10` 参数后对 `Bearing1_5` 的一次性评估、结果边界与后续建议。
+- `locked_holdout_evaluation_2026-08-02.md`：锁定15/10配置下的 Bearing1_5 参数选择后评价。
+- `cross_condition_v2_preregistration_2026-08-02.md`：第二工况数据审计、固定划分、严格盲测边界和 v2 跨工况实验预注册。
 
 ### `meetings/`：组会纪要与周报
 
@@ -46,16 +47,23 @@
 
 - `2026-07-27/`：2026-07-27 组会的德语短报告、PPTX 及检查文件。
 
-## 文档来源与同步规则
+## 持续维护文档
 
-本目录是从 `student_handover 2/docs/state_interpreter/` 同步到代码仓库的项目文档副本。
+以下两份文件仍保留在仓库根目录，方便每次工作后更新：
 
-- 文献、数据审计、实验说明和组会材料在两个仓库中保持同步。
-- 个人过程日志 `work_log.md` 和汇报素材库 `presentation_notes.md` 只在 `student_handover 2` 中持续维护，不复制到代码仓库。
-- 模型代码或接口变化应首先更新代码仓库；新的研究说明应首先写入 handover，再同步到这里。
+- [`../../work_log.md`](../../work_log.md)：个人工作思路、任务和问题记录。
+- [`../../presentation_notes.md`](../../presentation_notes.md)：未来组会、实习报告和论文汇报素材。
 
 ## 边界说明
 
-- handover 仓库的 `docs/project/` 是更早的 Gearbox-RL 项目学习资料，不属于本轮 State Interpreter 文档。
-- handover 仓库的 `docs/presentation/` 中还有更早的汇报/学习材料，这些内容不在本目录同步范围内。
+- `docs/project/` 是更早的 Gearbox-RL 项目学习资料，不属于本轮 State Interpreter 文档。
+- `docs/presentation/` 根目录中的旧文件是更早的汇报/学习材料。
 - 模型代码、测试和训练脚本位于独立的 `state-interpreter` 代码仓库；checkpoint、CSV、JSON 等机器工件放在该仓库的 `runs/` 中。
+
+## 与代码仓库同步
+
+本目录的项目文档同时同步到 `state-interpreter/docs/`：
+
+- handover 中的本目录保留完整研究与汇报资料，并作为文档整理来源。
+- 代码仓库中的 `docs/` 便于结合实现、测试和实验工件阅读。
+- `work_log.md` 和 `presentation_notes.md` 属于个人持续记录，只保留在 handover 仓库，不进行双份维护。

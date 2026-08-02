@@ -61,6 +61,13 @@ The machine-readable decision record is
 `configs/xjtu_z8_interpreter_v1.json`; the evaluation artifacts are stored in
 `runs/locked_holdout_bearing1_5_20260802/`.
 
+The next protocol is preregistered in
+`configs/xjtu_cross_condition_v2.json`. It targets `37.5Hz11kN`, retrains the
+same `z=8` AutoEncoder on `Bearing2_1`–`Bearing2_3`, uses `Bearing2_4` for
+AutoEncoder validation, freezes the `15/10` interpreter, and reserves
+`Bearing2_5` as a strict blind holdout. Training must not start until the
+hard-coded bearing split has been replaced by an explicit, tested interface.
+
 ## Development setup
 
 ```powershell

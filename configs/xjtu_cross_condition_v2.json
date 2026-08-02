@@ -1,0 +1,75 @@
+{
+  "config_id": "xjtu_cross_condition_v2",
+  "preregistered_date": "2026-08-02",
+  "status": "preregistered_not_run",
+  "research_question": "Does the frozen relative-temporal State Interpreter transfer to a newly learned z=8 latent space under 37.5Hz11kN?",
+  "source_condition": "35Hz12kN",
+  "target_condition": "37.5Hz11kN",
+  "scope": "Interpreter transfer with a condition-specific AutoEncoder; not whole-system zero-shot transfer.",
+  "data_split": {
+    "train_bearings": [
+      "Bearing2_1",
+      "Bearing2_2",
+      "Bearing2_3"
+    ],
+    "validation_bearing": "Bearing2_4",
+    "strict_blind_holdout": "Bearing2_5"
+  },
+  "blind_holdout_audit": {
+    "raw_directory_and_schema_inspected": true,
+    "signal_statistics_inspected": false,
+    "latent_or_state_outputs_inspected": false
+  },
+  "preprocessing": {
+    "n_fft": 1024,
+    "win_length": 1024,
+    "hop_length": 512,
+    "window": "hann",
+    "magnitude_transform": "log1p",
+    "output_shape": [2, 32, 32],
+    "normalization_fit_on": [
+      "Bearing2_1",
+      "Bearing2_2",
+      "Bearing2_3"
+    ]
+  },
+  "autoencoder": {
+    "architecture": "SmallConvAutoEncoder",
+    "embedding_dim": 8,
+    "epochs": 5,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "seed": 20260801,
+    "weights": "train_new_on_target_condition"
+  },
+  "interpreter": {
+    "type": "RelativeTemporalStateInterpreter",
+    "calibration_steps": 15,
+    "temporal_window": 10,
+    "state_fields": ["level", "trend", "movement"],
+    "parameters_may_be_tuned": false
+  },
+  "primary_analysis": {
+    "metric": "level_spearman_rho_vs_normalized_lifetime",
+    "strong_support_threshold": 0.7,
+    "limited_support_lower_bound": 0.3,
+    "unsupported_rule": "rho < 0.30 or rho < 0"
+  },
+  "secondary_metrics": [
+    "level_directional_monotonicity",
+    "level_smoothness",
+    "trend_noise",
+    "ready_samples",
+    "ready_fraction",
+    "level_first_last_difference",
+    "movement_peak_and_step"
+  ],
+  "execution_gates": {
+    "split_interface_implemented_and_tested": false,
+    "target_autoencoder_trained": false,
+    "development_latents_inspected": false,
+    "blind_holdout_evaluated": false
+  },
+  "warning": "Do not inspect Bearing2_5 signal statistics, latent vectors, reconstruction metrics, or interpreter states before the final locked evaluation."
+}
+
