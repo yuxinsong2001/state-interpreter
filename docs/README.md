@@ -73,3 +73,5 @@
 - `work_log.md` 和 `presentation_notes.md` 属于个人持续记录，只保留在 handover 仓库，不进行双份维护。
 
 最新实验：`experiments/arm_b_adapted_encoder_dev_result_2026-08-02.md` 记录目标工况 Encoder 配合固定 State Interpreter 的开发集结果及 Arm A/B 比较。
+
+本周最终步骤：`experiments/joint_evaluation_rehearsal_2026-08-02.md` 记录 Arm A/B 在 Bearing2_4 上共享单次输入物化的联合评估演练；Bearing2_5 仍未读取。

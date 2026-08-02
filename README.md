@@ -93,6 +93,12 @@ per-bearing changes were `+0.026`, `+0.003`, `+0.005`, and `+0.312`. These are
 development results; `Bearing2_5` remains unread until the single joint blind
 evaluation.
 
+The joint workflow is implemented in `scripts/run_joint_evaluation_v2.py` and
+was rehearsed on the already-used `Bearing2_4`. Both arms shared one data/STFT
+materialization and exactly reproduced their previous correlations (`0.681319`
+and `0.993284`). Rehearsal mode cannot select the holdout, and blind mode
+requires an explicit one-time confirmation token. `Bearing2_5` remains unread.
+
 ## Development setup
 
 ```powershell

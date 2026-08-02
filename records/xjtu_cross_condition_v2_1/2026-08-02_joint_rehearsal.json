@@ -1,0 +1,29 @@
+{
+  "record_type": "experiment_gate",
+  "config_id": "xjtu_cross_condition_v2_1",
+  "date": "2026-08-02",
+  "gate": "joint_evaluation_script_tested_without_holdout",
+  "status": "completed",
+  "configuration_modified": false,
+  "experiment_id": "joint_evaluation_rehearsal_20260802",
+  "result_directory": "runs/joint_evaluation_rehearsal_bearing2_4_20260802",
+  "rehearsal_bearing": "Bearing2_4",
+  "single_shared_materialization": true,
+  "raw_sample_count": 42,
+  "joint_state_row_count": 84,
+  "blind_holdout": {
+    "bearing": "Bearing2_5",
+    "raw_data_read": false,
+    "latent_or_state_outputs_inspected": false
+  },
+  "full_test_result": {"passed": 66, "failed": 0, "errors": 0},
+  "arm_a_level_spearman_rho": 0.6813186813186813,
+  "arm_b_level_spearman_rho": 0.9932844932844932,
+  "arm_b_minus_arm_a_rho": 0.31196581196581186,
+  "independent_report_reproduction_error": {"arm_a_rho": 0.0, "arm_b_rho": 0.0},
+  "config_sha256": "788b4c25ae32c4eee4f4237df372f0087f57f30608a00a3cb09e2acb217ceae3",
+  "arm_a_checkpoint_sha256": "6edb626d1961cb1b1a7a2c32c52c9c96b0100cabb712cda4d79ab3c2a2e7695a",
+  "arm_b_checkpoint_sha256": "479f66d07916fc43556da3b74a4eae35c42f58424ff1307b76a8dafcca4f818c",
+  "joint_script_sha256": "584f7f3b5a47ece22bc80d35f7db322de5def2b4f5c90700ecd59008bc514e93",
+  "next_gate": "explicit_authorization_for_single_joint_blind_evaluation"
+}
