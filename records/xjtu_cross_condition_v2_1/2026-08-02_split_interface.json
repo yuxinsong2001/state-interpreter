@@ -1,0 +1,23 @@
+{
+  "record_type": "implementation_gate",
+  "config_id": "xjtu_cross_condition_v2_1",
+  "date": "2026-08-02",
+  "gate": "split_interface_implemented_and_tested",
+  "status": "completed",
+  "configuration_modified": false,
+  "full_test_result": {
+    "passed": 55,
+    "failed": 0,
+    "errors": 0
+  },
+  "frozen_artifacts_verified": {
+    "source_checkpoint_sha256": "6edb626d1961cb1b1a7a2c32c52c9c96b0100cabb712cda4d79ab3c2a2e7695a",
+    "source_config_sha256": "6fcdcc7852fe356c5897c89edf4b3fa83baf95105af84bc4cc90043f5b72ea26"
+  },
+  "blind_holdout": {
+    "bearing": "Bearing2_5",
+    "raw_data_read_during_this_gate": false,
+    "latent_or_state_outputs_inspected": false
+  },
+  "next_gate": "arm_a_development_inference"
+}

@@ -36,6 +36,7 @@
 - `locked_holdout_evaluation_2026-08-02.md`：锁定15/10配置下的 Bearing1_5 参数选择后评价。
 - `cross_condition_v2_preregistration_2026-08-02.md`：第二工况数据审计、固定划分、严格盲测边界和 v2 跨工况实验预注册。
 - `cross_condition_v2_two_arm_amendment_2026-08-02.md`：在盲测前将 v2 修订为“直接泛化 + Encoder适配”双分支联合评价；实际执行以 v2.1 为准。
+- `experiment_config_safety_layer_2026-08-02.md`：v2.1只读配置接口、划分/holdout泄漏保护、冻结工件哈希校验及测试结果。
 
 ### `meetings/`：组会纪要与周报
 

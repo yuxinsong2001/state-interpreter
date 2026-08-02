@@ -67,8 +67,10 @@ in `configs/xjtu_cross_condition_v2_1.json`. It compares two frozen branches on
 normalization, and (B) the same interpreter after retraining the same `z=8`
 AutoEncoder architecture on `Bearing2_1`–`Bearing2_3`. `Bearing2_4` is used for
 development/AutoEncoder validation, while `Bearing2_5` is reserved for one
-joint blind evaluation of both branches. Training must not start until the
-hard-coded bearing split has been replaced by an explicit, tested interface.
+joint blind evaluation of both branches. The read-only configuration and
+leakage guards are implemented in `state_interpreter.experiment_config`; gate
+completion is recorded separately under `records/` without rewriting the
+locked configuration.
 
 ## Development setup
 
