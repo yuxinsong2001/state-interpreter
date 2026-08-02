@@ -22,6 +22,17 @@
     "bearing": "Bearing1_5",
     "evaluated_during_selection": false
   },
+  "final_evaluation": {
+    "evaluated": true,
+    "evaluation_date": "2026-08-02",
+    "result_directory": "runs/locked_holdout_bearing1_5_20260802",
+    "locked_config_sha256_before_evaluation": "9b4a9349e64f0c02a5e7fb8185f73ee4cf99950308376acb2321efeed2be8514",
+    "parameters_retuned_after_evaluation": false,
+    "level_spearman_rho": 0.9502133712660028,
+    "level_smoothness": 0.8365496908406888,
+    "ready_samples": 37,
+    "scope": "Parameter-selection holdout; not a strict project-wide blind holdout because Bearing1_5 appeared in earlier exploratory analysis."
+  },
   "selection_metrics": {
     "train_mean_spearman_rho": 0.9708185607993758,
     "train_min_spearman_rho": 0.9543771955743785,

@@ -53,9 +53,13 @@ for z_t in ordered_embeddings:
 ```
 
 The first validation-only sensitivity sweep locked these parameters before
-holdout evaluation. The machine-readable decision record is
-`configs/xjtu_z8_interpreter_v1.json`; `Bearing1_5` was excluded from parameter
-selection.
+the designated holdout evaluation. With the parameters still frozen,
+`Bearing1_5` reached a level Spearman correlation of `0.950` over 37 READY
+states. It is a parameter-selection holdout, but not a strict project-wide
+blind holdout because it had already appeared in earlier exploratory analyses.
+The machine-readable decision record is
+`configs/xjtu_z8_interpreter_v1.json`; the evaluation artifacts are stored in
+`runs/locked_holdout_bearing1_5_20260802/`.
 
 ## Development setup
 
