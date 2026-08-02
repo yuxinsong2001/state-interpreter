@@ -1,0 +1,92 @@
+{
+  "config_id": "xjtu_cross_condition_v2_1",
+  "amendment_date": "2026-08-02",
+  "status": "preregistered_not_run",
+  "supersedes": "xjtu_cross_condition_v2",
+  "amendment_timing": "Before any Bearing2_5 signal statistics, latent vectors, reconstruction metrics, or interpreter states were inspected.",
+  "research_questions": {
+    "arm_a": "Does the complete frozen 35Hz12kN system generalize zero-shot to 37.5Hz11kN?",
+    "arm_b": "Does the frozen State Interpreter transfer after the same z=8 AutoEncoder architecture is retrained on 37.5Hz11kN?"
+  },
+  "source_condition": "35Hz12kN",
+  "target_condition": "37.5Hz11kN",
+  "data_split": {
+    "development_or_train_bearings": ["Bearing2_1", "Bearing2_2", "Bearing2_3"],
+    "validation_bearing": "Bearing2_4",
+    "strict_blind_holdout": "Bearing2_5"
+  },
+  "blind_holdout_audit": {
+    "raw_directory_and_schema_inspected": true,
+    "signal_statistics_inspected": false,
+    "latent_or_state_outputs_inspected": false
+  },
+  "shared_preprocessing": {
+    "n_fft": 1024,
+    "win_length": 1024,
+    "hop_length": 512,
+    "window": "hann",
+    "magnitude_transform": "log1p",
+    "output_shape": [2, 32, 32]
+  },
+  "shared_interpreter": {
+    "type": "RelativeTemporalStateInterpreter",
+    "embedding_dim": 8,
+    "calibration_steps": 15,
+    "temporal_window": 10,
+    "state_fields": ["level", "trend", "movement"],
+    "parameters_may_be_tuned": false
+  },
+  "arms": {
+    "arm_a_direct_generalization": {
+      "autoencoder_action": "load_frozen_source_checkpoint",
+      "checkpoint": "runs/ae_baseline_z8_20260801/best_checkpoint.pt",
+      "checkpoint_sha256": "6edb626d1961cb1b1a7a2c32c52c9c96b0100cabb712cda4d79ab3c2a2e7695a",
+      "source_config": "configs/xjtu_z8_interpreter_v1.json",
+      "source_config_sha256_at_amendment": "6fcdcc7852fe356c5897c89edf4b3fa83baf95105af84bc4cc90043f5b72ea26",
+      "normalization": "load_source_checkpoint_statistics",
+      "training_allowed": false
+    },
+    "arm_b_adapted_encoder": {
+      "autoencoder_action": "train_same_architecture_on_target_condition",
+      "architecture": "SmallConvAutoEncoder",
+      "train_bearings": ["Bearing2_1", "Bearing2_2", "Bearing2_3"],
+      "validation_bearing": "Bearing2_4",
+      "normalization_fit_on": ["Bearing2_1", "Bearing2_2", "Bearing2_3"],
+      "epochs": 5,
+      "batch_size": 32,
+      "learning_rate": 0.001,
+      "seed": 20260801
+    }
+  },
+  "primary_analysis": {
+    "metric_per_arm": "level_spearman_rho_vs_normalized_lifetime",
+    "comparison": "arm_b_rho_minus_arm_a_rho",
+    "strong_support_threshold": 0.7,
+    "limited_support_lower_bound": 0.3,
+    "unsupported_rule": "rho < 0.30"
+  },
+  "secondary_metrics_per_arm": [
+    "level_directional_monotonicity",
+    "level_smoothness",
+    "trend_noise",
+    "ready_samples",
+    "ready_fraction",
+    "level_first_last_difference",
+    "movement_peak_and_step"
+  ],
+  "joint_blind_evaluation": {
+    "single_script_reads_holdout_once": true,
+    "both_arms_reported_together": true,
+    "blind_holdout_evaluated": false,
+    "retuning_after_evaluation_allowed": false
+  },
+  "execution_gates": {
+    "split_interface_implemented_and_tested": false,
+    "arm_a_development_inference_completed": false,
+    "arm_b_target_autoencoder_trained": false,
+    "joint_evaluation_script_tested_without_holdout": false,
+    "blind_holdout_evaluated": false
+  },
+  "warning": "Bearing2_5 may only be read once by the final joint evaluation after both arms, code, hashes, metrics, and interpretation rules are frozen."
+}
+
