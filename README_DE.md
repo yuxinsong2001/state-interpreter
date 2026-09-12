@@ -61,6 +61,16 @@ Die Entwicklungsinferenz von Arm B ist in `scripts/run_adapted_encoder_developme
 
 Der gemeinsame Ablauf ist in `scripts/run_joint_evaluation_v2.py` implementiert und wurde mit dem bereits verwendeten `Bearing2_4` erprobt. Beide Zweige nutzten dieselbe einmalige Daten-/STFT-Materialisierung und reproduzierten ihre vorherigen Korrelationen exakt (`0.681319` und `0.993284`). Der Rehearsal-Modus kann den Holdout nicht auswählen; der Blind-Modus verlangt ein explizites einmaliges Bestätigungstoken. `Bearing2_5` wurde weiterhin nicht gelesen.
 
+## Abgeschlossene gemeinsame Blind-Evaluation
+
+Die einmalige gemeinsame Blind-Evaluation auf `Bearing2_5` wurde am 12.09.2026 mit der vorher festgelegten Konfiguration durchgeführt. Beide Arme verwendeten dieselben 339 Rohmessungen und denselben State Interpreter mit 15 Kalibrierungsschritten und einem Zeitfenster von 10. Pro Arm entstanden 324 READY-Zustände.
+
+- Arm A: Spearman-ρ zwischen Level und normierter Lebensdauer `0.946183`;
+- Arm B: Spearman-ρ `0.964242`;
+- Differenz Arm B − Arm A: `+0.018059`.
+
+Beide Arme überschreiten den präregistrierten Schwellenwert von `0.7`. Die Blind-Daten unterstützen damit eine starke zeitliche Ordnung für beide eingefrorenen Pipelines. Die Encoder-Anpassung liefert auf diesem Holdout nur einen kleinen zusätzlichen Vorteil. Das Ergebnis stammt von einem einzigen Blind-Bearing und ist kein Nachweis statistischer Signifikanz oder eines physikalisch kalibrierten Schadensgrades. `Bearing2_5` darf nicht mehr zur Parameterauswahl verwendet werden. Ergebnisse und Audit-Record liegen unter `runs/joint_blind_bearing2_5_20260912/` und `records/xjtu_cross_condition_v2_1/2026-09-12_joint_blind_evaluation.json`.
+
 ## Entwicklungsumgebung
 
 ```powershell

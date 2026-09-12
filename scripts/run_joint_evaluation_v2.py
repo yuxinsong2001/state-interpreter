@@ -150,7 +150,7 @@ def compare(arm_a: dict[str, object], arm_b: dict[str, object]) -> dict[str, obj
     }
 
 
-def save_plot(path: Path, rows_a, rows_b, bearing: str) -> None:
+def save_plot(path: Path, rows_a, rows_b, bearing: str, *, mode: str) -> None:
     figure, axes = plt.subplots(3, 1, figsize=(10, 10), sharex=True)
     for rows, label in ((rows_a, "Arm A"), (rows_b, "Arm B")):
         ready = [row for row in rows if row["phase"] == "ready"]
@@ -166,7 +166,8 @@ def save_plot(path: Path, rows_a, rows_b, bearing: str) -> None:
         axis.grid(alpha=0.3)
         axis.legend()
     axes[-1].set_xlabel("Measurement step")
-    figure.suptitle(f"Joint evaluation rehearsal: {bearing}")
+    title_mode = "blind evaluation" if mode == "blind" else "evaluation rehearsal"
+    figure.suptitle(f"Joint {title_mode}: {bearing}")
     figure.tight_layout()
     figure.savefig(path, dpi=180)
     plt.close(figure)
@@ -195,6 +196,11 @@ def main() -> None:
         raise FileExistsError(f"output directory already exists: {output_dir}")
 
     config = load_cross_condition_config(config_path)
+    record_dir = repository_root / "records" / config_path.stem
+    existing_blind_records = tuple(record_dir.glob("*_joint_blind_evaluation.json"))
+    if args.mode == "blind" and existing_blind_records:
+        names = ", ".join(path.name for path in existing_blind_records)
+        raise RuntimeError(f"blind evaluation is already recorded: {names}")
     bearing = resolve_evaluation_bearing(config, args.mode, args.confirm_blind)
     blind_read = args.mode == "blind"
     source_hashes = verify_frozen_source_artifacts(config, repository_root)
@@ -268,17 +274,26 @@ def main() -> None:
         writer = csv.DictWriter(handle, fieldnames=list(all_rows[0]))
         writer.writeheader()
         writer.writerows(all_rows)
-    save_plot(output_dir / "joint_state_plot.png", rows_a, rows_b, bearing)
+    save_plot(
+        output_dir / "joint_state_plot.png",
+        rows_a,
+        rows_b,
+        bearing,
+        mode=args.mode,
+    )
+
+    run_date = time.strftime("%Y-%m-%d")
+    run_date_tag = time.strftime("%Y%m%d")
 
     report = {
         "material_passport": {
             "origin_skill": "experiment-agent",
             "origin_mode": "run",
-            "origin_date": "2026-08-02",
+            "origin_date": run_date,
             "verification_status": "UNVERIFIED",
             "version_label": "exp_result_v1",
         },
-        "experiment_id": f"joint_evaluation_{args.mode}_20260802",
+        "experiment_id": f"joint_evaluation_{args.mode}_{run_date_tag}",
         "type": "analysis",
         "status": "completed",
         "mode": args.mode,

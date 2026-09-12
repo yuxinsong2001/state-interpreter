@@ -2,6 +2,10 @@
 
 本目录集中保存 2026 年 7 月下旬开始的 State Interpreter 研究与实现资料。
 
+## 当前阶段状态（2026-09-12）
+
+`Bearing2_5`的一次性联合严格盲测已经完成。Arm A的Level–lifetime Spearman `ρ=0.946183`，Arm B为`ρ=0.964242`，差值为`+0.018059`。两个冻结分支都达到预注册的强支持阈值；Arm B只有小幅额外收益。该bearing从现在起不得再用于模型选择或调参。正式总结见`experiments/joint_blind_evaluation_bearing2_5_2026-09-12.md`。
+
 ## 工作主线
 
 ```text
@@ -75,3 +79,5 @@
 最新实验：`experiments/arm_b_adapted_encoder_dev_result_2026-08-02.md` 记录目标工况 Encoder 配合固定 State Interpreter 的开发集结果及 Arm A/B 比较。
 
 本周最终步骤：`experiments/joint_evaluation_rehearsal_2026-08-02.md` 记录 Arm A/B 在 Bearing2_4 上共享单次输入物化的联合评估演练；Bearing2_5 仍未读取。
+
+最新组会材料：`meetings/wochenupdate_2026-08-02_DE.md` 为包含方法、双分支结果、限制和下一步的德语周报。
