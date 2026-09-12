@@ -44,6 +44,7 @@
 - `arm_a_direct_generalization_dev_result_2026-08-02.md`：冻结v1系统在第二工况 `Bearing2_1–2_4` 上的直接泛化开发结果。
 - `arm_b_target_autoencoder_training_result_2026-08-02.md`：分支B在第二工况训练同结构 `z=8` AutoEncoder的训练与验证结果。
 - `v0_1_stability_study_2026-09-12.md`：两个工况、5折bearing轮换和3个随机种子的30次稳定性实验与方法选择结论。
+- `bearing1_4_diagnosis_2026-09-12.md`：最弱bearing的重建误差、seed一致性和窗口敏感性事后诊断。
 
 ### `meetings/`：组会纪要与周报
 

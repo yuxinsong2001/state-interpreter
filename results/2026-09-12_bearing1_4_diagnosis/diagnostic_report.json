@@ -1,0 +1,114 @@
+{
+  "status": "completed",
+  "analysis_type": "post_hoc_failure_diagnosis_not_for_retuning_v0.1",
+  "condition": "35Hz12kN",
+  "fold": {
+    "train": [
+      "Bearing1_1",
+      "Bearing1_2",
+      "Bearing1_3"
+    ],
+    "validation": "Bearing1_5",
+    "test": "Bearing1_4"
+  },
+  "seeds": [
+    20260801,
+    20260802,
+    20260803
+  ],
+  "reconstruction": {
+    "bearing1_4_mean_mse": 0.5978278716405233,
+    "other_bearings_mean_mse": 0.33769643927613896,
+    "ratio": 1.770311445752827
+  },
+  "locked_15_10": {
+    "level_rho_mean": 0.8600547293899438,
+    "level_rho_min": 0.8295617077137092,
+    "level_rho_max": 0.8762123082348793
+  },
+  "seed_level_trajectory_pearson_mean": 0.9911525662985877,
+  "setting_means": {
+    "5/3": {
+      "level_rho_mean": 0.6721065803473752,
+      "trend_accuracy_mean": 0.8448275862068965,
+      "movement_rho_mean": 0.2356129627493945
+    },
+    "5/5": {
+      "level_rho_mean": 0.6810781918905823,
+      "trend_accuracy_mean": 0.8189655172413793,
+      "movement_rho_mean": 0.18041748356590936
+    },
+    "5/10": {
+      "level_rho_mean": 0.7035621693716374,
+      "trend_accuracy_mean": 0.7614942528735632,
+      "movement_rho_mean": 0.13118312638552518
+    },
+    "5/20": {
+      "level_rho_mean": 0.751197630215748,
+      "trend_accuracy_mean": 0.7298850574712644,
+      "movement_rho_mean": 0.1697945898845449
+    },
+    "10/3": {
+      "level_rho_mean": 0.7644246648671427,
+      "trend_accuracy_mean": 0.8378378378378378,
+      "movement_rho_mean": 0.23001930501930498
+    },
+    "10/5": {
+      "level_rho_mean": 0.7745868498080887,
+      "trend_accuracy_mean": 0.8078078078078077,
+      "movement_rho_mean": 0.2125394875394875
+    },
+    "10/10": {
+      "level_rho_mean": 0.7939801369004909,
+      "trend_accuracy_mean": 0.7417417417417417,
+      "movement_rho_mean": 0.17650930150930152
+    },
+    "10/20": {
+      "level_rho_mean": 0.8233960888828147,
+      "trend_accuracy_mean": 0.6996996996996997,
+      "movement_rho_mean": 0.2516438516438516
+    },
+    "15/3": {
+      "level_rho_mean": 0.8446939268663832,
+      "trend_accuracy_mean": 0.8364779874213837,
+      "movement_rho_mean": 0.22250715839148216
+    },
+    "15/5": {
+      "level_rho_mean": 0.8485406584507272,
+      "trend_accuracy_mean": 0.7987421383647799,
+      "movement_rho_mean": 0.23481707265872317
+    },
+    "15/10": {
+      "level_rho_mean": 0.8600547293899438,
+      "trend_accuracy_mean": 0.7138364779874213,
+      "movement_rho_mean": 0.14721683418562276
+    },
+    "15/20": {
+      "level_rho_mean": 0.8850486882579988,
+      "trend_accuracy_mean": 0.6918238993710691,
+      "movement_rho_mean": 0.2496091224357844
+    },
+    "20/3": {
+      "level_rho_mean": 0.8662112927454939,
+      "trend_accuracy_mean": 0.8283828382838284,
+      "movement_rho_mean": 0.21496020190254317
+    },
+    "20/5": {
+      "level_rho_mean": 0.8687256504062743,
+      "trend_accuracy_mean": 0.7689768976897691,
+      "movement_rho_mean": 0.2504251601630751
+    },
+    "20/10": {
+      "level_rho_mean": 0.87732422585491,
+      "trend_accuracy_mean": 0.7326732673267328,
+      "movement_rho_mean": 0.19661424966026012
+    },
+    "20/20": {
+      "level_rho_mean": 0.8999873716669211,
+      "trend_accuracy_mean": 0.7095709570957096,
+      "movement_rho_mean": 0.22910114540865847
+    }
+  },
+  "interpretation_rule": "High reconstruction ratio suggests encoder/domain mismatch; low seed agreement suggests initialization instability; large setting spread suggests window sensitivity.",
+  "warning": "Exploratory diagnosis on a seen test bearing; results must not retune or relabel v0.1."
+}
