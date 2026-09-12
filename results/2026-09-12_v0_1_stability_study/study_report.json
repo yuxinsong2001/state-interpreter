@@ -1,0 +1,253 @@
+{
+  "status": "completed",
+  "study": "post_v0.1_seeded_leave_one_bearing_out_stability",
+  "conditions": [
+    "35Hz12kN",
+    "37.5Hz11kN"
+  ],
+  "seeds": [
+    20260801,
+    20260802,
+    20260803
+  ],
+  "folds_per_condition": 5,
+  "run_count": 30,
+  "protocol": "test one bearing, validate on the next cyclic bearing, train/normalize on the remaining three",
+  "parameters": {
+    "epochs": 5,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "latent_dim": 8,
+    "calibration_steps": 15,
+    "temporal_window": 10
+  },
+  "aggregate_metrics": [
+    {
+      "scope": "all",
+      "metric": "level_spearman_rho",
+      "n": 30,
+      "mean": 0.958929099945642,
+      "std": 0.04782816614182479,
+      "ci95_low": 0.9410697691983987,
+      "ci95_high": 0.9767884306928853
+    },
+    {
+      "scope": "all",
+      "metric": "level_first_last_delta",
+      "n": 30,
+      "mean": 15.513571325937907,
+      "std": 6.905182130713545,
+      "ci95_low": 12.935133942897096,
+      "ci95_high": 18.092008708978717
+    },
+    {
+      "scope": "all",
+      "metric": "trend_direction_accuracy",
+      "n": 30,
+      "mean": 0.8161405011256077,
+      "std": 0.07464041521398251,
+      "ci95_low": 0.7882693120345339,
+      "ci95_high": 0.8440116902166814
+    },
+    {
+      "scope": "all",
+      "metric": "trend_noise",
+      "n": 30,
+      "mean": 0.02554165503227708,
+      "std": 0.022664534916215364,
+      "ci95_low": 0.01707857860779403,
+      "ci95_high": 0.034004731456760126
+    },
+    {
+      "scope": "all",
+      "metric": "movement_change_spearman_rho",
+      "n": 30,
+      "mean": 0.3792264481543267,
+      "std": 0.20647554034215576,
+      "ci95_low": 0.30212721430012107,
+      "ci95_high": 0.45632568200853235
+    },
+    {
+      "scope": "all",
+      "metric": "movement_mean",
+      "n": 30,
+      "mean": 0.3938547375423572,
+      "std": 0.24505027861840267,
+      "ci95_low": 0.3023514596919634,
+      "ci95_high": 0.48535801539275103
+    },
+    {
+      "scope": "all",
+      "metric": "movement_max",
+      "n": 30,
+      "mean": 3.7338279604911806,
+      "std": 1.9608329666904458,
+      "ci95_low": 3.001640897571377,
+      "ci95_high": 4.466015023410984
+    },
+    {
+      "scope": "all",
+      "metric": "test_reconstruction_mse",
+      "n": 30,
+      "mean": 0.4057429783046246,
+      "std": 0.2358278151677956,
+      "ci95_low": 0.31768342490271473,
+      "ci95_high": 0.49380253170653443
+    },
+    {
+      "scope": "35Hz12kN",
+      "metric": "level_spearman_rho",
+      "n": 15,
+      "mean": 0.9396786585379027,
+      "std": 0.05587810278129659,
+      "ci95_low": 0.9087343966399561,
+      "ci95_high": 0.9706229204358492
+    },
+    {
+      "scope": "35Hz12kN",
+      "metric": "level_first_last_delta",
+      "n": 15,
+      "mean": 16.118928269545236,
+      "std": 9.374597558132058,
+      "ci95_low": 10.92744918225262,
+      "ci95_high": 21.310407356837853
+    },
+    {
+      "scope": "35Hz12kN",
+      "metric": "trend_direction_accuracy",
+      "n": 15,
+      "mean": 0.8376895820885389,
+      "std": 0.07030754943175314,
+      "ci95_low": 0.7987545589805746,
+      "ci95_high": 0.8766246051965033
+    },
+    {
+      "scope": "35Hz12kN",
+      "metric": "trend_noise",
+      "n": 15,
+      "mean": 0.027146509185883887,
+      "std": 0.018482236032858507,
+      "ci95_low": 0.016911388024041754,
+      "ci95_high": 0.03738163034772602
+    },
+    {
+      "scope": "35Hz12kN",
+      "metric": "movement_change_spearman_rho",
+      "n": 15,
+      "mean": 0.3607255924997775,
+      "std": 0.24015025192478653,
+      "ci95_low": 0.2277348157816778,
+      "ci95_high": 0.49371636921787715
+    },
+    {
+      "scope": "35Hz12kN",
+      "metric": "movement_mean",
+      "n": 15,
+      "mean": 0.4578702738951113,
+      "std": 0.2361187891776123,
+      "ci95_low": 0.3271120468319031,
+      "ci95_high": 0.5886285009583195
+    },
+    {
+      "scope": "35Hz12kN",
+      "metric": "movement_max",
+      "n": 15,
+      "mean": 4.409095939000448,
+      "std": 2.3170361809361544,
+      "ci95_low": 3.12596407086005,
+      "ci95_high": 5.692227807140846
+    },
+    {
+      "scope": "35Hz12kN",
+      "metric": "test_reconstruction_mse",
+      "n": 15,
+      "mean": 0.5794615149497986,
+      "std": 0.19866091368558644,
+      "ci95_low": 0.46944676792030937,
+      "ci95_high": 0.6894762619792878
+    },
+    {
+      "scope": "37.5Hz11kN",
+      "metric": "level_spearman_rho",
+      "n": 15,
+      "mean": 0.9781795413533819,
+      "std": 0.028670558318727047,
+      "ci95_low": 0.9623023153701118,
+      "ci95_high": 0.994056767336652
+    },
+    {
+      "scope": "37.5Hz11kN",
+      "metric": "level_first_last_delta",
+      "n": 15,
+      "mean": 14.908214382330577,
+      "std": 3.1781378795400044,
+      "ci95_low": 13.148220288093214,
+      "ci95_high": 16.66820847656794
+    },
+    {
+      "scope": "37.5Hz11kN",
+      "metric": "trend_direction_accuracy",
+      "n": 15,
+      "mean": 0.7945914201626765,
+      "std": 0.07484724830630952,
+      "ci95_low": 0.75314239561372,
+      "ci95_high": 0.836040444711633
+    },
+    {
+      "scope": "37.5Hz11kN",
+      "metric": "trend_noise",
+      "n": 15,
+      "mean": 0.023936800878670263,
+      "std": 0.026775766972623693,
+      "ci95_low": 0.00910887536798904,
+      "ci95_high": 0.03876472638935149
+    },
+    {
+      "scope": "37.5Hz11kN",
+      "metric": "movement_change_spearman_rho",
+      "n": 15,
+      "mean": 0.39772730380887616,
+      "std": 0.17292728761697967,
+      "ci95_low": 0.30196336389371387,
+      "ci95_high": 0.49349124372403846
+    },
+    {
+      "scope": "37.5Hz11kN",
+      "metric": "movement_mean",
+      "n": 15,
+      "mean": 0.3298392011896031,
+      "std": 0.24465291875926695,
+      "ci95_low": 0.19435493069075183,
+      "ci95_high": 0.46532347168845434
+    },
+    {
+      "scope": "37.5Hz11kN",
+      "metric": "movement_max",
+      "n": 15,
+      "mean": 3.0585599819819134,
+      "std": 1.272239678615208,
+      "ci95_low": 2.3540171315183915,
+      "ci95_high": 3.763102832445435
+    },
+    {
+      "scope": "37.5Hz11kN",
+      "metric": "test_reconstruction_mse",
+      "n": 15,
+      "mean": 0.23202444165945052,
+      "std": 0.10520655662754745,
+      "ci95_low": 0.1737629925475157,
+      "ci95_high": 0.29028589077138534
+    }
+  ],
+  "warnings": [
+    "Normalized lifetime is a temporal proxy, not a physical damage label.",
+    "Trend and Movement metrics test internal temporal consistency, not maintenance utility.",
+    "Runs sharing a fold reuse the same data and are not statistically independent observations."
+  ],
+  "duration_seconds": 147.98400000000038,
+  "outputs": [
+    "per_run_metrics.csv",
+    "aggregate_metrics.csv",
+    "study_report.json"
+  ]
+}
