@@ -1,0 +1,113 @@
+{
+  "status": "completed",
+  "verification_status": "exploratory_single_seed",
+  "experiment_id": "xjtu_gru_predictive_v1",
+  "input": "D:\\1\\德国留学\\斯图加特大学在校资料\\hiwi工作\\state-interpreter\\runs\\latent_analysis_z8_20260801\\latent_trajectories.csv",
+  "input_sha256": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+  "config": "D:\\1\\德国留学\\斯图加特大学在校资料\\hiwi工作\\state-interpreter\\configs\\xjtu_gru_predictive_v1.json",
+  "config_sha256": "a006b62c225a95efa53c2cfa61f1a747a506c9250d996787f19683577826ee41",
+  "centered_hmm_metrics_sha256": "36e8b04ab1322d304bf34f2d9c1b4754ffa8cb649cfda64803de72e289e8196d",
+  "train_bearings": [
+    "Bearing1_1",
+    "Bearing1_2",
+    "Bearing1_3"
+  ],
+  "validation_bearing": "Bearing1_4",
+  "old_holdout_bearing": "Bearing1_5",
+  "model": {
+    "type": "one-layer causal predictive GRU",
+    "embedding_dim": 8,
+    "hidden_dim": 8,
+    "parameter_count": 504,
+    "training_target": "next standardized bearing-centered embedding",
+    "uses_normalized_lifetime_for_training": false
+  },
+  "training": {
+    "epochs_completed": 300,
+    "best_epoch": 300,
+    "best_validation_next_step_mse": 0.05524745211005211,
+    "final_train_next_step_mse": 0.01877385936677456,
+    "stopped_by_patience": false,
+    "random_seed": 20260916
+  },
+  "prediction_mse_by_bearing": {
+    "Bearing1_1": 0.024589307606220245,
+    "Bearing1_2": 0.020000306889414787,
+    "Bearing1_3": 0.012814543209969997,
+    "Bearing1_4": 0.05524745211005211,
+    "Bearing1_5": 0.031288132071495056
+  },
+  "comparisons": [
+    {
+      "bearing_id": "Bearing1_1",
+      "split": "train",
+      "distance_rho": 0.9640553697828841,
+      "centered_hmm_rho": 0.9162929304932526,
+      "predictive_gru_rho": 0.9637314584583725,
+      "gru_minus_distance": -0.0003239113245115943,
+      "gru_minus_centered_hmm": 0.047438527965119937,
+      "gru_collapsed": false,
+      "gru_next_step_mse": 0.024589307606220245
+    },
+    {
+      "bearing_id": "Bearing1_2",
+      "split": "train",
+      "distance_rho": 0.9940231170408648,
+      "centered_hmm_rho": 0.8313675630680473,
+      "predictive_gru_rho": 0.9988624642110034,
+      "gru_minus_distance": 0.004839347170138675,
+      "gru_minus_centered_hmm": 0.16749490114295618,
+      "gru_collapsed": false,
+      "gru_next_step_mse": 0.020000306889414787
+    },
+    {
+      "bearing_id": "Bearing1_3",
+      "split": "train",
+      "distance_rho": 0.9543771955743785,
+      "centered_hmm_rho": 0.9460936350184548,
+      "predictive_gru_rho": 0.9663728290488852,
+      "gru_minus_distance": 0.011995633474506717,
+      "gru_minus_centered_hmm": 0.020279194030430436,
+      "gru_collapsed": false,
+      "gru_next_step_mse": 0.012814543209969997
+    },
+    {
+      "bearing_id": "Bearing1_4",
+      "split": "validation",
+      "distance_rho": 0.8489488430415958,
+      "centered_hmm_rho": 0.962268288705045,
+      "predictive_gru_rho": 0.8941495718960011,
+      "gru_minus_distance": 0.04520072885440529,
+      "gru_minus_centered_hmm": -0.06811871680904391,
+      "gru_collapsed": false,
+      "gru_next_step_mse": 0.05524745211005211
+    },
+    {
+      "bearing_id": "Bearing1_5",
+      "split": "holdout_test",
+      "distance_rho": 0.9502133712660028,
+      "centered_hmm_rho": 0.8962683085662442,
+      "predictive_gru_rho": 0.9321953532479847,
+      "gru_minus_distance": -0.018018018018018056,
+      "gru_minus_centered_hmm": 0.03592704468174057,
+      "gru_collapsed": false,
+      "gru_next_step_mse": 0.031288132071495056
+    }
+  ],
+  "warnings": [
+    "All bearings were inspected previously; this is not a blind test.",
+    "This is a single-seed exploratory result and does not establish training stability.",
+    "Bearing1_4 selects the checkpoint and is not independent test evidence.",
+    "Normalized lifetime is used only for descriptive evaluation, not training.",
+    "A predictive hidden-state distance is not a physical damage measurement."
+  ],
+  "duration_seconds": 23.155999999988126,
+  "outputs": [
+    "best_checkpoint.pt",
+    "training_history.csv",
+    "per_step_states.csv",
+    "bearing_metrics.csv",
+    "method_comparison.csv",
+    "experiment_report.json"
+  ]
+}

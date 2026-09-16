@@ -1,0 +1,30 @@
+{
+  "experiment_id": "xjtu_gru_predictive_v1",
+  "status": "exploratory_single_seed",
+  "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+  "centered_hmm_metrics": "results/2026-09-16_hmm_bearing_centering_ablation/bearing_metrics.csv",
+  "output_dir": "results/2026-09-16_gru_predictive_interpreter_exploratory",
+  "training_split": "train",
+  "validation_bearing": "Bearing1_4",
+  "old_holdout_bearing": "Bearing1_5",
+  "calibration_steps": 15,
+  "temporal_window": 10,
+  "hidden_dim": 8,
+  "num_layers": 1,
+  "learning_rate": 0.001,
+  "weight_decay": 0.00001,
+  "max_epochs": 300,
+  "patience": 40,
+  "minimum_improvement": 1e-8,
+  "gradient_clip_norm": 1.0,
+  "random_seed": 20260916,
+  "common_score_start_step": 15,
+  "notes": [
+    "The GRU is trained only on Bearing1_1-Bearing1_3 through the training split.",
+    "Bearing1_4 is used only for checkpoint selection and Bearing1_5 only for old-holdout evaluation.",
+    "Each bearing is centered by its own first 15 embeddings before train-only feature standardization.",
+    "The training target is the next standardized centered embedding; normalized lifetime is not used for training.",
+    "The GRU Level is the 10-step moving average of hidden-state distance from the first-15 hidden-state mean.",
+    "This is a single-seed exploratory experiment on previously inspected bearings, not a blind validation."
+  ]
+}
