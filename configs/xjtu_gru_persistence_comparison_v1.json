@@ -1,0 +1,23 @@
+{
+  "experiment_id": "xjtu_gru_persistence_comparison_v1",
+  "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+  "checkpoint_directory": "results/2026-09-16_gru_temporal_ranking",
+  "output_directory": "results/2026-09-16_gru_persistence_comparison",
+  "arms": ["control", "ranking"],
+  "random_seeds": [20260916, 20260917, 20260918],
+  "bearings": ["Bearing1_1", "Bearing1_2", "Bearing1_3", "Bearing1_4", "Bearing1_5"],
+  "calibration_steps": 15,
+  "primary_target_start_step": 25,
+  "forecast_horizon": 1,
+  "prefix_check_length": 35,
+  "prefix_tolerance": 0.000001,
+  "notes": [
+    "Frozen checkpoints only; no optimizer, model fitting, hyperparameter search or checkpoint selection.",
+    "Forecast at origin t is compared with observation t+1; the final unobserved forecast is discarded.",
+    "Both methods use the same saved training standardization and same target rows.",
+    "Primary scoring uses target step>=25; full-sequence MSE is for archived-result reproduction and sensitivity only.",
+    "Skill=1-MSE_GRU/MSE_persistence; undefined when persistence MSE is zero.",
+    "Previously inspected bearings; three seeds are not independent equipment samples.",
+    "Input, config, archived metrics, source report and checkpoint hashes are checked before and after inference."
+  ]
+}
