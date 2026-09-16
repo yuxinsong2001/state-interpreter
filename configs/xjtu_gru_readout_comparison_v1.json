@@ -1,0 +1,23 @@
+{
+  "experiment_id": "xjtu_gru_readout_comparison_v1",
+  "status": "fixed_checkpoint_readout_ablation",
+  "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+  "multiseed_result_dir": "results/2026-09-16_gru_predictive_multiseed_stability",
+  "output_dir": "results/2026-09-16_gru_readout_comparison",
+  "random_seeds": [20260916, 20260917, 20260918],
+  "calibration_steps": 15,
+  "temporal_window": 10,
+  "common_score_start_step": 25,
+  "readouts": [
+    "hidden_distance",
+    "predicted_z_distance",
+    "prediction_residual"
+  ],
+  "notes": [
+    "All three GRU checkpoints are frozen; no training or parameter updates occur.",
+    "Predicted z at target step t is produced at t-1 and is therefore causal.",
+    "Prediction residual at step t compares the t-1 forecast with the observed z at t.",
+    "Scoring starts at step 25 so every readout has a full post-calibration 10-step moving window.",
+    "Normalized lifetime is used only for descriptive evaluation."
+  ]
+}
