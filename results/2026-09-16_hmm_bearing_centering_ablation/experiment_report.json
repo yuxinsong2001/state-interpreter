@@ -1,0 +1,104 @@
+{
+  "status": "completed",
+  "verification_status": "exploratory_ablation",
+  "experiment_id": "xjtu_hmm_bearing_centering_v1",
+  "hypothesis": "Per-bearing early-reference centering reduces cross-bearing initial-position offset and prevents HMM state collapse without changing the HMM structure.",
+  "input": "D:\\1\\德国留学\\斯图加特大学在校资料\\hiwi工作\\state-interpreter\\runs\\latent_analysis_z8_20260801\\latent_trajectories.csv",
+  "input_sha256": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+  "config": "D:\\1\\德国留学\\斯图加特大学在校资料\\hiwi工作\\state-interpreter\\configs\\xjtu_hmm_bearing_centering_v1.json",
+  "config_sha256": "24c37d83be007ab59ab4b423bbf1a933bb60b55e1f2570380dd49609bfb30ca3",
+  "train_bearings": [
+    "Bearing1_1",
+    "Bearing1_2",
+    "Bearing1_3"
+  ],
+  "evaluated_bearings": [
+    "Bearing1_1",
+    "Bearing1_2",
+    "Bearing1_3",
+    "Bearing1_4",
+    "Bearing1_5"
+  ],
+  "calibration_steps": 15,
+  "common_score_start_step": 15,
+  "controlled_factors": [
+    "same archived AutoEncoder embeddings",
+    "same training-bearing split",
+    "same three-state left-right diagonal-Gaussian HMM",
+    "same EM hyperparameters and causal log-domain filtering",
+    "same scoring interval"
+  ],
+  "changed_factor": "subtract each bearing's own first-15-embedding mean before HMM fitting and inference",
+  "comparisons": [
+    {
+      "bearing_id": "Bearing1_1",
+      "split": "train",
+      "raw_spearman_rho": 0.8539491708033325,
+      "centered_spearman_rho": 0.9162929304932526,
+      "rho_delta_centered_minus_raw": 0.06234375968992001,
+      "raw_stage_changes": 1,
+      "centered_stage_changes": 8,
+      "raw_collapsed": false,
+      "centered_collapsed": false
+    },
+    {
+      "bearing_id": "Bearing1_2",
+      "split": "train",
+      "raw_spearman_rho": 0.8343384319670174,
+      "centered_spearman_rho": 0.8313675630680473,
+      "rho_delta_centered_minus_raw": -0.002970868898970136,
+      "raw_stage_changes": 2,
+      "centered_stage_changes": 2,
+      "raw_collapsed": false,
+      "centered_collapsed": false
+    },
+    {
+      "bearing_id": "Bearing1_3",
+      "split": "train",
+      "raw_spearman_rho": 0.9140345996827635,
+      "centered_spearman_rho": 0.9460936350184548,
+      "rho_delta_centered_minus_raw": 0.03205903533569132,
+      "raw_stage_changes": 2,
+      "centered_stage_changes": 2,
+      "raw_collapsed": false,
+      "centered_collapsed": false
+    },
+    {
+      "bearing_id": "Bearing1_4",
+      "split": "validation",
+      "raw_spearman_rho": NaN,
+      "centered_spearman_rho": 0.962268288705045,
+      "rho_delta_centered_minus_raw": NaN,
+      "raw_stage_changes": 0,
+      "centered_stage_changes": 2,
+      "raw_collapsed": true,
+      "centered_collapsed": false
+    },
+    {
+      "bearing_id": "Bearing1_5",
+      "split": "holdout_test",
+      "raw_spearman_rho": 0.8159156512341678,
+      "centered_spearman_rho": 0.8962683085662442,
+      "rho_delta_centered_minus_raw": 0.08035265733207642,
+      "raw_stage_changes": 1,
+      "centered_stage_changes": 1,
+      "raw_collapsed": false,
+      "centered_collapsed": false
+    }
+  ],
+  "warnings": [
+    "All evaluated bearings were previously inspected; this is not a blind test.",
+    "Normalized lifetime is a time proxy, not a physical damage label.",
+    "Training-bearing metrics are descriptive and not generalization evidence.",
+    "The first 15 measurements are assumed to provide a local reference; this assumption is not physically labeled.",
+    "Only centering is tested here; bearing-specific scale normalization is deliberately excluded."
+  ],
+  "duration_seconds": 1.672000000020489,
+  "outputs": [
+    "per_step_states.csv",
+    "bearing_metrics.csv",
+    "representation_comparison.csv",
+    "hmm_parameters.json",
+    "experiment_report.json"
+  ]
+}

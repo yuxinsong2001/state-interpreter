@@ -1,0 +1,23 @@
+{
+  "experiment_id": "xjtu_hmm_bearing_centering_v1",
+  "status": "exploratory_ablation",
+  "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+  "output_dir": "results/2026-09-16_hmm_bearing_centering_ablation",
+  "training_split": "train",
+  "calibration_steps": 15,
+  "num_states": 3,
+  "max_iterations": 100,
+  "tolerance": 0.0001,
+  "variance_floor": 0.0001,
+  "transition_floor": 0.000001,
+  "filtering_domain": "log",
+  "common_score_start_step": 15,
+  "notes": [
+    "This experiment changes only the HMM input representation.",
+    "The control uses archived raw z embeddings.",
+    "The treatment subtracts each bearing's own first-15-embedding mean.",
+    "No bearing-specific scale normalization is applied.",
+    "The AutoEncoder, training split, HMM structure, HMM hyperparameters and scoring interval are unchanged.",
+    "All bearings were inspected previously, so this is an exploratory ablation and not a blind test."
+  ]
+}

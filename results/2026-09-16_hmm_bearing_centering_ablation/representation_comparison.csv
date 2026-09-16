@@ -1,0 +1,6 @@
+bearing_id,split,raw_spearman_rho,centered_spearman_rho,rho_delta_centered_minus_raw,raw_stage_changes,centered_stage_changes,raw_collapsed,centered_collapsed
+Bearing1_1,train,0.8539491708033325,0.9162929304932526,0.06234375968992001,1,8,False,False
+Bearing1_2,train,0.8343384319670174,0.8313675630680473,-0.002970868898970136,2,2,False,False
+Bearing1_3,train,0.9140345996827635,0.9460936350184548,0.03205903533569132,2,2,False,False
+Bearing1_4,validation,nan,0.962268288705045,nan,0,2,True,False
+Bearing1_5,holdout_test,0.8159156512341678,0.8962683085662442,0.08035265733207642,1,1,False,False
