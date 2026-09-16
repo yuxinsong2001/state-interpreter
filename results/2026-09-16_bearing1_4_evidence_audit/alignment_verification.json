@@ -1,0 +1,33 @@
+{
+  "rows": 122,
+  "max_latent_absolute_difference": 1.430511474609375e-06,
+  "allclose_rtol_1e-5_atol_1e-5": true,
+  "endpoint_sensitivity_descriptive_only": {
+    "rms_h": {
+      "without_final_rho": 0.7461929277875624,
+      "final_over_previous": 4.151953970367727,
+      "median_measurements_16_45": 0.38572992324150507,
+      "median_measurements_92_121": 0.48087283246222123
+    },
+    "rms_v": {
+      "without_final_rho": 0.8122950819672129,
+      "final_over_previous": 3.269536615101644,
+      "median_measurements_16_45": 0.5576447939511066,
+      "median_measurements_92_121": 0.7084556262102903
+    },
+    "latent_pc1": {
+      "without_final_rho": 0.8438897168405363,
+      "final_over_previous": 0.28560038475767036,
+      "median_measurements_16_45": -16.701435115839665,
+      "median_measurements_92_121": -12.732828158616329
+    },
+    "local_distance": {
+      "without_final_rho": 0.8702343855846089,
+      "final_over_previous": 3.6924309477278756,
+      "median_measurements_16_45": 0.7773234791156526,
+      "median_measurements_92_121": 3.2099709290661487
+    }
+  },
+  "torch_version": "2.13.0+cpu",
+  "note": "Original metrics unchanged; endpoint exclusion is a declared diagnostic, not model selection."
+}
