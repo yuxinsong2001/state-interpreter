@@ -54,7 +54,7 @@ class LeftRightGaussianHMMStateInterpreter:
         self.variance_floor = variance_floor
         self.transition_floor = transition_floor
         self._fitted = False
-        self._filtered_probabilities: torch.Tensor | None = None
+        self._filtered_log_probabilities: torch.Tensor | None = None
 
     @property
     def fitted(self) -> bool:
@@ -246,7 +246,7 @@ class LeftRightGaussianHMMStateInterpreter:
     def reset(self) -> None:
         """Reset causal filtering before a new bearing sequence."""
 
-        self._filtered_probabilities = None
+        self._filtered_log_probabilities = None
 
     def update(self, z: torch.Tensor) -> HMMStateOutput:
         """Consume one embedding and return a causal filtered state estimate."""
@@ -255,17 +255,22 @@ class LeftRightGaussianHMMStateInterpreter:
             raise RuntimeError("fit must be called before update")
         current = self._validate_observation(z)
         standardized = (current - self.feature_mean_) / self.feature_std_
-        likelihood = torch.exp(self._log_emissions(standardized[None, :])[0])
-        if self._filtered_probabilities is None:
-            prior = self.start_probabilities_
+        log_likelihood = self._log_emissions(standardized[None, :])[0]
+        log_start, log_transition = self._log_parameters()
+        if self._filtered_log_probabilities is None:
+            log_prior = log_start
         else:
-            prior = self._filtered_probabilities @ self.transition_matrix_
-        posterior = prior * likelihood
-        denominator = posterior.sum()
-        if not bool(torch.isfinite(denominator)) or float(denominator) <= 0.0:
-            raise RuntimeError("HMM filtering produced invalid probabilities")
-        posterior = posterior / denominator
-        self._filtered_probabilities = posterior
+            log_prior = torch.logsumexp(
+                self._filtered_log_probabilities[:, None] + log_transition,
+                dim=0,
+            )
+        log_posterior = log_prior + log_likelihood
+        normalizer = torch.logsumexp(log_posterior, dim=0)
+        if not bool(torch.isfinite(normalizer)):
+            raise RuntimeError("HMM filtering produced invalid log probabilities")
+        log_posterior = log_posterior - normalizer
+        posterior = torch.exp(log_posterior)
+        self._filtered_log_probabilities = log_posterior
         indices = torch.arange(self.num_states, dtype=torch.float64)
         expected = (posterior * indices).sum() / (self.num_states - 1)
         confidence, stage = posterior.max(dim=0)

@@ -1,0 +1,22 @@
+{
+  "experiment_id": "xjtu_hmm_interpreter_v1_1_log_filter",
+  "status": "exploratory_numerical_check",
+  "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+  "output_dir": "results/2026-09-16_hmm_interpreter_log_filter_check",
+  "training_split": "train",
+  "num_states": 3,
+  "max_iterations": 100,
+  "tolerance": 0.0001,
+  "variance_floor": 0.0001,
+  "transition_floor": 0.000001,
+  "filtering_domain": "log",
+  "baseline_calibration_steps": 15,
+  "baseline_temporal_window": 10,
+  "common_score_start_step": 15,
+  "notes": [
+    "This configuration changes only causal HMM filtering from probability domain to log domain.",
+    "The AutoEncoder, latent CSV, HMM fitting parameters and scoring interval are unchanged from v1.",
+    "The output directory is new; the v1 result remains immutable.",
+    "All bearings were inspected previously, so this is a numerical exploratory check, not a blind test."
+  ]
+}

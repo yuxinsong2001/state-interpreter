@@ -240,7 +240,7 @@ def main() -> None:
         "common_score_start_step": int(config["common_score_start_step"]),
         "hmm": {
             "num_states": hmm.num_states,
-            "inference": "causal filtered probabilities using current and past embeddings",
+            "inference": "causal log-domain filtered probabilities using current and past embeddings",
             "fitting": "EM on complete training sequences with diagonal Gaussian emissions",
             "state_order": "relative-time initialization plus left-to-right self/next transitions",
         },

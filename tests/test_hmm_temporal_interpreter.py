@@ -62,6 +62,19 @@ def test_transform_is_causal_and_resettable() -> None:
         )
 
 
+def test_log_domain_filtering_handles_extreme_observation() -> None:
+    model = LeftRightGaussianHMMStateInterpreter(
+        embedding_dim=1, num_states=3, max_iterations=10
+    ).fit(synthetic_sequences())
+
+    output = model.update(torch.tensor([1_000_000.0]))
+
+    assert bool(torch.isfinite(output.stage_probabilities).all())
+    torch.testing.assert_close(
+        output.stage_probabilities.sum(), torch.tensor(1.0, dtype=torch.float64)
+    )
+
+
 def test_hmm_rejects_invalid_use_and_inputs() -> None:
     model = LeftRightGaussianHMMStateInterpreter(embedding_dim=2, num_states=3)
     with pytest.raises(RuntimeError, match="fit"):

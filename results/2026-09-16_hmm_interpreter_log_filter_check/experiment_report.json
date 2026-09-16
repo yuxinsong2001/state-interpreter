@@ -1,0 +1,173 @@
+{
+  "status": "completed",
+  "verification_status": "unverified_exploratory",
+  "experiment_id": "xjtu_hmm_interpreter_v1_1_log_filter",
+  "input": "D:\\1\\德国留学\\斯图加特大学在校资料\\hiwi工作\\state-interpreter\\runs\\latent_analysis_z8_20260801\\latent_trajectories.csv",
+  "input_sha256": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+  "config": "D:\\1\\德国留学\\斯图加特大学在校资料\\hiwi工作\\state-interpreter\\configs\\xjtu_hmm_interpreter_v1_1.json",
+  "config_sha256": "977d4ded8789b8bf252a090a8e85a4ae1654f1871f17cb611dad9dc0b896f896",
+  "train_bearings": [
+    "Bearing1_1",
+    "Bearing1_2",
+    "Bearing1_3"
+  ],
+  "evaluated_bearings": [
+    "Bearing1_1",
+    "Bearing1_2",
+    "Bearing1_3",
+    "Bearing1_4",
+    "Bearing1_5"
+  ],
+  "common_score_start_step": 15,
+  "hmm": {
+    "num_states": 3,
+    "inference": "causal log-domain filtered probabilities using current and past embeddings",
+    "fitting": "EM on complete training sequences with diagonal Gaussian emissions",
+    "state_order": "relative-time initialization plus left-to-right self/next transitions"
+  },
+  "metrics": [
+    {
+      "bearing_id": "Bearing1_1",
+      "split": "train",
+      "method": "distance_baseline",
+      "score_samples": 108,
+      "spearman_rho": 0.9640553697828841,
+      "first_last_delta": 8.47518014907837,
+      "mean_absolute_step": 0.08950172183669616,
+      "step_std": 0.14249793513879866,
+      "backward_step_fraction": 0.1308411214953271,
+      "stage_changes": "",
+      "mean_confidence": ""
+    },
+    {
+      "bearing_id": "Bearing1_1",
+      "split": "train",
+      "method": "hmm",
+      "score_samples": 108,
+      "spearman_rho": 0.8539491708033325,
+      "first_last_delta": 0.5,
+      "mean_absolute_step": 0.004672897196261682,
+      "step_std": 0.048110421219565415,
+      "backward_step_fraction": 0.0,
+      "stage_changes": 1,
+      "mean_confidence": 1.0
+    },
+    {
+      "bearing_id": "Bearing1_2",
+      "split": "train",
+      "method": "distance_baseline",
+      "score_samples": 146,
+      "spearman_rho": 0.9940231170408648,
+      "first_last_delta": 11.911071479320526,
+      "mean_absolute_step": 0.08577041667083214,
+      "step_std": 0.14593033951610374,
+      "backward_step_fraction": 0.19310344827586207,
+      "stage_changes": "",
+      "mean_confidence": ""
+    },
+    {
+      "bearing_id": "Bearing1_2",
+      "split": "train",
+      "method": "hmm",
+      "score_samples": 146,
+      "spearman_rho": 0.8343384319670174,
+      "first_last_delta": 1.0,
+      "mean_absolute_step": 0.0068965517288756585,
+      "step_std": 0.05831563472324839,
+      "backward_step_fraction": 0.0,
+      "stage_changes": 2,
+      "mean_confidence": 0.9999999996313607
+    },
+    {
+      "bearing_id": "Bearing1_3",
+      "split": "train",
+      "method": "distance_baseline",
+      "score_samples": 143,
+      "spearman_rho": 0.9543771955743785,
+      "first_last_delta": 11.847296439111233,
+      "mean_absolute_step": 0.08903463599337659,
+      "step_std": 0.08458392907171333,
+      "backward_step_fraction": 0.1619718309859155,
+      "stage_changes": "",
+      "mean_confidence": ""
+    },
+    {
+      "bearing_id": "Bearing1_3",
+      "split": "train",
+      "method": "hmm",
+      "score_samples": 143,
+      "spearman_rho": 0.9140345996827635,
+      "first_last_delta": 1.0,
+      "mean_absolute_step": 0.00704353777831882,
+      "step_std": 0.05891697710134529,
+      "backward_step_fraction": 0.02112676056338028,
+      "stage_changes": 2,
+      "mean_confidence": 0.9999968677645167
+    },
+    {
+      "bearing_id": "Bearing1_4",
+      "split": "validation",
+      "method": "distance_baseline",
+      "score_samples": 107,
+      "spearman_rho": 0.8489488430415958,
+      "first_last_delta": 3.255563497543335,
+      "mean_absolute_step": 0.0544970766553339,
+      "step_std": 0.11083335698297077,
+      "backward_step_fraction": 0.3867924528301887,
+      "stage_changes": "",
+      "mean_confidence": ""
+    },
+    {
+      "bearing_id": "Bearing1_4",
+      "split": "validation",
+      "method": "hmm",
+      "score_samples": 107,
+      "spearman_rho": NaN,
+      "first_last_delta": 0.0,
+      "mean_absolute_step": 0.0,
+      "step_std": 0.0,
+      "backward_step_fraction": 0.0,
+      "stage_changes": 0,
+      "mean_confidence": 1.0
+    },
+    {
+      "bearing_id": "Bearing1_5",
+      "split": "holdout_test",
+      "method": "distance_baseline",
+      "score_samples": 37,
+      "spearman_rho": 0.9502133712660028,
+      "first_last_delta": 6.901375442743301,
+      "mean_absolute_step": 0.19881385233667162,
+      "step_std": 0.2315434123086962,
+      "backward_step_fraction": 0.2222222222222222,
+      "stage_changes": "",
+      "mean_confidence": ""
+    },
+    {
+      "bearing_id": "Bearing1_5",
+      "split": "holdout_test",
+      "method": "hmm",
+      "score_samples": 37,
+      "spearman_rho": 0.8159156512341678,
+      "first_last_delta": 0.5,
+      "mean_absolute_step": 0.013888888888888888,
+      "step_std": 0.08212352260954796,
+      "backward_step_fraction": 0.0,
+      "stage_changes": 1,
+      "mean_confidence": 0.9999858450846348
+    }
+  ],
+  "warnings": [
+    "All evaluated bearings were previously inspected; this is not a blind test.",
+    "Normalized lifetime is a time proxy, not a physical damage label.",
+    "Training-bearing metrics are descriptive and not generalization evidence.",
+    "HMM state numbers are temporal stages; health semantics are not guaranteed."
+  ],
+  "duration_seconds": 0.5780000000086147,
+  "outputs": [
+    "per_step_states.csv",
+    "bearing_metrics.csv",
+    "hmm_parameters.json",
+    "experiment_report.json"
+  ]
+}

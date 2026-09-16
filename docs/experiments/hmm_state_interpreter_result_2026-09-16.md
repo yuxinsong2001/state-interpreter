@@ -64,3 +64,7 @@ HMM将backward-step比例大幅压低，但不能直接将其解释为更稳健�
 - 单元测试：`tests/test_hmm_temporal_interpreter.py`
 
 第一次尝试因本地缺少可选的matplotlib而在读取数据前退出；移除非必要绘图依赖并获得用户明确确认后，第二次运行成功。生成的`experiment_report.json`仍包含一句关于展示用绘图归一化的旧提示，但实际输出清单没有图像；该提示不影响任何数值，脚本随后已删除这句过期提示。
+
+## 后续数值验证
+
+HMM在线过滤随后改为log-domain，并通过极端embedding测试。新旧版本在616个时间步上的阶段概率、期望阶段、置信度和离散阶段完全一致，最大绝对差为0。因此，过度置信和Bearing1_4状态塌缩不是概率域下溢伪影。完整验证见`hmm_log_filter_validation_2026-09-16.md`。
