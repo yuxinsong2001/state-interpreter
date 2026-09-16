@@ -45,6 +45,11 @@
 - `arm_b_target_autoencoder_training_result_2026-08-02.md`：分支B在第二工况训练同结构 `z=8` AutoEncoder的训练与验证结果。
 - `v0_1_stability_study_2026-09-12.md`：两个工况、5折bearing轮换和3个随机种子的30次稳定性实验与方法选择结论。
 - `bearing1_4_diagnosis_2026-09-12.md`：最弱bearing的重建误差、seed一致性和窗口敏感性事后诊断。
+- `gru_predictive_interpreter_result_2026-09-16.md`：第一版因果Predictive GRU与距离/HMM基线比较。
+- `gru_predictive_multiseed_result_2026-09-16.md`：三个随机种子的GRU稳定性与精确复现结果。
+- `gru_readout_comparison_result_2026-09-16.md`：冻结checkpoint后的hidden、predicted-z与residual读出比较。
+- `gru_temporal_ranking_protocol_2026-09-16.md`：加入时间排序弱监督的配对实验预设协议。
+- `gru_temporal_ranking_result_2026-09-16.md`：三seed配对结果、人工输入诊断、失败门槛与后续决策。
 
 ### `meetings/`：组会纪要与周报
 
@@ -78,7 +83,7 @@
 - 代码仓库中的 `docs/` 便于结合实现、测试和实验工件阅读。
 - `work_log.md` 和 `presentation_notes.md` 属于个人持续记录，只保留在 handover 仓库，不进行双份维护。
 
-最新实验：`experiments/arm_b_adapted_encoder_dev_result_2026-08-02.md` 记录目标工况 Encoder 配合固定 State Interpreter 的开发集结果及 Arm A/B 比较。
+最新实验：`experiments/gru_temporal_ranking_result_2026-09-16.md` 记录GRU时间排序目标的三seed配对实验。该固定设置未通过稳定性推进门槛，当前不升级默认Level。
 
 本周最终步骤：`experiments/joint_evaluation_rehearsal_2026-08-02.md` 记录 Arm A/B 在 Bearing2_4 上共享单次输入物化的联合评估演练；Bearing2_5 仍未读取。
 

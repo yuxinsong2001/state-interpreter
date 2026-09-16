@@ -1,0 +1,3 @@
+bearing_id,std_reduced_20_percent,mean_rho_preserved,worst_seed_preserved,prediction_preserved,no_collapse,constant_input_check,supports_next_validation
+Bearing1_4,False,True,False,True,True,True,False
+Bearing1_5,False,True,True,True,True,True,False

@@ -1,0 +1,5 @@
+{
+  "status": "completed_after_plot_dependency_recovery",
+  "config_sha256": "e01a4ba33881f475689b683c65b2e62bf11a3e3d5ef3b964c5bce421f45c0577",
+  "recovery_record": "recovery_record.json"
+}

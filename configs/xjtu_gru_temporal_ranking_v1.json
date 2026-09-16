@@ -1,0 +1,42 @@
+{
+  "experiment_id": "xjtu_gru_temporal_ranking_v1",
+  "status": "exploratory_paired_objective_ablation",
+  "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+  "reference_checkpoints": "results/2026-09-16_gru_predictive_multiseed_stability",
+  "output_dir": "results/2026-09-16_gru_temporal_ranking",
+  "train_bearings": ["Bearing1_1", "Bearing1_2", "Bearing1_3"],
+  "validation_bearing": "Bearing1_4",
+  "old_holdout_bearing": "Bearing1_5",
+  "random_seeds": [20260916, 20260917, 20260918],
+  "calibration_steps": 15,
+  "temporal_window": 10,
+  "common_score_start_step": 25,
+  "hidden_dim": 8,
+  "num_layers": 1,
+  "learning_rate": 0.001,
+  "weight_decay": 0.00001,
+  "max_epochs": 300,
+  "patience": 40,
+  "minimum_improvement": 1e-8,
+  "gradient_clip_norm": 1.0,
+  "ranking_weight": 0.1,
+  "ranking_margin": 0.05,
+  "pair_lag": 10,
+  "checkpoint_selection": "validation_next_step_mse_only",
+  "negative_control_seed": 91700,
+  "hard_timeout_seconds": 1800,
+  "decision": {
+    "required_std_reduction_fraction_each_bearing": 0.2,
+    "maximum_mean_rho_drop_each_bearing": 0.01,
+    "maximum_prediction_mse_increase_fraction_each_bearing": 0.1,
+    "constant_input_range_fraction_flag": 0.1
+  },
+  "notes": [
+    "Two paired arms differ only by auxiliary training ranking weight (0 versus 0.1).",
+    "Chronological order is weak supervision; time and normalized lifetime are not inputs or regression targets.",
+    "Ranking compares full-window hidden-distance Level at fixed lag 10 on training bearings only.",
+    "Checkpoint selection remains validation prediction MSE for both arms.",
+    "All bearing data have been inspected previously; this is not blind evaluation.",
+    "No sweep or after-result hyperparameter changes; constant and shuffled input are diagnostics only."
+  ]
+}

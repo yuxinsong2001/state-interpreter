@@ -1,0 +1,23 @@
+{
+  "original_execution_record": {
+    "status": "running",
+    "config_sha256": "e01a4ba33881f475689b683c65b2e62bf11a3e3d5ef3b964c5bce421f45c0577",
+    "started_local": "2026-09-16T23:08:17+0800"
+  },
+  "original_exit_code": 1,
+  "failure": "ModuleNotFoundError: matplotlib during final plotting after all training and metric tables completed",
+  "action": "installed plotting dependency, reloaded frozen checkpoints, verified inference, finalized report",
+  "retrained": false,
+  "finalization_max_level_difference": 0.0,
+  "finalization_max_mse_difference": 0.0,
+  "numeric_artifacts_unchanged": true,
+  "row_counts": {
+    "training_history.csv": 1800,
+    "training_summary.csv": 6,
+    "per_seed_bearing_metrics.csv": 35,
+    "per_step_levels.csv": 3696,
+    "negative_control_metrics.csv": 60,
+    "summary_by_bearing.csv": 15,
+    "decision_checks.csv": 2
+  }
+}

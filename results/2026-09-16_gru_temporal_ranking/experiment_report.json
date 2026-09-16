@@ -1,0 +1,374 @@
+{
+  "status": "completed_after_plot_dependency_recovery",
+  "verification_status": "exact_control_and_inference_reproduction",
+  "config": {
+    "experiment_id": "xjtu_gru_temporal_ranking_v1",
+    "status": "exploratory_paired_objective_ablation",
+    "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+    "reference_checkpoints": "results/2026-09-16_gru_predictive_multiseed_stability",
+    "output_dir": "results/2026-09-16_gru_temporal_ranking",
+    "train_bearings": [
+      "Bearing1_1",
+      "Bearing1_2",
+      "Bearing1_3"
+    ],
+    "validation_bearing": "Bearing1_4",
+    "old_holdout_bearing": "Bearing1_5",
+    "random_seeds": [
+      20260916,
+      20260917,
+      20260918
+    ],
+    "calibration_steps": 15,
+    "temporal_window": 10,
+    "common_score_start_step": 25,
+    "hidden_dim": 8,
+    "num_layers": 1,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "max_epochs": 300,
+    "patience": 40,
+    "minimum_improvement": 1e-08,
+    "gradient_clip_norm": 1.0,
+    "ranking_weight": 0.1,
+    "ranking_margin": 0.05,
+    "pair_lag": 10,
+    "checkpoint_selection": "validation_next_step_mse_only",
+    "negative_control_seed": 91700,
+    "hard_timeout_seconds": 1800,
+    "decision": {
+      "required_std_reduction_fraction_each_bearing": 0.2,
+      "maximum_mean_rho_drop_each_bearing": 0.01,
+      "maximum_prediction_mse_increase_fraction_each_bearing": 0.1,
+      "constant_input_range_fraction_flag": 0.1
+    },
+    "notes": [
+      "Two paired arms differ only by auxiliary training ranking weight (0 versus 0.1).",
+      "Chronological order is weak supervision; time and normalized lifetime are not inputs or regression targets.",
+      "Ranking compares full-window hidden-distance Level at fixed lag 10 on training bearings only.",
+      "Checkpoint selection remains validation prediction MSE for both arms.",
+      "All bearing data have been inspected previously; this is not blind evaluation.",
+      "No sweep or after-result hyperparameter changes; constant and shuffled input are diagnostics only."
+    ]
+  },
+  "input_sha256": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+  "config_sha256": "e01a4ba33881f475689b683c65b2e62bf11a3e3d5ef3b964c5bce421f45c0577",
+  "source_sha256": {
+    "scripts\\run_gru_temporal_ranking.py": "8ab204cf2940126ee3a522a17b05cad2b624f6e3c4ab508d8dd1479d96e2d32a",
+    "scripts\\finalize_gru_temporal_ranking.py": "6a05f6d92b4e93f1d144726196ec55b4bc7920c68bc9d5e3174609e17a2893df",
+    "src\\state_interpreter\\temporal_ranking.py": "05784887670dbcbb7ffffad9afc45e7862d520b450da33ed7f42627f0b86a302",
+    "src\\state_interpreter\\gru_temporal.py": "ead8bd3802401a8ee65eb9c6abfd7df0ca481dda77309183a83d2a9237bc328b",
+    "scripts\\run_gru_interpreter_exploratory.py": "35b66636d1dfda6b84d970c1ff29ea548cd8a53b92469ea4f958a0e8c28f6b44"
+  },
+  "checkpoint_sha256": {
+    "control_seed_20260916_checkpoint.pt": "c22f13764697fce8b2b52824604c24d1e3c0739f0b0ff34aa73ccc113ed67f64",
+    "control_seed_20260917_checkpoint.pt": "28b421c51f90b0e19a75938f5abf29aa5c6106b713e8949de8cfc108f25ec139",
+    "control_seed_20260918_checkpoint.pt": "e6a72b290bc9ebde4b2874b726225a4110c6196cec67170b2e699b4a12caf14d",
+    "ranking_seed_20260916_checkpoint.pt": "35850f1773f50c4e7295317a376197a1dc11948e85e2335a21ce22ffb2529fa1",
+    "ranking_seed_20260917_checkpoint.pt": "6be25f58cb350eaef8229a24bff524c32437af3b8ce8058e9da0cbcf18d08367",
+    "ranking_seed_20260918_checkpoint.pt": "83e8aca14c8a19efddf5de226eb66aa0f0b0726ff0e520443d8af2f99bc45180"
+  },
+  "original_checkpoint_sha256": {
+    "seed_20260916": "d9d41b14234f7b0ff4afb16ca6e8d5c3955661f09e792f8d372bb9e21b288a0d",
+    "seed_20260917": "5d9a9fb63ab97dfc8bec885ac730b24470d5dcb7242f2f73ffbfd3e5309b4589",
+    "seed_20260918": "31f378167785b7a9054c76479b98b61d62239a290053add9e782ee411fd55782"
+  },
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "C:\\Users\\syx\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "torch": "2.13.0+cpu",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_head": "06473c91f6aaddb93d14598c9018cbe4823d0afb"
+  },
+  "row_counts": {
+    "training_history.csv": 1800,
+    "training_summary.csv": 6,
+    "per_seed_bearing_metrics.csv": 35,
+    "per_step_levels.csv": 3696,
+    "negative_control_metrics.csv": 60,
+    "summary_by_bearing.csv": 15,
+    "decision_checks.csv": 2
+  },
+  "reproduction": [
+    {
+      "seed": 20260916,
+      "exact_match": true
+    },
+    {
+      "seed": 20260917,
+      "exact_match": true
+    },
+    {
+      "seed": 20260918,
+      "exact_match": true
+    }
+  ],
+  "finalization_max_level_difference": 0.0,
+  "finalization_max_mse_difference": 0.0,
+  "numeric_artifacts_unchanged": true,
+  "summaries": [
+    {
+      "arm": "distance",
+      "bearing_id": "Bearing1_1",
+      "rho_mean": "0.9519027854815777",
+      "rho_std": "",
+      "rho_min": "0.9519027854815777",
+      "rho_max": "0.9519027854815777",
+      "next_step_mse_mean": "",
+      "backward_fraction_mean": "0.13402061855670103",
+      "normalized_step_std_mean": "0.018672827367522047",
+      "collapse_count": "0"
+    },
+    {
+      "arm": "distance",
+      "bearing_id": "Bearing1_2",
+      "rho_mean": "0.996507800200372",
+      "rho_std": "",
+      "rho_min": "0.996507800200372",
+      "rho_max": "0.996507800200372",
+      "next_step_mse_mean": "",
+      "backward_fraction_mean": "0.15555555555555556",
+      "normalized_step_std_mean": "0.012457644571273175",
+      "collapse_count": "0"
+    },
+    {
+      "arm": "distance",
+      "bearing_id": "Bearing1_3",
+      "rho_mean": "0.9597739259954499",
+      "rho_std": "",
+      "rho_min": "0.9597739259954499",
+      "rho_max": "0.9597739259954499",
+      "next_step_mse_mean": "",
+      "backward_fraction_mean": "0.17424242424242425",
+      "normalized_step_std_mean": "0.0073583393501627245",
+      "collapse_count": "0"
+    },
+    {
+      "arm": "distance",
+      "bearing_id": "Bearing1_4",
+      "rho_mean": "0.8531190826846202",
+      "rho_std": "",
+      "rho_min": "0.8531190826846202",
+      "rho_max": "0.8531190826846202",
+      "next_step_mse_mean": "",
+      "backward_fraction_mean": "0.40625",
+      "normalized_step_std_mean": "0.034404818518654595",
+      "collapse_count": "0"
+    },
+    {
+      "arm": "distance",
+      "bearing_id": "Bearing1_5",
+      "rho_mean": "0.9713064713064712",
+      "rho_std": "",
+      "rho_min": "0.9713064713064712",
+      "rho_max": "0.9713064713064712",
+      "next_step_mse_mean": "",
+      "backward_fraction_mean": "0.15384615384615385",
+      "normalized_step_std_mean": "0.033591732879115266",
+      "collapse_count": "0"
+    },
+    {
+      "arm": "control",
+      "bearing_id": "Bearing1_1",
+      "rho_mean": "0.9517965261706056",
+      "rho_std": "0.0005779412567521069",
+      "rho_min": "0.9514564963754948",
+      "rho_max": "0.9524638346435105",
+      "next_step_mse_mean": "0.02530782048900922",
+      "backward_fraction_mean": "0.140893470790378",
+      "normalized_step_std_mean": "0.017573472191030354",
+      "collapse_count": "0"
+    },
+    {
+      "arm": "control",
+      "bearing_id": "Bearing1_2",
+      "rho_mean": "0.999615158309877",
+      "rho_std": "8.11497595354899e-05",
+      "rho_min": "0.9995324650541481",
+      "rho_max": "0.9996946710557701",
+      "next_step_mse_mean": "0.02056075694660346",
+      "backward_fraction_mean": "0.054320987654320994",
+      "normalized_step_std_mean": "0.013270348954545921",
+      "collapse_count": "0"
+    },
+    {
+      "arm": "control",
+      "bearing_id": "Bearing1_3",
+      "rho_mean": "0.9634245042728938",
+      "rho_std": "0.00209845162638959",
+      "rho_min": "0.9610032544046684",
+      "rho_max": "0.9647167443711041",
+      "next_step_mse_mean": "0.012702209564546743",
+      "backward_fraction_mean": "0.16161616161616163",
+      "normalized_step_std_mean": "0.0072154646109206825",
+      "collapse_count": "0"
+    },
+    {
+      "arm": "control",
+      "bearing_id": "Bearing1_4",
+      "rho_mean": "0.8283715548074899",
+      "rho_std": "0.06321353269848944",
+      "rho_min": "0.756377551020408",
+      "rho_max": "0.8747896065642752",
+      "next_step_mse_mean": "0.055216932048400245",
+      "backward_fraction_mean": "0.4131944444444444",
+      "normalized_step_std_mean": "0.02644230931798879",
+      "collapse_count": "0"
+    },
+    {
+      "arm": "control",
+      "bearing_id": "Bearing1_5",
+      "rho_mean": "0.9489214489214489",
+      "rho_std": "0.03197026409719737",
+      "rho_min": "0.9255189255189256",
+      "rho_max": "0.9853479853479853",
+      "next_step_mse_mean": "0.032101668417453766",
+      "backward_fraction_mean": "0.15384615384615385",
+      "normalized_step_std_mean": "0.03404744610033459",
+      "collapse_count": "0"
+    },
+    {
+      "arm": "ranking",
+      "bearing_id": "Bearing1_1",
+      "rho_mean": "0.9517965261706056",
+      "rho_std": "0.0005779412567521069",
+      "rho_min": "0.9514564963754948",
+      "rho_max": "0.9524638346435105",
+      "next_step_mse_mean": "0.02519399548570315",
+      "backward_fraction_mean": "0.140893470790378",
+      "normalized_step_std_mean": "0.017368724595514123",
+      "collapse_count": "0"
+    },
+    {
+      "arm": "ranking",
+      "bearing_id": "Bearing1_2",
+      "rho_mean": "0.9996755879967557",
+      "rho_std": "4.55101951918622e-05",
+      "rho_min": "0.9996231095844663",
+      "rho_max": "0.9997042125852774",
+      "next_step_mse_mean": "0.02059970051050186",
+      "backward_fraction_mean": "0.041975308641975316",
+      "normalized_step_std_mean": "0.013159672099263801",
+      "collapse_count": "0"
+    },
+    {
+      "arm": "ranking",
+      "bearing_id": "Bearing1_3",
+      "rho_mean": "0.9635384254394467",
+      "rho_std": "0.002054175158284452",
+      "rho_min": "0.9611664847328634",
+      "rho_max": "0.9647320472143723",
+      "next_step_mse_mean": "0.012816689908504486",
+      "backward_fraction_mean": "0.16161616161616163",
+      "normalized_step_std_mean": "0.007187676289410445",
+      "collapse_count": "0"
+    },
+    {
+      "arm": "ranking",
+      "bearing_id": "Bearing1_4",
+      "rho_mean": "0.8264604810996562",
+      "rho_std": "0.06527003129472914",
+      "rho_min": "0.7525904691773616",
+      "rho_max": "0.8763412581527454",
+      "next_step_mse_mean": "0.05505877857406934",
+      "backward_fraction_mean": "0.4166666666666667",
+      "normalized_step_std_mean": "0.026506245234801246",
+      "collapse_count": "0"
+    },
+    {
+      "arm": "ranking",
+      "bearing_id": "Bearing1_5",
+      "rho_mean": "0.9470899470899471",
+      "rho_std": "0.026592423644964776",
+      "rho_min": "0.9255189255189256",
+      "rho_max": "0.9768009768009768",
+      "next_step_mse_mean": "0.031971060360471405",
+      "backward_fraction_mean": "0.15384615384615385",
+      "normalized_step_std_mean": "0.03405844585601588",
+      "collapse_count": "0"
+    }
+  ],
+  "training_summary": [
+    {
+      "arm": "control",
+      "seed": "20260916",
+      "epochs_completed": "300",
+      "best_epoch": "300",
+      "validation_prediction_mse": "0.05524745211005211",
+      "paired_initialization_exact": "True"
+    },
+    {
+      "arm": "ranking",
+      "seed": "20260916",
+      "epochs_completed": "300",
+      "best_epoch": "300",
+      "validation_prediction_mse": "0.05497787147760391",
+      "paired_initialization_exact": "True"
+    },
+    {
+      "arm": "control",
+      "seed": "20260917",
+      "epochs_completed": "300",
+      "best_epoch": "300",
+      "validation_prediction_mse": "0.05562996491789818",
+      "paired_initialization_exact": "True"
+    },
+    {
+      "arm": "ranking",
+      "seed": "20260917",
+      "epochs_completed": "300",
+      "best_epoch": "300",
+      "validation_prediction_mse": "0.05557122454047203",
+      "paired_initialization_exact": "True"
+    },
+    {
+      "arm": "control",
+      "seed": "20260918",
+      "epochs_completed": "300",
+      "best_epoch": "300",
+      "validation_prediction_mse": "0.05477337911725044",
+      "paired_initialization_exact": "True"
+    },
+    {
+      "arm": "ranking",
+      "seed": "20260918",
+      "epochs_completed": "300",
+      "best_epoch": "300",
+      "validation_prediction_mse": "0.05462723970413208",
+      "paired_initialization_exact": "True"
+    }
+  ],
+  "decisions": [
+    {
+      "bearing_id": "Bearing1_4",
+      "std_reduced_20_percent": "False",
+      "mean_rho_preserved": "True",
+      "worst_seed_preserved": "False",
+      "prediction_preserved": "True",
+      "no_collapse": "True",
+      "constant_input_check": "True",
+      "supports_next_validation": "False"
+    },
+    {
+      "bearing_id": "Bearing1_5",
+      "std_reduced_20_percent": "False",
+      "mean_rho_preserved": "True",
+      "worst_seed_preserved": "True",
+      "prediction_preserved": "True",
+      "no_collapse": "True",
+      "constant_input_check": "True",
+      "supports_next_validation": "False"
+    }
+  ],
+  "supports_next_validation": false,
+  "pure_time_counter_rho_analytical": 1.0,
+  "limitations": [
+    "Time order is weak training supervision; time correlation does not independently validate health semantics.",
+    "All bearings were inspected previously; Bearing1_4 selects checkpoints and Bearing1_5 is a reused old holdout.",
+    "Only one ranking weight, margin and lag were evaluated.",
+    "Artificial constant and shuffled inputs do not replace physical fault labels."
+  ],
+  "recovery_record": "recovery_record.json"
+}
