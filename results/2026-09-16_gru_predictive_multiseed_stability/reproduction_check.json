@@ -1,0 +1,10 @@
+{
+  "seed": 20260916,
+  "best_epoch_match": true,
+  "validation_mse_absolute_difference": 0.0,
+  "parameter_max_absolute_difference": 0.0,
+  "parameter_nonzero_difference_count": 0,
+  "maximum_bearing_rho_absolute_difference": 0.0,
+  "maximum_bearing_next_step_mse_absolute_difference": 0.0,
+  "exact_match": true
+}

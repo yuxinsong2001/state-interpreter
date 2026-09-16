@@ -1,0 +1,208 @@
+{
+  "status": "completed",
+  "verification_status": "verified_multiseed_exploratory",
+  "experiment_id": "xjtu_gru_predictive_multiseed_v1",
+  "input_sha256": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+  "config_sha256": "6fcae30314a25663fbcfc3a6251c85170e25b3482af8d33cdaa37bca5c554d90",
+  "single_seed_comparison_sha256": "8e9b128ce287c78834acdb51a355e00b62cc26419d6a2aa1772b2fca0ba3ee1e",
+  "random_seeds": [
+    20260916,
+    20260917,
+    20260918
+  ],
+  "train_bearings": [
+    "Bearing1_1",
+    "Bearing1_2",
+    "Bearing1_3"
+  ],
+  "validation_bearing": "Bearing1_4",
+  "old_holdout_bearing": "Bearing1_5",
+  "reproduction": {
+    "seed": 20260916,
+    "best_epoch_match": true,
+    "validation_mse_absolute_difference": 0.0,
+    "parameter_max_absolute_difference": 0.0,
+    "parameter_nonzero_difference_count": 0,
+    "maximum_bearing_rho_absolute_difference": 0.0,
+    "maximum_bearing_next_step_mse_absolute_difference": 0.0,
+    "exact_match": true
+  },
+  "seed_summaries": [
+    {
+      "seed": 20260916,
+      "best_epoch": 300,
+      "best_validation_next_step_mse": 0.05524745211005211,
+      "mean_bearing_rho_descriptive": 0.9510623353724494,
+      "minimum_bearing_rho": 0.8941495718960011,
+      "maximum_bearing_rho": 0.9988624642110034,
+      "collapse_count": 0
+    },
+    {
+      "seed": 20260917,
+      "best_epoch": 300,
+      "best_validation_next_step_mse": 0.05562996491789818,
+      "mean_bearing_rho_descriptive": 0.8964498111798163,
+      "minimum_bearing_rho": 0.737622210466506,
+      "maximum_bearing_rho": 0.9966336652752741,
+      "collapse_count": 0
+    },
+    {
+      "seed": 20260918,
+      "best_epoch": 300,
+      "best_validation_next_step_mse": 0.05477337911725044,
+      "mean_bearing_rho_descriptive": 0.9377825982710227,
+      "minimum_bearing_rho": 0.8518975685260292,
+      "maximum_bearing_rho": 0.9980179884896803,
+      "collapse_count": 0
+    }
+  ],
+  "bearing_summaries": [
+    {
+      "bearing_id": "Bearing1_1",
+      "split": "train",
+      "gru_rho_mean": 0.9639791553535871,
+      "gru_rho_sample_std": 0.000437300005431384,
+      "gru_rho_min": 0.9637219316547104,
+      "gru_rho_max": 0.9644840759476787,
+      "gru_next_step_mse_mean": 0.02530782048900922,
+      "gru_next_step_mse_sample_std": 0.0007132842484391845,
+      "collapse_count": 0,
+      "mean_pairwise_level_pearson": 0.9998514281416092,
+      "minimum_pairwise_level_pearson": 0.999758419388185,
+      "mean_pairwise_level_spearman": 0.999596698644971,
+      "minimum_pairwise_level_spearman": 0.9994569721912602
+    },
+    {
+      "bearing_id": "Bearing1_2",
+      "split": "train",
+      "gru_rho_mean": 0.9978380393253192,
+      "gru_rho_sample_std": 0.001125243284935639,
+      "gru_rho_min": 0.9966336652752741,
+      "gru_rho_max": 0.9988624642110034,
+      "gru_next_step_mse_mean": 0.02056075694660346,
+      "gru_next_step_mse_sample_std": 0.0008287090023282412,
+      "collapse_count": 0,
+      "mean_pairwise_level_pearson": 0.9998203489357415,
+      "minimum_pairwise_level_pearson": 0.999721285013262,
+      "mean_pairwise_level_spearman": 0.9992724912355119,
+      "minimum_pairwise_level_spearman": 0.9988316157828273
+    },
+    {
+      "bearing_id": "Bearing1_3",
+      "split": "train",
+      "gru_rho_mean": 0.9543949790428662,
+      "gru_rho_sample_std": 0.010565457791522242,
+      "gru_rho_min": 0.9463992580189763,
+      "gru_rho_max": 0.9663728290488852,
+      "gru_next_step_mse_mean": 0.012702209564546743,
+      "gru_next_step_mse_sample_std": 0.0004955648595417513,
+      "collapse_count": 0,
+      "mean_pairwise_level_pearson": 0.9986358456125309,
+      "minimum_pairwise_level_pearson": 0.9980219650817347,
+      "mean_pairwise_level_spearman": 0.9944173588539785,
+      "minimum_pairwise_level_spearman": 0.9922149446797334
+    },
+    {
+      "bearing_id": "Bearing1_4",
+      "split": "validation",
+      "gru_rho_mean": 0.8278897836295122,
+      "gru_rho_sample_std": 0.08097829351590474,
+      "gru_rho_min": 0.737622210466506,
+      "gru_rho_max": 0.8941495718960011,
+      "gru_next_step_mse_mean": 0.055216932048400245,
+      "gru_next_step_mse_sample_std": 0.0004291076952121178,
+      "collapse_count": 0,
+      "mean_pairwise_level_pearson": 0.9975596189902478,
+      "minimum_pairwise_level_pearson": 0.9968721645272178,
+      "mean_pairwise_level_spearman": 0.9294983574652064,
+      "minimum_pairwise_level_spearman": 0.8815513626834381
+    },
+    {
+      "bearing_id": "Bearing1_5",
+      "split": "holdout_test",
+      "gru_rho_mean": 0.8980559506875295,
+      "gru_rho_sample_std": 0.056281220235881085,
+      "gru_rho_min": 0.8330962541488856,
+      "gru_rho_max": 0.9321953532479847,
+      "gru_next_step_mse_mean": 0.032101668417453766,
+      "gru_next_step_mse_sample_std": 0.00105237826858602,
+      "collapse_count": 0,
+      "mean_pairwise_level_pearson": 0.9989110751235298,
+      "minimum_pairwise_level_pearson": 0.9983203460882386,
+      "mean_pairwise_level_spearman": 0.936857910542121,
+      "minimum_pairwise_level_spearman": 0.9300616405879563
+    }
+  ],
+  "method_comparisons": [
+    {
+      "bearing_id": "Bearing1_1",
+      "split": "train",
+      "distance_rho": 0.9640553697828841,
+      "centered_hmm_rho": 0.9162929304932526,
+      "gru_rho_mean": 0.9639791553535871,
+      "gru_rho_sample_std": 0.000437300005431384,
+      "gru_mean_minus_distance": -7.621442929695021e-05,
+      "gru_mean_minus_centered_hmm": 0.04768622486033458
+    },
+    {
+      "bearing_id": "Bearing1_2",
+      "split": "train",
+      "distance_rho": 0.9940231170408648,
+      "centered_hmm_rho": 0.8313675630680473,
+      "gru_rho_mean": 0.9978380393253192,
+      "gru_rho_sample_std": 0.001125243284935639,
+      "gru_mean_minus_distance": 0.0038149222844544584,
+      "gru_mean_minus_centered_hmm": 0.16647047625727196
+    },
+    {
+      "bearing_id": "Bearing1_3",
+      "split": "train",
+      "distance_rho": 0.9543771955743785,
+      "centered_hmm_rho": 0.9460936350184548,
+      "gru_rho_mean": 0.9543949790428662,
+      "gru_rho_sample_std": 0.010565457791522242,
+      "gru_mean_minus_distance": 1.7783468487686527e-05,
+      "gru_mean_minus_centered_hmm": 0.008301344024411406
+    },
+    {
+      "bearing_id": "Bearing1_4",
+      "split": "validation",
+      "distance_rho": 0.8489488430415958,
+      "centered_hmm_rho": 0.962268288705045,
+      "gru_rho_mean": 0.8278897836295122,
+      "gru_rho_sample_std": 0.08097829351590474,
+      "gru_mean_minus_distance": -0.021059059412083636,
+      "gru_mean_minus_centered_hmm": -0.13437850507553284
+    },
+    {
+      "bearing_id": "Bearing1_5",
+      "split": "holdout_test",
+      "distance_rho": 0.9502133712660028,
+      "centered_hmm_rho": 0.8962683085662442,
+      "gru_rho_mean": 0.8980559506875295,
+      "gru_rho_sample_std": 0.056281220235881085,
+      "gru_mean_minus_distance": -0.05215742057847328,
+      "gru_mean_minus_centered_hmm": 0.0017876421212853488
+    }
+  ],
+  "warnings": [
+    "All bearings were inspected previously; this is not a blind test.",
+    "Three seeds provide preliminary, not definitive, stability evidence.",
+    "Seed runs on the same bearing are not independent equipment samples.",
+    "Bearing1_4 selects every checkpoint and is not independent test evidence.",
+    "Normalized lifetime is used only for descriptive evaluation."
+  ],
+  "duration_seconds": 47.125,
+  "outputs": [
+    "seed_*_checkpoint.pt",
+    "training_history.csv",
+    "per_seed_bearing_metrics.csv",
+    "per_step_gru_levels.csv",
+    "per_seed_summary.csv",
+    "trajectory_consistency.csv",
+    "summary_by_bearing.csv",
+    "method_comparison.csv",
+    "reproduction_check.json",
+    "experiment_report.json"
+  ]
+}

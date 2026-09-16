@@ -1,0 +1,30 @@
+{
+  "experiment_id": "xjtu_gru_predictive_multiseed_v1",
+  "status": "exploratory_multiseed_stability",
+  "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+  "centered_hmm_metrics": "results/2026-09-16_hmm_bearing_centering_ablation/bearing_metrics.csv",
+  "single_seed_result": "results/2026-09-16_gru_predictive_interpreter_exploratory",
+  "output_dir": "results/2026-09-16_gru_predictive_multiseed_stability",
+  "training_split": "train",
+  "validation_bearing": "Bearing1_4",
+  "old_holdout_bearing": "Bearing1_5",
+  "calibration_steps": 15,
+  "temporal_window": 10,
+  "hidden_dim": 8,
+  "num_layers": 1,
+  "learning_rate": 0.001,
+  "weight_decay": 0.00001,
+  "max_epochs": 300,
+  "patience": 40,
+  "minimum_improvement": 1e-8,
+  "gradient_clip_norm": 1.0,
+  "random_seeds": [20260916, 20260917, 20260918],
+  "common_score_start_step": 15,
+  "notes": [
+    "All settings are frozen from xjtu_gru_predictive_v1 except the random seed.",
+    "The first seed is rerun to check deterministic reproduction of the previous single-seed experiment.",
+    "Training uses Bearing1_1-Bearing1_3; Bearing1_4 selects checkpoints; Bearing1_5 is an already-inspected old holdout.",
+    "Normalized lifetime is used only for descriptive evaluation.",
+    "This is a three-seed exploratory stability study, not a blind validation."
+  ]
+}
