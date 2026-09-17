@@ -1,0 +1,25 @@
+{
+  "experiment_id": "xjtu_relative_state_v2_integration",
+  "config_sha256": "f39e4ded7e4130b5d8a1843344c5cc312414690ec66080e5d0e39d6f7163c597",
+  "input_sha256": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+  "movement_reference": 0.05926334485411644,
+  "training_movement_median": 1.0000007543192793,
+  "artifact_hashes": {
+    "configs\\xjtu_relative_state_v2_integration.json": "f39e4ded7e4130b5d8a1843344c5cc312414690ec66080e5d0e39d6f7163c597",
+    "runs\\latent_analysis_z8_20260801\\latent_trajectories.csv": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+    "results\\2026-09-17_signed_axis_interpreter\\axis.json": "298df1b363d948efdd76b590e2c53c1cbc11a8e10882b0dad6aff8359fbe8bdd",
+    "results\\2026-09-17_residual_gru_termination\\residual_seed_20260916_checkpoint.pt": "6bec3cbf2a0375e4fd1f6e840457f2d7479448ec4e99c1a0fb4492394873ad75",
+    "results\\2026-09-17_residual_gru_termination\\residual_seed_20260917_checkpoint.pt": "b5d862e7da34a64f774bc4496a08343d09b83ac309e8ca58159d0a57596c554d",
+    "results\\2026-09-17_residual_gru_termination\\residual_seed_20260918_checkpoint.pt": "068233b742232a88c4c011801cce875e42c36f275b99fc7fb56502adcde80cff"
+  },
+  "integrity_checks": {
+    "archived_level_reproduced": true,
+    "prefix_causality": true,
+    "all_finite": true,
+    "movement_nonnegative": true,
+    "training_movement_median_is_one": true,
+    "protected_hashes_unchanged": true
+  },
+  "all_integrity_checks_pass": true,
+  "interpretation": "Relative signals only; no absolute damage, RUL or physical health claim."
+}

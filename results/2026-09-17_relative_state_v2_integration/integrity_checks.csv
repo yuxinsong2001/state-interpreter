@@ -1,0 +1,6 @@
+bearing_id,level_archive_max_abs_error,prefix_max_abs_error,finite,movement_nonnegative
+Bearing1_1,1.6181579276519642e-07,0.0,True,True
+Bearing1_2,1.2529347870327e-07,0.0,True,True
+Bearing1_3,5.8218951437538635e-08,0.0,True,True
+Bearing1_4,1.6988816131657813e-07,0.0,True,True
+Bearing1_5,6.46283835337158e-08,0.0,True,True

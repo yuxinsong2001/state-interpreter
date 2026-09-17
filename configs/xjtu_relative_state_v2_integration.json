@@ -1,0 +1,23 @@
+{
+  "experiment_id": "xjtu_relative_state_v2_integration",
+  "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+  "residual_checkpoint_directory": "results/2026-09-17_residual_gru_termination",
+  "signed_axis_result": "results/2026-09-17_signed_axis_interpreter/axis.json",
+  "output_directory": "results/2026-09-17_relative_state_v2_integration",
+  "training_bearings": ["Bearing1_1", "Bearing1_2", "Bearing1_3"],
+  "evaluation_bearings": ["Bearing1_4", "Bearing1_5"],
+  "random_seeds": [20260916, 20260917, 20260918],
+  "calibration_steps": 15,
+  "temporal_window": 10,
+  "movement_reference_target_start": 15,
+  "score_start_step": 25,
+  "integrity_tolerance": 0.000001,
+  "notes": [
+    "Level is the frozen training-only signed degradation-axis projection with causal smoothing.",
+    "Trend is the causal least-squares slope of the last ten Level outputs.",
+    "Movement is current standardized embedding surprise relative to the ensemble forecast made from the preceding prefix, divided by the training-bearing median surprise.",
+    "All residual checkpoints and the signed axis are frozen; no model is retrained.",
+    "The three outputs are relative signals, not absolute damage, RUL or physical health percentages.",
+    "All bearings have been inspected previously; metrics are descriptive integration diagnostics."
+  ]
+}
