@@ -1,0 +1,33 @@
+{
+  "experiment_id": "xjtu_early_scale_calibration_v1",
+  "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+  "output_directory": "results/2026-09-17_early_scale_calibration",
+  "training_bearings": ["Bearing1_1", "Bearing1_2", "Bearing1_3"],
+  "evaluation_bearings": ["Bearing1_4", "Bearing1_5"],
+  "candidate_methods": ["none", "early_axis_std", "early_latent_rms"],
+  "calibration_steps": 15,
+  "temporal_window": 10,
+  "score_start_step": 25,
+  "stage_thresholds": [0.3333333333333333, 0.6666666666666666],
+  "scale_floor_fraction_of_training_median": 0.1,
+  "logistic_C": 1.0,
+  "ridge_alpha": 1.0,
+  "random_seed": 20260917,
+  "selection_rule": [
+    "highest mean training-LOBO stage balanced accuracy",
+    "then lowest mean training-LOBO lifetime MAE",
+    "then candidate order"
+  ],
+  "evaluation_gates": {
+    "minimum_mean_stage_balanced_accuracy_delta_vs_none": 0.0,
+    "minimum_mean_mae_improvement_vs_none": 0.0,
+    "maximum_single_bearing_mae_increase_fraction": 0.1
+  },
+  "notes": [
+    "Candidate selection is performed only by leave-one-training-bearing-out evaluation within Bearing1_1 to Bearing1_3.",
+    "Each held or evaluation bearing contributes only its first 15 embeddings to its own causal scale and reference.",
+    "The selected method is frozen before Bearing1_4 and Bearing1_5 metrics are computed.",
+    "Normalized lifetime and three equal-width stages are chronological proxies, not physical damage labels.",
+    "All bearings were inspected previously; this is a fixed diagnostic, not a pristine blind test."
+  ]
+}

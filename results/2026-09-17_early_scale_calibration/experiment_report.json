@@ -1,0 +1,29 @@
+{
+  "experiment_id": "xjtu_early_scale_calibration_v1",
+  "config_sha256": "847d27967279a56fad1ed37cfa24d8b7d009842055254e4a93059088052a86ed",
+  "input_sha256": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+  "selected_method_from_training_lobo": "none",
+  "evaluated_methods": [
+    "none"
+  ],
+  "decisions": {
+    "selected_is_baseline": true,
+    "stage_gate": false,
+    "mae_gate": false,
+    "single_bearing_mae_gate": false,
+    "adopt_scale": false
+  },
+  "fallacy_scan_11_of_11": {
+    "1_simpson": "Per-bearing and mean results retained.",
+    "2_ecological": "Inference limited to bearing trajectories.",
+    "3_berkson": "Selected run-to-failure dataset may not represent field population.",
+    "4_collider": "No covariate adjustment.",
+    "5_base_rate": "Balanced accuracy reported; stage prevalence remains dataset-specific.",
+    "6_regression_to_mean": "Early reference is protocol-defined, not selected for extreme values.",
+    "7_survivorship": "Complete archived sequences used; field censoring not represented.",
+    "8_look_elsewhere": "Three candidates and selection rule preregistered.",
+    "9_forking_paths": "Configuration fixed before evaluation and outputs immutable.",
+    "10_correlation_causation": "Time association is not physical damage causation.",
+    "11_reverse_causality": "Chronology is known, but the latent mechanism is not causal evidence."
+  }
+}
