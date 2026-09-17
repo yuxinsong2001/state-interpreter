@@ -1,0 +1,27 @@
+{
+  "experiment_id": "xjtu_signed_axis_interpreter_v1",
+  "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+  "output_directory": "results/2026-09-17_signed_axis_interpreter",
+  "training_bearings": ["Bearing1_1", "Bearing1_2", "Bearing1_3"],
+  "evaluation_bearings": ["Bearing1_4", "Bearing1_5"],
+  "calibration_steps": 15,
+  "temporal_window": 10,
+  "score_start_step": 25,
+  "stage_thresholds": [0.3333333333333333, 0.6666666666666666],
+  "logistic_C": 1.0,
+  "ridge_alpha": 1.0,
+  "random_seed": 20260917,
+  "decision_gates": {
+    "minimum_spearman_delta_vs_euclidean": 0.0,
+    "maximum_backward_fraction_increase": 0.02,
+    "minimum_stage_balanced_accuracy_delta": 0.0,
+    "require_positive_evaluation_spearman": true
+  },
+  "notes": [
+    "Axis, sign, scalar standardization and supervised mappings are fitted only on Bearing1_1 to Bearing1_3.",
+    "Evaluation bearings contribute only their first 15 embeddings to their own online reference.",
+    "Normalized lifetime and stage labels are weak chronological proxies, not physical damage ground truth.",
+    "Bearing1_4 and Bearing1_5 were inspected previously, so this is a fixed-protocol diagnostic, not a pristine blind test.",
+    "No hyperparameter is selected from the evaluation results."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "experiment_id": "xjtu_signed_axis_interpreter_v1",
+  "config_sha256": "429c6f90891968b1ecf2397c226715368b169ef94fa8e657cb31d0668e08f636",
+  "input_sha256": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+  "axis_fit_bearings": [
+    "Bearing1_1",
+    "Bearing1_2",
+    "Bearing1_3"
+  ],
+  "evaluation_bearings": [
+    "Bearing1_4",
+    "Bearing1_5"
+  ],
+  "decisions": [
+    {
+      "bearing_id": "Bearing1_4",
+      "positive_direction": true,
+      "rho_not_worse": true,
+      "backward_not_worse": true,
+      "stage_not_worse": true,
+      "all_gates_pass": true
+    },
+    {
+      "bearing_id": "Bearing1_5",
+      "positive_direction": true,
+      "rho_not_worse": true,
+      "backward_not_worse": true,
+      "stage_not_worse": true,
+      "all_gates_pass": true
+    }
+  ],
+  "continue_signed_axis": true,
+  "fallacy_scan_11_of_11": {
+    "1_measurement_validity": "Normalized lifetime is only a chronological proxy.",
+    "2_population_scope": "One condition and five bearings; no broad population claim.",
+    "3_independence": "Samples within a bearing are dependent; bearing is the evaluation unit.",
+    "4_sample_size": "Only two evaluation bearings; report per-bearing results, not significance.",
+    "5_missing_data": "No missing latent rows detected after selected-bearing filtering.",
+    "6_multiple_testing": "One predeclared signed-axis comparison; no p-value search.",
+    "7_effect_size": "Report rho, backward fraction, balanced accuracy, MAE and R2.",
+    "8_uncertainty": "Insufficient independent bearings for reliable confidence intervals.",
+    "9_model_assumptions": "PCA assumes a common linear direction; failure does not reject nonlinear structure.",
+    "10_leakage": "Axis and mappings use only Bearing1_1-1_3; evaluation bearings supply local early reference only.",
+    "11_causation": "Association with time does not establish physical damage causation."
+  }
+}
