@@ -1,0 +1,31 @@
+{
+  "experiment_id": "xjtu_gru_increment_diagnosis_v1",
+  "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+  "checkpoint_directory": "results/2026-09-16_gru_temporal_ranking",
+  "persistence_reference_directory": "results/2026-09-16_gru_persistence_comparison",
+  "output_directory": "results/2026-09-17_gru_increment_diagnosis",
+  "arms": ["control", "ranking"],
+  "random_seeds": [20260916, 20260917, 20260918],
+  "bearings": ["Bearing1_1", "Bearing1_2", "Bearing1_3", "Bearing1_4", "Bearing1_5"],
+  "calibration_steps": 15,
+  "primary_target_start_step": 25,
+  "forecast_horizon": 1,
+  "prefix_check_length": 35,
+  "prefix_tolerance": 0.000001,
+  "descriptive_flags": {
+    "bias_dominant_fraction_minimum": 0.5,
+    "magnitude_ratio_lower": 0.8,
+    "magnitude_ratio_upper": 1.25,
+    "poor_flattened_direction_maximum": 0.0,
+    "poor_positive_dot_fraction_maximum": 0.5
+  },
+  "notes": [
+    "Frozen checkpoints only; no training, tuning or checkpoint selection.",
+    "Observed increment is z[t+1]-z[t]; predicted increment is forecast[t]-z[t].",
+    "Primary targets begin at step 25 and exactly match the persistence benchmark.",
+    "Oracle mean-bias correction uses the whole evaluated sequence and is diagnostic only, not deployable.",
+    "Thresholds are descriptive flags rather than inferential hypothesis tests.",
+    "Previously inspected bearings and only three random seeds; seeds are not independent devices.",
+    "Increment prediction quality does not prove physical health semantics."
+  ]
+}
