@@ -1,0 +1,16 @@
+{
+  "experiment_id": "xjtu_movement_event_validation_v1",
+  "ensemble_threshold": 15.022665944112457,
+  "trend_threshold": 0.35703283230314203,
+  "seed_thresholds": {
+    "20260916": 0.8891075100848237,
+    "20260917": 0.88738481494961,
+    "20260918": 0.8943892018806661
+  },
+  "config_sha256": "6e6b1ddfbb9940b071bd9143863deac4ac3d15c6625ea362c5d32d2bc843d050",
+  "inputs": {
+    "results\\2026-09-17_relative_state_v2_integration\\relative_state_trajectories.csv": "d809656e7a82663110706b56b332fab2937d21161a09792bb3e959d7b73b2408",
+    "results\\2026-09-17_residual_gru_termination\\per_target_errors.csv": "101ec81daaf43b66159517c59c84f4f8196f8a4d429b6932ee00b69096b05c3c"
+  },
+  "interpretation": "Change candidates only; no fault labels."
+}

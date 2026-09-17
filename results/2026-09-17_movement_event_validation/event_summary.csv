@@ -1,0 +1,3 @@
+bearing_id,threshold,event_points,event_fraction,persistent_runs,max_run_length,three_seed_agreement_points,max_movement,max_movement_step
+Bearing1_4,15.022665944112457,1,0.010309278350515464,0,1,1,88.19987801400055,121
+Bearing1_5,15.022665944112457,0,0.0,0,0,0,10.442208739882616,39

@@ -9,6 +9,7 @@
 - Training-only signed degradation-axis Level.
 - Early-window scale calibration rejection.
 - Integrated Relative State Interpreter v2: signed Level, causal Trend, Residual-GRU Movement.
+- Training-only Movement event threshold validation.
 - Full repository test status: 121 passed.
 
 ## Current scientific conclusion
@@ -24,7 +25,7 @@ The latent representation contains a shared degradation-related direction and su
 
 ## Next executable task
 
-Design a training-only Movement event threshold and evaluate peak persistence, agreement across Residual-GRU seeds, and temporal relation to Level/Trend turning points. Do not call detected peaks faults without event labels.
+Movement threshold validation is complete. B1_4 has one three-seed-consistent terminal point above the training 99th percentile, but no persistent run; B1_5 has no event. Next obtain event labels/additional bearings or prepare the phase summary. Do not call the terminal candidate a fault without labels.
 
 ## Resume command
 
@@ -32,4 +33,3 @@ Design a training-only Movement event threshold and evaluate peak persistence, a
 cd "D:\1\德国留学\斯图加特大学在校资料\hiwi工作\state-interpreter"
 D:\python3.13\python.exe -m pytest -q -p no:cacheprovider --basetemp "D:\1\德国留学\斯图加特大学在校资料\hiwi工作\student_handover 2\.pytest_resume_relative_v2"
 ```
-

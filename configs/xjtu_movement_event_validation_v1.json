@@ -1,0 +1,13 @@
+{
+  "experiment_id": "xjtu_movement_event_validation_v1",
+  "state_trajectories": "results/2026-09-17_relative_state_v2_integration/relative_state_trajectories.csv",
+  "per_seed_errors": "results/2026-09-17_residual_gru_termination/per_target_errors.csv",
+  "output_directory": "results/2026-09-17_movement_event_validation",
+  "training_bearings": ["Bearing1_1", "Bearing1_2", "Bearing1_3"],
+  "evaluation_bearings": ["Bearing1_4", "Bearing1_5"],
+  "score_start_step": 25,
+  "movement_quantile": 0.99,
+  "trend_absolute_quantile": 0.95,
+  "minimum_persistent_steps": 2,
+  "seed_count": 3
+}
