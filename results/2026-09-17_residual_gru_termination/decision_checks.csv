@@ -1,0 +1,3 @@
+bearing_id,residual_positive_skill_seed_count,required_positive_skill_seed_count,all_residual_seeds_positive,residual_mean_ratio_below_direct
+Bearing1_4,3,3,True,True
+Bearing1_5,3,3,True,True

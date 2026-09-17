@@ -1,0 +1,37 @@
+{
+  "experiment_id": "xjtu_residual_gru_termination_v1",
+  "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+  "direct_checkpoint_directory": "results/2026-09-16_gru_temporal_ranking",
+  "persistence_reference_directory": "results/2026-09-16_gru_persistence_comparison",
+  "output_directory": "results/2026-09-17_residual_gru_termination",
+  "train_bearings": ["Bearing1_1", "Bearing1_2", "Bearing1_3"],
+  "validation_bearing": "Bearing1_4",
+  "old_holdout_bearing": "Bearing1_5",
+  "random_seeds": [20260916, 20260917, 20260918],
+  "calibration_steps": 15,
+  "primary_target_start_step": 25,
+  "hidden_dim": 8,
+  "num_layers": 1,
+  "learning_rate": 0.001,
+  "weight_decay": 0.00001,
+  "max_epochs": 300,
+  "patience": 40,
+  "minimum_improvement": 1e-8,
+  "gradient_clip_norm": 1.0,
+  "hard_timeout_seconds": 1800,
+  "prefix_check_length": 35,
+  "prefix_tolerance": 0.000001,
+  "decision": {
+    "required_positive_skill_seed_count_each_bearing": 3,
+    "decision_bearings": ["Bearing1_4", "Bearing1_5"]
+  },
+  "notes": [
+    "Residual GRU predicts z[t+1]=z[t]+delta and uses a zero-initialised delta head.",
+    "The untrained residual model must exactly reproduce persistence.",
+    "Direct GRU uses the already frozen control checkpoints; no direct model is retrained.",
+    "Architecture capacity, preprocessing, optimizer, epoch budget, seeds and checkpoint selection match the direct GRU experiment.",
+    "Primary targets begin at step 25 and skill is measured against persistence on identical rows.",
+    "All bearings were previously inspected; this is a termination experiment, not a blind test.",
+    "Failure of the predeclared decision rule ends one-step prediction as the primary Health Level route."
+  ]
+}

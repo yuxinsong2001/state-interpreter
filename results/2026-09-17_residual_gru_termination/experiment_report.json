@@ -1,0 +1,272 @@
+{
+  "status": "completed",
+  "verification_status": "predeclared_termination_experiment_with_exact_direct_reproduction",
+  "config": {
+    "experiment_id": "xjtu_residual_gru_termination_v1",
+    "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+    "direct_checkpoint_directory": "results/2026-09-16_gru_temporal_ranking",
+    "persistence_reference_directory": "results/2026-09-16_gru_persistence_comparison",
+    "output_directory": "results/2026-09-17_residual_gru_termination",
+    "train_bearings": [
+      "Bearing1_1",
+      "Bearing1_2",
+      "Bearing1_3"
+    ],
+    "validation_bearing": "Bearing1_4",
+    "old_holdout_bearing": "Bearing1_5",
+    "random_seeds": [
+      20260916,
+      20260917,
+      20260918
+    ],
+    "calibration_steps": 15,
+    "primary_target_start_step": 25,
+    "hidden_dim": 8,
+    "num_layers": 1,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "max_epochs": 300,
+    "patience": 40,
+    "minimum_improvement": 1e-08,
+    "gradient_clip_norm": 1.0,
+    "hard_timeout_seconds": 1800,
+    "prefix_check_length": 35,
+    "prefix_tolerance": 1e-06,
+    "decision": {
+      "required_positive_skill_seed_count_each_bearing": 3,
+      "decision_bearings": [
+        "Bearing1_4",
+        "Bearing1_5"
+      ]
+    },
+    "notes": [
+      "Residual GRU predicts z[t+1]=z[t]+delta and uses a zero-initialised delta head.",
+      "The untrained residual model must exactly reproduce persistence.",
+      "Direct GRU uses the already frozen control checkpoints; no direct model is retrained.",
+      "Architecture capacity, preprocessing, optimizer, epoch budget, seeds and checkpoint selection match the direct GRU experiment.",
+      "Primary targets begin at step 25 and skill is measured against persistence on identical rows.",
+      "All bearings were previously inspected; this is a termination experiment, not a blind test.",
+      "Failure of the predeclared decision rule ends one-step prediction as the primary Health Level route."
+    ]
+  },
+  "protected_sha256": {
+    "configs\\xjtu_residual_gru_termination_v1.json": "dc56eb6c9e7bc5bd19807a7fab99657e6eaaf01663dce0b23c2cde4b7a89172b",
+    "runs\\latent_analysis_z8_20260801\\latent_trajectories.csv": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+    "results\\2026-09-16_gru_temporal_ranking\\experiment_report.json": "ea548877f0a6cfd915b88444324e13c110f2308753b4739a959c7fbbd7fe5b9d",
+    "results\\2026-09-16_gru_temporal_ranking\\per_seed_bearing_metrics.csv": "f66f9bde764fc89132a708ad4c7fc5c167d59729be8e43708b65d0f5bfe77cd9",
+    "results\\2026-09-16_gru_persistence_comparison\\experiment_report.json": "3fc6f316156aa9f76bd9dcb688684fe3b9660de8a84aef45abae374c6a5ece7a",
+    "results\\2026-09-16_gru_persistence_comparison\\per_seed_bearing_metrics.csv": "4914d3869b717a0e6551b95a754bdcfcf5a94953db4e32609239bc0586e59fd2",
+    "results\\2026-09-16_gru_temporal_ranking\\control_seed_20260916_checkpoint.pt": "c22f13764697fce8b2b52824604c24d1e3c0739f0b0ff34aa73ccc113ed67f64",
+    "results\\2026-09-16_gru_temporal_ranking\\control_seed_20260917_checkpoint.pt": "28b421c51f90b0e19a75938f5abf29aa5c6106b713e8949de8cfc108f25ec139",
+    "results\\2026-09-16_gru_temporal_ranking\\control_seed_20260918_checkpoint.pt": "e6a72b290bc9ebde4b2874b726225a4110c6196cec67170b2e699b4a12caf14d"
+  },
+  "protected_files_unchanged": true,
+  "source_sha256": {
+    "scripts\\run_residual_gru_termination.py": "bec8ab53b9aa3916c258dbb083549ad5407734f9d73ac7f02d221d7c1c3c259b",
+    "src\\state_interpreter\\residual_gru.py": "c0d458cca046145976d7828569453e0cdafba2539e1b4a319c3d897864131a07",
+    "src\\state_interpreter\\gru_temporal.py": "ead8bd3802401a8ee65eb9c6abfd7df0ca481dda77309183a83d2a9237bc328b",
+    "src\\state_interpreter\\forecast_evaluation.py": "40232b10cbdb15f5a5c7713fbd6823ecd671adae935269c470fc8efa29d7518b"
+  },
+  "checkpoint_sha256": {
+    "residual_seed_20260916_checkpoint.pt": "6bec3cbf2a0375e4fd1f6e840457f2d7479448ec4e99c1a0fb4492394873ad75",
+    "residual_seed_20260917_checkpoint.pt": "b5d862e7da34a64f774bc4496a08343d09b83ac309e8ca58159d0a57596c554d",
+    "residual_seed_20260918_checkpoint.pt": "068233b742232a88c4c011801cce875e42c36f275b99fc7fb56502adcde80cff"
+  },
+  "environment": {
+    "executable": "D:\\python3.13\\python.exe",
+    "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+    "torch": "2.12.1+cpu",
+    "numpy": "2.4.4",
+    "matplotlib": "3.10.8",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_head": "204b13020d54c0f9303339d3709e5b9a86152b50"
+  },
+  "training_runs": 3,
+  "checkpoint_selection": "Bearing1_4 full-sequence next-step MSE",
+  "supports_one_step_prediction_as_primary_route": true,
+  "decision": "continue_prediction_route",
+  "summaries": [
+    {
+      "arm": "direct",
+      "bearing_id": "Bearing1_1",
+      "split": "train",
+      "seed_count": 3,
+      "target_count": 98,
+      "mse_ratio_mean": 3.0210650980646805,
+      "mse_ratio_sample_std": 0.03853355224040948,
+      "skill_mean": -2.021065098064681,
+      "skill_sample_std": 0.03853355224040949,
+      "skill_min": -2.0636522584809933,
+      "skill_max": -1.9886097539268932,
+      "positive_skill_seed_count": 0,
+      "win_fraction_mean": 0.17346938775510204
+    },
+    {
+      "arm": "direct",
+      "bearing_id": "Bearing1_2",
+      "split": "train",
+      "seed_count": 3,
+      "target_count": 136,
+      "mse_ratio_mean": 1.966578106613541,
+      "mse_ratio_sample_std": 0.06082406323097223,
+      "skill_mean": -0.9665781066135409,
+      "skill_sample_std": 0.06082406323097223,
+      "skill_min": -1.036810462875145,
+      "skill_max": -0.9311030853656721,
+      "positive_skill_seed_count": 0,
+      "win_fraction_mean": 0.10784313725490195
+    },
+    {
+      "arm": "direct",
+      "bearing_id": "Bearing1_3",
+      "split": "train",
+      "seed_count": 3,
+      "target_count": 133,
+      "mse_ratio_mean": 4.394840887885061,
+      "mse_ratio_sample_std": 0.3546071954317889,
+      "skill_mean": -3.3948408878850613,
+      "skill_sample_std": 0.3546071954317889,
+      "skill_min": -3.6398002816462673,
+      "skill_max": -2.988209058145833,
+      "positive_skill_seed_count": 0,
+      "win_fraction_mean": 0.09273182957393483
+    },
+    {
+      "arm": "direct",
+      "bearing_id": "Bearing1_4",
+      "split": "validation",
+      "seed_count": 3,
+      "target_count": 97,
+      "mse_ratio_mean": 1.521037384631388,
+      "mse_ratio_sample_std": 0.020191228783363994,
+      "skill_mean": -0.521037384631388,
+      "skill_sample_std": 0.020191228783363994,
+      "skill_min": -0.5335537155780048,
+      "skill_max": -0.49774420185523494,
+      "positive_skill_seed_count": 0,
+      "win_fraction_mean": 0.07216494845360825
+    },
+    {
+      "arm": "direct",
+      "bearing_id": "Bearing1_5",
+      "split": "holdout_test",
+      "seed_count": 3,
+      "target_count": 27,
+      "mse_ratio_mean": 4.524717906267895,
+      "mse_ratio_sample_std": 0.3018856053432861,
+      "skill_mean": -3.5247179062678953,
+      "skill_sample_std": 0.3018856053432861,
+      "skill_min": -3.8391803865334797,
+      "skill_max": -3.237217981899808,
+      "positive_skill_seed_count": 0,
+      "win_fraction_mean": 0.07407407407407407
+    },
+    {
+      "arm": "residual",
+      "bearing_id": "Bearing1_1",
+      "split": "train",
+      "seed_count": 3,
+      "target_count": 98,
+      "mse_ratio_mean": 0.9480746836046453,
+      "mse_ratio_sample_std": 0.011067002992775,
+      "skill_mean": 0.05192531639535469,
+      "skill_sample_std": 0.011067002992775,
+      "skill_min": 0.039146354534090544,
+      "skill_max": 0.05836122526324494,
+      "positive_skill_seed_count": 3,
+      "win_fraction_mean": 0.36734693877551017
+    },
+    {
+      "arm": "residual",
+      "bearing_id": "Bearing1_2",
+      "split": "train",
+      "seed_count": 3,
+      "target_count": 136,
+      "mse_ratio_mean": 0.9351401518061003,
+      "mse_ratio_sample_std": 0.014051321481187694,
+      "skill_mean": 0.06485984819389967,
+      "skill_sample_std": 0.014051321481187694,
+      "skill_min": 0.04940620996203682,
+      "skill_max": 0.0768678393942861,
+      "positive_skill_seed_count": 3,
+      "win_fraction_mean": 0.3872549019607843
+    },
+    {
+      "arm": "residual",
+      "bearing_id": "Bearing1_3",
+      "split": "train",
+      "seed_count": 3,
+      "target_count": 133,
+      "mse_ratio_mean": 0.8613015460227597,
+      "mse_ratio_sample_std": 0.025594299078626412,
+      "skill_mean": 0.13869845397724032,
+      "skill_sample_std": 0.025594299078626412,
+      "skill_min": 0.10914667214457585,
+      "skill_max": 0.15376979067900398,
+      "positive_skill_seed_count": 3,
+      "win_fraction_mean": 0.5413533834586467
+    },
+    {
+      "arm": "residual",
+      "bearing_id": "Bearing1_4",
+      "split": "validation",
+      "seed_count": 3,
+      "target_count": 97,
+      "mse_ratio_mean": 0.978016409423371,
+      "mse_ratio_sample_std": 0.0009749837286374954,
+      "skill_mean": 0.021983590576628947,
+      "skill_sample_std": 0.0009749837286374954,
+      "skill_min": 0.020918910059025686,
+      "skill_max": 0.022832845362842802,
+      "positive_skill_seed_count": 3,
+      "win_fraction_mean": 0.4914089347079038
+    },
+    {
+      "arm": "residual",
+      "bearing_id": "Bearing1_5",
+      "split": "holdout_test",
+      "seed_count": 3,
+      "target_count": 27,
+      "mse_ratio_mean": 0.7771856948653375,
+      "mse_ratio_sample_std": 0.018331659664530948,
+      "skill_mean": 0.2228143051346624,
+      "skill_sample_std": 0.018331659664530948,
+      "skill_min": 0.21194936447594837,
+      "skill_max": 0.243979370431734,
+      "positive_skill_seed_count": 3,
+      "win_fraction_mean": 0.6049382716049383
+    }
+  ],
+  "decision_checks": [
+    {
+      "bearing_id": "Bearing1_4",
+      "residual_positive_skill_seed_count": 3,
+      "required_positive_skill_seed_count": 3,
+      "all_residual_seeds_positive": true,
+      "residual_mean_ratio_below_direct": true
+    },
+    {
+      "bearing_id": "Bearing1_5",
+      "residual_positive_skill_seed_count": 3,
+      "required_positive_skill_seed_count": 3,
+      "all_residual_seeds_positive": true,
+      "residual_mean_ratio_below_direct": true
+    }
+  ],
+  "row_counts": {
+    "training_history": 252,
+    "per_seed_bearing_metrics": 30,
+    "per_target_errors": 2946,
+    "summary_by_bearing": 10,
+    "integrity_checks": 30
+  },
+  "duration_seconds": 13.109039800000119,
+  "fallacy_scan_coverage": "11/11",
+  "limitations": [
+    "All bearings were previously inspected; this is not a blind test.",
+    "Bearing1_4 selects checkpoints and Bearing1_5 has been repeatedly inspected.",
+    "Three seeds quantify initialization variability, not between-device uncertainty.",
+    "The decision threshold is a predeclared engineering gate, not a significance test.",
+    "Positive forecast skill would not itself establish physical health semantics."
+  ]
+}

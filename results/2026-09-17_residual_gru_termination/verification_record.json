@@ -1,0 +1,17 @@
+{
+  "status": "verified",
+  "checkpoint_count": 3,
+  "metric_comparison_count": 105,
+  "maximum_metric_absolute_difference": 0.0,
+  "maximum_prefix_absolute_difference": 0.0,
+  "protected_sha256": {
+    "results\\2026-09-17_residual_gru_termination\\experiment_report.json": "0b6a496b8fe08300784e826d9b1c8fa10a9132b4afb88c09ee7cc9eb19665b38",
+    "results\\2026-09-17_residual_gru_termination\\per_seed_bearing_metrics.csv": "7628815b941a44dc12311840e88caefedf20448e79566adea45c52e70e69c42b",
+    "results\\2026-09-17_residual_gru_termination\\training_history.csv": "32d2f81ba26aa26601408a9835e88339e4665735cce76eb0152cb5fb93ae6ffd",
+    "results\\2026-09-17_residual_gru_termination\\training_summary.csv": "8a154fc2e457b50772b08e357d71f68cc7cf9c7a02fd9ed6d2e3d3a537dbdaf6",
+    "results\\2026-09-17_residual_gru_termination\\residual_seed_20260916_checkpoint.pt": "6bec3cbf2a0375e4fd1f6e840457f2d7479448ec4e99c1a0fb4492394873ad75",
+    "results\\2026-09-17_residual_gru_termination\\residual_seed_20260917_checkpoint.pt": "b5d862e7da34a64f774bc4496a08343d09b83ac309e8ca58159d0a57596c554d",
+    "results\\2026-09-17_residual_gru_termination\\residual_seed_20260918_checkpoint.pt": "068233b742232a88c4c011801cce875e42c36f275b99fc7fb56502adcde80cff"
+  },
+  "protected_files_unchanged": true
+}
