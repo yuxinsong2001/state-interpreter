@@ -1,0 +1,126 @@
+{
+  "status": "completed",
+  "verification_status": "deterministic_frozen_representation_audit",
+  "config": {
+    "experiment_id": "xjtu_z8_representation_audit_v1",
+    "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+    "source_analysis_report": "runs/latent_analysis_z8_20260801/analysis_report.json",
+    "output_directory": "results/2026-09-17_z8_representation_audit",
+    "bearings": [
+      "Bearing1_1",
+      "Bearing1_2",
+      "Bearing1_3",
+      "Bearing1_4",
+      "Bearing1_5"
+    ],
+    "calibration_steps": 15,
+    "stage_thresholds": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "late_fraction": 0.2,
+    "logistic_C": 1.0,
+    "ridge_alpha": 1.0,
+    "max_iter": 2000,
+    "random_seed": 20260917,
+    "descriptive_gates": {
+      "cross_bearing_stage_balanced_accuracy_minimum": 0.5,
+      "cross_bearing_lifetime_spearman_minimum": 0.5,
+      "median_direction_cosine_minimum": 0.0,
+      "bearing_identity_balanced_accuracy_maximum": 0.5,
+      "effective_dimension_minimum": 2.0,
+      "centering_improvement_minimum": 0.1,
+      "encoder_primary_flag_count": 3
+    },
+    "notes": [
+      "Audit compares raw z and per-bearing first-15-step centered z without retraining the AutoEncoder.",
+      "Early/middle/late labels are weak normalized-lifetime bins, not physical damage labels.",
+      "Stage classification and lifetime regression use leave-one-bearing-out evaluation with train-only scaling.",
+      "Bearing identity uses chronological within-bearing train/test halves and is a leakage diagnostic, not a generalization score.",
+      "Only condition 35Hz12kN is present, so operating-condition predictability is not testable in this audit.",
+      "All bearings were previously inspected; thresholds are descriptive gates rather than significance tests."
+    ]
+  },
+  "protected_sha256": {
+    "configs\\xjtu_z8_representation_audit_v1.json": "02bc98ffbda76a557f4b26a56a1ce808ea9d2b9276b30ae20e558b1d15586ff6",
+    "runs\\latent_analysis_z8_20260801\\latent_trajectories.csv": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+    "runs\\latent_analysis_z8_20260801\\analysis_report.json": "7804d5257f86bd678388cd985ab74e4247cb2f3a4eb5fc2ceeba83e495d8fb07",
+    "runs\\ae_baseline_z8_20260801\\best_checkpoint.pt": "6edb626d1961cb1b1a7a2c32c52c9c96b0100cabb712cda4d79ab3c2a2e7695a"
+  },
+  "protected_files_unchanged": true,
+  "source_sha256": {
+    "scripts\\run_z8_representation_audit.py": "097dd098e2e4e254b9dcd94a03efc8b40734d81b9b96825bc8686e237570520b",
+    "src/state_interpreter/representation_audit.py": "fe697df09678cee0b2daaf4405c7f62c8123f6815cd4cc77ea65fb211fb0a1cc"
+  },
+  "environment": {
+    "executable": "D:\\python3.13\\python.exe",
+    "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "sklearn": "1.8.0",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.8",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_head": "4b72864af3ed75c8b40d0e8db8ac81d1542d159e"
+  },
+  "sample_count": 616,
+  "condition_count": 1,
+  "operating_condition_probe": "not_testable_single_condition",
+  "probe_summary": [
+    {
+      "representation": "raw",
+      "stage_balanced_accuracy_mean": 0.6229541174624776,
+      "stage_balanced_accuracy_min": 0.3333333333333333,
+      "stage_macro_f1_mean": 0.5364891758031074,
+      "lifetime_spearman_mean": 0.883567579098037,
+      "lifetime_spearman_min": 0.6994792111329292,
+      "lifetime_mae_mean": 0.24795379256588249,
+      "bearing_identity_balanced_accuracy": 0.30219298245614035,
+      "effective_dimension": 1.0015954391261852
+    },
+    {
+      "representation": "early_centered",
+      "stage_balanced_accuracy_mean": 0.6155051768466402,
+      "stage_balanced_accuracy_min": 0.34979674796747967,
+      "stage_macro_f1_mean": 0.5556298982417542,
+      "lifetime_spearman_mean": 0.7887453770431057,
+      "lifetime_spearman_min": 0.6704516349355416,
+      "lifetime_mae_mean": 0.21079057988844369,
+      "bearing_identity_balanced_accuracy": 0.22222222222222224,
+      "effective_dimension": 1.0012404151499863
+    }
+  ],
+  "median_off_diagonal_direction_cosine": 0.9993303983691093,
+  "direction_cosine_min": 0.9943738192942467,
+  "direction_cosine_max": 0.9999489611951115,
+  "centering_stage_balanced_accuracy_improvement": -0.007448940615837452,
+  "centering_lifetime_spearman_improvement": -0.0948222020549313,
+  "diagnostic_flags": {
+    "low_effective_dimension": true,
+    "poor_cross_bearing_stage_probe": false,
+    "poor_cross_bearing_lifetime_probe": false,
+    "inconsistent_degradation_direction": false,
+    "high_bearing_identity_readout": false
+  },
+  "diagnostic_flag_count": 1,
+  "diagnostic_conclusion": "mixed_or_inconclusive_bottleneck",
+  "row_counts": {
+    "representation_geometry": 2,
+    "dimension_correlations": 120,
+    "degradation_direction_cosines": 25,
+    "stage_probe_lobo": 10,
+    "lifetime_probe_lobo": 10,
+    "bearing_identity_probe": 2,
+    "probe_summary": 2
+  },
+  "duration_seconds": 0.8980160000000978,
+  "fallacy_scan_coverage": "11/11",
+  "limitations": [
+    "All five bearings were previously inspected; this is diagnostic, not blind confirmation.",
+    "Normalized lifetime bins are weak temporal labels, not physical damage-stage annotations.",
+    "Only one operating condition is present, so condition invariance cannot be evaluated.",
+    "Bearing identity prediction reuses identity classes across chronological halves and is only a leakage diagnostic.",
+    "Five leave-one-bearing-out folds are heterogeneous cases, not independent population samples for significance inference.",
+    "Linear probes can underestimate nonlinear information and can exploit temporal correlations within each trajectory."
+  ]
+}

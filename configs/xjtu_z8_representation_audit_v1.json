@@ -1,0 +1,31 @@
+{
+  "experiment_id": "xjtu_z8_representation_audit_v1",
+  "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+  "source_analysis_report": "runs/latent_analysis_z8_20260801/analysis_report.json",
+  "output_directory": "results/2026-09-17_z8_representation_audit",
+  "bearings": ["Bearing1_1", "Bearing1_2", "Bearing1_3", "Bearing1_4", "Bearing1_5"],
+  "calibration_steps": 15,
+  "stage_thresholds": [0.3333333333333333, 0.6666666666666666],
+  "late_fraction": 0.2,
+  "logistic_C": 1.0,
+  "ridge_alpha": 1.0,
+  "max_iter": 2000,
+  "random_seed": 20260917,
+  "descriptive_gates": {
+    "cross_bearing_stage_balanced_accuracy_minimum": 0.5,
+    "cross_bearing_lifetime_spearman_minimum": 0.5,
+    "median_direction_cosine_minimum": 0.0,
+    "bearing_identity_balanced_accuracy_maximum": 0.5,
+    "effective_dimension_minimum": 2.0,
+    "centering_improvement_minimum": 0.1,
+    "encoder_primary_flag_count": 3
+  },
+  "notes": [
+    "Audit compares raw z and per-bearing first-15-step centered z without retraining the AutoEncoder.",
+    "Early/middle/late labels are weak normalized-lifetime bins, not physical damage labels.",
+    "Stage classification and lifetime regression use leave-one-bearing-out evaluation with train-only scaling.",
+    "Bearing identity uses chronological within-bearing train/test halves and is a leakage diagnostic, not a generalization score.",
+    "Only condition 35Hz12kN is present, so operating-condition predictability is not testable in this audit.",
+    "All bearings were previously inspected; thresholds are descriptive gates rather than significance tests."
+  ]
+}

@@ -1,0 +1,3 @@
+representation,train_sample_count,test_sample_count,accuracy,balanced_accuracy,macro_f1,chance_balanced_accuracy,split_definition
+raw,269,272,0.3639705882352941,0.30219298245614035,0.2692984032625977,0.2,first_half_after_calibration_train_second_half_test
+early_centered,269,272,0.29044117647058826,0.22222222222222224,0.1270894047499414,0.2,first_half_after_calibration_train_second_half_test
