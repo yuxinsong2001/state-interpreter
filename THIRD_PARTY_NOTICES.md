@@ -21,3 +21,15 @@ Licensed under the MIT License:
 The present project uses a minimal PyTorch reimplementation. It does not copy
 the upstream RUL labels, curated onset labels, TensorFlow training pipeline,
 cloud infrastructure, or dashboard.
+
+## TS2Vec
+
+The TS2Vec encoder, hierarchical contrastive losses, and context-view sampling
+in `src/state_interpreter/encoders/ts2vec.py` are adapted from the official
+[`zhihanyue/ts2vec`](https://github.com/zhihanyue/ts2vec) implementation,
+commit `b0088e14a99706c05451316dc6db8d3da9351163`.
+
+Copyright (c) 2022 Zhihan Yue
+
+Licensed under the MIT License. The complete upstream license is preserved in
+`licenses/TS2VEC_LICENSE.txt`.
