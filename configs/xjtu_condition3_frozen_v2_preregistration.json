@@ -1,0 +1,35 @@
+{
+  "experiment_id": "xjtu_condition3_frozen_v2",
+  "status": "preregistered_no_bearing3_data_read",
+  "source_condition": "35Hz12kN",
+  "target_condition": "40Hz10kN",
+  "split": {
+    "development": ["Bearing3_1", "Bearing3_2", "Bearing3_3"],
+    "validation": ["Bearing3_4"],
+    "blind": ["Bearing3_5"]
+  },
+  "tokens": {
+    "development": "EXECUTE_BEARING3_DEVELOPMENT_ONCE",
+    "validation": "EXECUTE_BEARING3_VALIDATION_ONCE",
+    "blind": "EXECUTE_BEARING3_5_BLIND_ONCE"
+  },
+  "records_directory": "records/xjtu_condition3_frozen_v2",
+  "frozen_artifacts": [
+    {"path": "runs/ae_baseline_z8_20260801/best_checkpoint.pt", "sha256": "6edb626d1961cb1b1a7a2c32c52c9c96b0100cabb712cda4d79ab3c2a2e7695a"},
+    {"path": "configs/xjtu_z8_interpreter_v1.json", "sha256": "6fcdcc7852fe356c5897c89edf4b3fa83baf95105af84bc4cc90043f5b72ea26"},
+    {"path": "results/2026-09-17_signed_axis_interpreter/axis.json", "sha256": "298df1b363d948efdd76b590e2c53c1cbc11a8e10882b0dad6aff8359fbe8bdd"},
+    {"path": "results/2026-09-17_residual_gru_termination/residual_seed_20260916_checkpoint.pt", "sha256": "6bec3cbf2a0375e4fd1f6e840457f2d7479448ec4e99c1a0fb4492394873ad75"},
+    {"path": "results/2026-09-17_residual_gru_termination/residual_seed_20260917_checkpoint.pt", "sha256": "b5d862e7da34a64f774bc4496a08343d09b83ac309e8ca58159d0a57596c554d"},
+    {"path": "results/2026-09-17_residual_gru_termination/residual_seed_20260918_checkpoint.pt", "sha256": "068233b742232a88c4c011801cce875e42c36f275b99fc7fb56502adcde80cff"},
+    {"path": "results/2026-09-17_movement_event_validation/experiment_report.json", "sha256": "0f1d4608ffad01b9eb3c8726a8f96d1222ca31e157d2fce65d1927c4f8bb1bd9"}
+  ],
+  "frozen_parameters": {"calibration_steps": 15, "temporal_window": 10, "movement_threshold": 15.022665944112457},
+  "development_metrics": ["level_lifetime_spearman", "level_first_last_delta", "movement_event_fraction", "movement_median_ratio_vs_source", "finite_state_fraction", "three_seed_event_agreement"],
+  "rules": {
+    "development_may_not_read_validation_or_blind": true,
+    "validation_requires_completed_development_record": true,
+    "blind_requires_locked_validation_record": true,
+    "blind_may_run_once": true,
+    "retuning_after_blind": false
+  }
+}

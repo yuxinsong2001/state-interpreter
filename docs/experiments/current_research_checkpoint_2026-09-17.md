@@ -10,6 +10,7 @@
 - Early-window scale calibration rejection.
 - Integrated Relative State Interpreter v2: signed Level, causal Trend, Residual-GRU Movement.
 - Training-only Movement event threshold validation.
+- Condition 3 frozen-v2 preregistration, artifact hash preflight and staged access guards; no Bearing3 data read.
 - Full repository test status: 121 passed.
 
 ## Current scientific conclusion
@@ -25,7 +26,7 @@ The latent representation contains a shared degradation-related direction and su
 
 ## Next executable task
 
-Movement threshold validation is complete. B1_4 has one three-seed-consistent terminal point above the training 99th percentile, but no persistent run; B1_5 has no event. Next obtain event labels/additional bearings or prepare the phase summary. Do not call the terminal candidate a fault without labels.
+Condition 3 preflight is complete without reading Bearing3 data. The next authorized task is a one-time development diagnostic on Bearing3_1–Bearing3_3 using token `EXECUTE_BEARING3_DEVELOPMENT_ONCE`; Bearing3_4 and Bearing3_5 remain protected.
 
 ## Resume command
 
