@@ -80,6 +80,7 @@
   "execution_token": "TRAIN_SOURCE_DANN_CONDITION3_DEVELOPMENT_LOBO_ONCE",
   "frozen_artifacts": [
     {"path": "src/state_interpreter/encoders/domain_adversarial.py", "sha256": "233a2adfcc640b7e0ae9516ca0d40875e56c988a27fbefb27c6f3f114362a1c4"},
-    {"path": "src/state_interpreter/data/stable_feature_scaling.py", "sha256": "96a3a557882822c7226a3bd74e1d1b6e56041eac3e7edf0ff4e46425319fcd6b"}
+    {"path": "src/state_interpreter/data/stable_feature_scaling.py", "sha256": "96a3a557882822c7226a3bd74e1d1b6e56041eac3e7edf0ff4e46425319fcd6b"},
+    {"path": "scripts/train_source_dann_condition3_development.py", "sha256": "d938ceb6dab2b40b51c73f3c30167ed076a1cd69e772ae4a783698b3683b3e5f"}
   ]
 }

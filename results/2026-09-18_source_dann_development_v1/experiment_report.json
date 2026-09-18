@@ -1,0 +1,93 @@
+{
+  "experiment_id": "xjtu_condition3_source_dann_development_v1",
+  "status": "completed",
+  "elapsed_seconds": 317.8865633010864,
+  "config_sha256": "b0b594a60e04366fefbb8894011ad587eb2e7b1749bdb58d1b6df6baae6cc45d",
+  "health_summary": [
+    {
+      "arm": "source_only",
+      "bearing_id": "Bearing3_1",
+      "mean_spearman": 0.1255706961359295,
+      "std_spearman": 0.1670890777088437,
+      "positive_seed_count": 2
+    },
+    {
+      "arm": "source_only",
+      "bearing_id": "Bearing3_2",
+      "mean_spearman": -0.6842616985405868,
+      "std_spearman": 0.22269879867832632,
+      "positive_seed_count": 0
+    },
+    {
+      "arm": "source_only",
+      "bearing_id": "Bearing3_3",
+      "mean_spearman": -0.44298592131824027,
+      "std_spearman": 0.0698300786159815,
+      "positive_seed_count": 0
+    },
+    {
+      "arm": "source_dann",
+      "bearing_id": "Bearing3_1",
+      "mean_spearman": 0.41152308549772004,
+      "std_spearman": 0.14565569140968765,
+      "positive_seed_count": 3
+    },
+    {
+      "arm": "source_dann",
+      "bearing_id": "Bearing3_2",
+      "mean_spearman": -0.3495624845904701,
+      "std_spearman": 0.6013105004458901,
+      "positive_seed_count": 1
+    },
+    {
+      "arm": "source_dann",
+      "bearing_id": "Bearing3_3",
+      "mean_spearman": -0.38443088771755846,
+      "std_spearman": 0.08970925175393293,
+      "positive_seed_count": 0
+    }
+  ],
+  "paired_comparison": [
+    {
+      "bearing_id": "Bearing3_1",
+      "source_only_mean_spearman": 0.1255706961359295,
+      "source_dann_mean_spearman": 0.41152308549772004,
+      "dann_minus_source_only": 0.28595238936179057
+    },
+    {
+      "bearing_id": "Bearing3_2",
+      "source_only_mean_spearman": -0.6842616985405868,
+      "source_dann_mean_spearman": -0.3495624845904701,
+      "dann_minus_source_only": 0.3346992139501167
+    },
+    {
+      "bearing_id": "Bearing3_3",
+      "source_only_mean_spearman": -0.44298592131824027,
+      "source_dann_mean_spearman": -0.38443088771755846,
+      "dann_minus_source_only": 0.058555033600681816
+    }
+  ],
+  "identity_mean_accuracy": {
+    "source_only": 0.9034567901234569,
+    "source_dann": 0.8791358024691358
+  },
+  "health_gate": {
+    "all_three_mean_spearman_positive": false,
+    "at_least_two_mean_spearman_at_least_0_5": false,
+    "minimum_positive_seeds_per_bearing": false,
+    "passed": false
+  },
+  "identity_gate": {
+    "mean_accuracy": 0.8791358024691358,
+    "maximum_allowed": 0.8,
+    "passed": false
+  },
+  "combined_gate_passed": false,
+  "validation_authorized": false,
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "outer_test_used_for_checkpoint_selection": false,
+  "future_context_used": false
+}

@@ -89,6 +89,8 @@
 
 最新预注册：`experiments/xjtu_source_dann_development_preregistration_2026-09-18.md` 锁定source-only与Source-DANN配对实验；`research/domain_alignment_method_audit_2026-09-18.md` 记录DANN、MMD与CORAL的比较依据。
 
+最新结果：`experiments/xjtu_source_dann_development_result_2026-09-18.md` 记录Source-DANN在三个bearing上均改善配对相关性并降低平均identity，但健康与identity绝对门槛仍失败，B3_4/B3_5未读取。
+
 本周最终步骤：`experiments/joint_evaluation_rehearsal_2026-08-02.md` 记录 Arm A/B 在 Bearing2_4 上共享单次输入物化的联合评估演练；Bearing2_5 仍未读取。
 
 最新组会材料：`meetings/wochenupdate_2026-08-02_DE.md` 为包含方法、双分支结果、限制和下一步的德语周报。

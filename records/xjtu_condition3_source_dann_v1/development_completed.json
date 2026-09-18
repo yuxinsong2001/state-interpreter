@@ -1,0 +1,24 @@
+{
+  "experiment_id": "xjtu_condition3_source_dann_development_v1",
+  "status": "completed_analyzed_gate_failed",
+  "completed_on": "2026-09-18",
+  "config_sha256": "b0b594a60e04366fefbb8894011ad587eb2e7b1749bdb58d1b6df6baae6cc45d",
+  "result_directory": "results/2026-09-18_source_dann_development_v1",
+  "source_only_mean_spearman_across_bearings": -0.3338923079076325,
+  "source_dann_mean_spearman_across_bearings": -0.10749009560343618,
+  "mean_paired_delta": 0.22640221230419636,
+  "identity_mean_accuracy": {
+    "source_only": 0.9034567901234569,
+    "source_dann": 0.8791358024691358
+  },
+  "health_gate_passed": false,
+  "identity_gate_passed": false,
+  "combined_gate_passed": false,
+  "validation_authorized": false,
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "future_context_used": false,
+  "outer_test_used_for_checkpoint_selection": false
+}
