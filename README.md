@@ -158,3 +158,18 @@ python scripts/train_autoencoder_baseline.py `
 - The State Interpreter accepts embeddings with shape `[batch, embedding_dim]`.
 - Dataset-, VibFM-, and Gearbox-specific code should be implemented as
   adapters rather than imported into the core model.
+
+## XJTU-SY 65-feature / Feature LSTM baseline
+
+The repository now contains a minimal PyTorch port of the audited
+`thfmn/xjtu-sy-bearing` engineering baseline:
+
+- `XJTUBearingFeatureExtractor`: `[samples, 2] -> [65]`, consisting of 37
+  time-domain and 28 frequency-domain features;
+- `FeatureLSTM`: `[batch, steps, 65] -> scalar score + 16-D hidden state`;
+- synthetic-data tests for shape, numerical stability, channel separation,
+  characteristic frequencies, parameter count, and backpropagation.
+
+This stage does not use RUL/onset labels and does not read any XJTU-SY bearing.
+Attribution and the upstream MIT notice are recorded in
+`THIRD_PARTY_NOTICES.md`.

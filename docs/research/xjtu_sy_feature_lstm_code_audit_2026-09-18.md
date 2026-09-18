@@ -80,7 +80,7 @@
 
 训练配置为AdamW、学习率0.001、weight decay 0.0001、Huber loss、最多100 epochs、early stopping patience 7。
 
-按代码和设计指南，该双向模型为11,041个参数；README首页同时出现约5,793参数的说法，两者不一致。移植时以实际模型`count_params()`和测试为准。
+按Keras代码和设计指南，该双向模型为11,041个参数；README首页同时出现约5,793参数的说法，两者不一致。PyTorch的`nn.LSTM`分别保存input/recurrent bias，因此同结构移植后为11,169个参数，多出的128个均为偏置参数。两种实现的层级结构和hidden尺寸一致，参数差异已由单元测试固定。
 
 虽然使用BiLSTM，但窗口只包含`t-9 … t`，没有使用`t+1`之后的数据；因此在窗口端点输出时仍可实现在线推理。不过它的原始输出是RUL，不是State Interpreter状态。
 
@@ -172,4 +172,3 @@ raw vibration [32768, 2]
 - [Onset detectors](https://github.com/thfmn/xjtu-sy-bearing/blob/main/src/onset/detectors.py)
 - [Feature LSTM训练脚本](https://github.com/thfmn/xjtu-sy-bearing/blob/main/scripts/11_train_feature_lstm.py)
 - [项目依赖](https://github.com/thfmn/xjtu-sy-bearing/blob/main/pyproject.toml)
-

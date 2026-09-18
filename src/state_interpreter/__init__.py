@@ -1,6 +1,17 @@
 """Encoder and State Interpreter building blocks for PHM experiments."""
 
-from .encoders import AutoEncoderOutput, SmallConvAutoEncoder
+from .encoders import (
+    AutoEncoderOutput,
+    FeatureLSTM,
+    FeatureLSTMOutput,
+    SmallConvAutoEncoder,
+)
+from .features import (
+    FEATURE_NAMES,
+    NUM_BEARING_FEATURES,
+    XJTUBearingFeatureExtractor,
+    calculate_bearing_frequencies,
+)
 from .data import ChannelStandardizer, MaterializedSTFTData, materialize_stft_data
 from .models import MLPStateInterpreter, StateInterpreterOutput
 from .hmm_temporal import HMMStateOutput, LeftRightGaussianHMMStateInterpreter
@@ -14,6 +25,9 @@ from .relative_temporal import (
 
 __all__ = [
     "AutoEncoderOutput",
+    "FEATURE_NAMES",
+    "FeatureLSTM",
+    "FeatureLSTMOutput",
     "ChannelStandardizer",
     "MLPStateInterpreter",
     "LogSTFTPreprocessor",
@@ -22,10 +36,13 @@ __all__ = [
     "GRUSequenceOutput",
     "LeftRightGaussianHMMStateInterpreter",
     "MaterializedSTFTData",
+    "NUM_BEARING_FEATURES",
     "SmallConvAutoEncoder",
     "RelativeTemporalStateInterpreter",
     "RelativeTemporalStateOutput",
     "StateInterpreterOutput",
     "PredictiveGRUStateInterpreter",
+    "XJTUBearingFeatureExtractor",
+    "calculate_bearing_frequencies",
     "materialize_stft_data",
 ]

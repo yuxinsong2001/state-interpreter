@@ -120,3 +120,17 @@ python scripts/train_autoencoder_baseline.py `
 - `SmallConvAutoEncoder` akzeptiert `[batch, 2, 32, 32]` und stellt `encode(x)` bereit.
 - Der State Interpreter akzeptiert Embeddings der Form `[batch, embedding_dim]`.
 - Datensatz-, VibFM- und Gearbox-spezifischer Code soll als Adapter implementiert werden, statt in das Kernmodell importiert zu werden.
+
+## XJTU-SY-65-Feature- und Feature-LSTM-Baseline
+
+Das Repository enthält nun eine minimale PyTorch-Portierung der geprüften
+Engineering-Baseline `thfmn/xjtu-sy-bearing`:
+
+- `XJTUBearingFeatureExtractor`: `[samples, 2] -> [65]` mit 37 Merkmalen im
+  Zeitbereich und 28 Merkmalen im Frequenzbereich;
+- `FeatureLSTM`: `[batch, steps, 65] -> skalarer Score + 16-dimensionaler Hidden State`;
+- Tests mit synthetischen Daten für Shapes, numerische Stabilität,
+  Kanaltrennung, charakteristische Frequenzen, Parameterzahl und Backpropagation.
+
+In diesem Schritt werden weder RUL-/Onset-Labels noch reale XJTU-SY-Bearings
+gelesen. Herkunft und MIT-Lizenzhinweis stehen in `THIRD_PARTY_NOTICES.md`.
