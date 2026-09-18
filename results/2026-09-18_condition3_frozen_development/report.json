@@ -1,0 +1,52 @@
+{
+  "status": "completed",
+  "bearings": [
+    "Bearing3_1",
+    "Bearing3_2",
+    "Bearing3_3"
+  ],
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "movement_threshold": 15.022665944112457,
+  "elapsed_seconds": 1013.9461443424225,
+  "summaries": [
+    {
+      "bearing_id": "Bearing3_1",
+      "samples": 2538,
+      "ready_scored": 2513,
+      "level_spearman": -0.3909392901133735,
+      "level_first_last_delta": 12.730985789348408,
+      "movement_event_fraction": 0.0007958615200955034,
+      "movement_median": 1.2056639571727685,
+      "movement_max": 19.792505121356456,
+      "finite": true,
+      "reconstruction_mse_mean": 0.32988229393959045
+    },
+    {
+      "bearing_id": "Bearing3_2",
+      "samples": 2496,
+      "ready_scored": 2471,
+      "level_spearman": 0.8944060309129552,
+      "level_first_last_delta": 9.460927163130297,
+      "movement_event_fraction": 0.1396195872116552,
+      "movement_median": 3.3615454191667373,
+      "movement_max": 71.40628484994357,
+      "finite": true,
+      "reconstruction_mse_mean": 0.6318036317825317
+    },
+    {
+      "bearing_id": "Bearing3_3",
+      "samples": 371,
+      "ready_scored": 346,
+      "level_spearman": -0.5635379691507214,
+      "level_first_last_delta": 7.463245822864715,
+      "movement_event_fraction": 0.008670520231213872,
+      "movement_median": 1.0728530988976064,
+      "movement_max": 23.782039444235156,
+      "finite": true,
+      "reconstruction_mse_mean": 0.6220157146453857
+    }
+  ]
+}

@@ -28,6 +28,12 @@ The latent representation contains a shared degradation-related direction and su
 
 Condition 3 preflight is complete without reading Bearing3 data. The next authorized task is a one-time development diagnostic on Bearing3_1–Bearing3_3 using token `EXECUTE_BEARING3_DEVELOPMENT_ONCE`; Bearing3_4 and Bearing3_5 remain protected.
 
+## Completed checkpoint — 2026-09-18
+
+The authorized Bearing3_1–Bearing3_3 frozen development diagnostic completed in 1013.95 seconds. Bearing3_4 and Bearing3_5 were not read. The frozen route did not generalize consistently: Level–lifetime Spearman correlations were -0.391, +0.894 and -0.564 for B3_1–B3_3, while B3_2 produced a 13.962% Movement event fraction under the frozen Condition 1 threshold. Full repository tests pass: 126 passed.
+
+The next task is not to consume protected data. Use only B3_1–B3_3 to compare controlled adaptation candidates, freeze one candidate, and then use B3_4 for validation. Keep B3_5 for the one-time final test.
+
 ## Resume command
 
 ```powershell

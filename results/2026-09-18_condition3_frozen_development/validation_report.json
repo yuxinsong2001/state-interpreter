@@ -1,0 +1,24 @@
+{
+  "experiment": "condition3_frozen_development",
+  "date": "2026-09-18",
+  "decision": {
+    "direct_frozen_generalization_supported": false,
+    "movement_cross_condition_calibrated": false,
+    "reason": "Only Bearing3_2 retained strong positive Level ordering; Bearing3_1 and Bearing3_3 had negative Spearman correlations, while Bearing3_2 produced a 0.1396 Movement event fraction under the frozen Condition 1 threshold."
+  },
+  "protected_data": {"Bearing3_4_read": false, "Bearing3_5_read": false},
+  "validity_scan": {
+    "simpsons_paradox": "Per-bearing results are reported; no pooled correlation is used because trajectories are heterogeneous.",
+    "ecological_fallacy": "The bearing is the evaluation unit; time points are not treated as independent devices.",
+    "berkson_bias": "Run-to-failure laboratory bearings are selected trajectories and may not represent deployed populations.",
+    "collider_bias": "No covariate-conditioned causal comparison is claimed.",
+    "base_rate_neglect": "Movement event fractions differ strongly by bearing, so threshold crossings are not called faults.",
+    "regression_to_mean": "No before-after intervention effect is claimed.",
+    "survivorship_bias": "Complete run-to-failure records do not cover field censoring or maintenance removal.",
+    "look_elsewhere_effect": "Metrics and bearings were preregistered before Condition 3 data access.",
+    "researcher_degrees_of_freedom": "Artifacts, parameters, split and threshold were hash-frozen before access.",
+    "correlation_causation": "Level-time correlations are descriptive and do not establish physical damage causation.",
+    "reverse_causality": "Chronology is respected, but no causal mechanism is inferred from it."
+  },
+  "next_step": "Use only Bearing3_1-Bearing3_3 to compare adaptation candidates; freeze one candidate before Bearing3_4 validation and keep Bearing3_5 for one-time final testing."
+}
