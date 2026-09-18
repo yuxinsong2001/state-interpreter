@@ -40,6 +40,10 @@ Arm A interpreter-only LOBO failed to change the signed-Level result. Arm B retr
 
 A post-hoc two-sided axial Level looked positive on B3_1–B3_3, so its formula and artifact hashes were locked before first access to B3_4. Validation did not support it: B3_4 signed rho was 0.328 and two-sided rho was 0.026. Bearing3_5 remains unread. Do not run the blind test. The next research task is a development-only health-aware or nonlinear/phase-aware representation; B3_4 must now be treated as previously observed validation evidence.
 
+The next experiment has been narrowed and frozen conceptually in `health_aware_encoder_checkpoint_2026-09-18.md`: reconstruction plus a within-bearing temporal-ranking head, evaluated by LOBO on B3_1–B3_3. The first protocol uses five epochs, seed 20260918, ranking weight 0.1 and minimum lifetime separation 0.1. Continue only if all three held-out rho values are positive. Bearing3_5 remains prohibited.
+
+The health-aware LOBO experiment completed with rho 0.709/0.522/-0.398 for B3_1/B3_2/B3_3. It failed the all-positive gate, so do not tune the linear ranking head further. Next: use development data to test an explicitly nonlinear or phase-aware state representation that can model B3_3's reversal. Bearing3_5 remains unread.
+
 ## Resume command
 
 ```powershell

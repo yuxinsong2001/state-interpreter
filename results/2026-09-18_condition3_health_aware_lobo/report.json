@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "elapsed_seconds": 347.11274337768555,
+  "decision": {
+    "all_positive": false,
+    "continue_health_aware_family": false,
+    "protected_bearing_not_read": "Bearing3_5"
+  },
+  "fallacy_scan_11_of_11": {
+    "simpsons": "per-bearing",
+    "ecological": "bearing unit",
+    "berkson": "lab run-to-failure",
+    "collider": "no causal conditioning",
+    "base_rate": "no event claim",
+    "regression": "no intervention",
+    "survivorship": "no field censoring",
+    "look_elsewhere": "locked folds/metrics",
+    "forking_paths": "locked hyperparameters",
+    "causation": "time is proxy",
+    "reverse_causality": "no causal claim"
+  }
+}
