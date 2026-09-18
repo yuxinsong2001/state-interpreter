@@ -1,0 +1,23 @@
+{
+  "experiment_id": "xjtu_condition3_ts2vec_development_v1",
+  "status": "completed_analyzed_gate_failed",
+  "completed_on": "2026-09-18",
+  "config_sha256": "31d480f1501a31f47e9419d3f9594eb436b5914822f5878de7713316360dc3ad",
+  "result_directory": "results/2026-09-18_ts2vec_development_v1",
+  "health_mean_spearman": {
+    "Bearing3_1": 0.5981324802331845,
+    "Bearing3_2": -0.45162534955647304,
+    "Bearing3_3": -0.3297350628218028
+  },
+  "identity_mean_accuracy": 0.8976543209876543,
+  "health_gate_passed": false,
+  "identity_gate_passed": false,
+  "combined_gate_passed": false,
+  "validation_authorized": false,
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "future_context_used": false,
+  "outer_test_used_for_checkpoint_selection": false
+}

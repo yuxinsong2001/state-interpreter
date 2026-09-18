@@ -85,6 +85,8 @@
 
 最新实验：`experiments/gru_temporal_ranking_result_2026-09-16.md` 记录GRU时间排序目标的三seed配对实验。该固定设置未通过稳定性推进门槛，当前不升级默认Level。
 
+最新表示学习实验：`experiments/xjtu_ts2vec_development_result_2026-09-18.md` 记录紧凑因果TS2Vec的Condition 3三折LOBO结果。健康排序与identity双门槛均未通过，B3_4/B3_5未读取；下一候选转向显式domain/bearing alignment。
+
 本周最终步骤：`experiments/joint_evaluation_rehearsal_2026-08-02.md` 记录 Arm A/B 在 Bearing2_4 上共享单次输入物化的联合评估演练；Bearing2_5 仍未读取。
 
 最新组会材料：`meetings/wochenupdate_2026-08-02_DE.md` 为包含方法、双分支结果、限制和下一步的德语周报。

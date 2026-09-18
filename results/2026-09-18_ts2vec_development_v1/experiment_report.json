@@ -1,0 +1,45 @@
+{
+  "experiment_id": "xjtu_condition3_ts2vec_development_v1",
+  "status": "completed",
+  "elapsed_seconds": 84.10488605499268,
+  "config_sha256": "31d480f1501a31f47e9419d3f9594eb436b5914822f5878de7713316360dc3ad",
+  "health_summary": [
+    {
+      "bearing_id": "Bearing3_1",
+      "mean_spearman": 0.5981324802331845,
+      "std_spearman": 0.09559518859869737,
+      "positive_seed_count": 3
+    },
+    {
+      "bearing_id": "Bearing3_2",
+      "mean_spearman": -0.45162534955647304,
+      "std_spearman": 0.15413839455240175,
+      "positive_seed_count": 0
+    },
+    {
+      "bearing_id": "Bearing3_3",
+      "mean_spearman": -0.3297350628218028,
+      "std_spearman": 0.08709336131047617,
+      "positive_seed_count": 0
+    }
+  ],
+  "health_gate": {
+    "all_three_mean_spearman_positive": false,
+    "at_least_two_mean_spearman_at_least_0_5": false,
+    "minimum_positive_seeds_per_bearing": false,
+    "passed": false
+  },
+  "identity_gate": {
+    "mean_accuracy": 0.8976543209876543,
+    "maximum_allowed": 0.8,
+    "passed": false
+  },
+  "combined_gate_passed": false,
+  "validation_authorized": false,
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "outer_test_used_for_checkpoint_selection": false,
+  "future_context_used": false
+}
