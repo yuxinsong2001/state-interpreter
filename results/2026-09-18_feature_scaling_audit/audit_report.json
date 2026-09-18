@@ -1,0 +1,102 @@
+{
+  "amendment_id": "xjtu_condition3_feature_scaling_amendment_v1",
+  "status": "scaling_audit_completed",
+  "selected_mode": "signed_log1p",
+  "selection_gate": {
+    "all_bearings_finite": true,
+    "maximum_absolute_value_at_most": 25.0,
+    "p99_absolute_value_at_most": 20.0,
+    "strictly_monotonic_transform_required": true,
+    "selection_rule": "select the first candidate in listed order that passes every gate on every development bearing"
+  },
+  "metrics": [
+    {
+      "mode": "baseline_zscore",
+      "bearing_id": "Bearing3_1",
+      "finite": true,
+      "max_abs": 11776562176.0,
+      "p99_abs": 296093760.0,
+      "strictly_monotonic_transform": true,
+      "passes_gate": false
+    },
+    {
+      "mode": "baseline_zscore",
+      "bearing_id": "Bearing3_2",
+      "finite": true,
+      "max_abs": 2259.798583984375,
+      "p99_abs": 38.73090362548828,
+      "strictly_monotonic_transform": true,
+      "passes_gate": false
+    },
+    {
+      "mode": "baseline_zscore",
+      "bearing_id": "Bearing3_3",
+      "finite": true,
+      "max_abs": 1616.951416015625,
+      "p99_abs": 198.372802734375,
+      "strictly_monotonic_transform": true,
+      "passes_gate": false
+    },
+    {
+      "mode": "signed_log1p",
+      "bearing_id": "Bearing3_1",
+      "finite": true,
+      "max_abs": 23.189376831054688,
+      "p99_abs": 19.506187438964844,
+      "strictly_monotonic_transform": true,
+      "passes_gate": true
+    },
+    {
+      "mode": "signed_log1p",
+      "bearing_id": "Bearing3_2",
+      "finite": true,
+      "max_abs": 7.72347354888916,
+      "p99_abs": 3.682129383087158,
+      "strictly_monotonic_transform": true,
+      "passes_gate": true
+    },
+    {
+      "mode": "signed_log1p",
+      "bearing_id": "Bearing3_3",
+      "finite": true,
+      "max_abs": 7.388916015625,
+      "p99_abs": 5.295162200927734,
+      "strictly_monotonic_transform": true,
+      "passes_gate": true
+    },
+    {
+      "mode": "clip_20",
+      "bearing_id": "Bearing3_1",
+      "finite": true,
+      "max_abs": 20.0,
+      "p99_abs": 20.0,
+      "strictly_monotonic_transform": false,
+      "passes_gate": false
+    },
+    {
+      "mode": "clip_20",
+      "bearing_id": "Bearing3_2",
+      "finite": true,
+      "max_abs": 20.0,
+      "p99_abs": 20.0,
+      "strictly_monotonic_transform": false,
+      "passes_gate": false
+    },
+    {
+      "mode": "clip_20",
+      "bearing_id": "Bearing3_3",
+      "finite": true,
+      "max_abs": 20.0,
+      "p99_abs": 20.0,
+      "strictly_monotonic_transform": false,
+      "passes_gate": false
+    }
+  ],
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "training_performed": false,
+  "input_cache_hashes_verified": true,
+  "scaler_hash_verified": true
+}

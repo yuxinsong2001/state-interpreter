@@ -1,0 +1,10 @@
+mode,bearing_id,finite,max_abs,p99_abs,strictly_monotonic_transform,passes_gate
+baseline_zscore,Bearing3_1,True,11776562176.0,296093760.0,True,False
+baseline_zscore,Bearing3_2,True,2259.798583984375,38.73090362548828,True,False
+baseline_zscore,Bearing3_3,True,1616.951416015625,198.372802734375,True,False
+signed_log1p,Bearing3_1,True,23.189376831054688,19.506187438964844,True,True
+signed_log1p,Bearing3_2,True,7.72347354888916,3.682129383087158,True,True
+signed_log1p,Bearing3_3,True,7.388916015625,5.295162200927734,True,True
+clip_20,Bearing3_1,True,20.0,20.0,False,False
+clip_20,Bearing3_2,True,20.0,20.0,False,False
+clip_20,Bearing3_3,True,20.0,20.0,False,False

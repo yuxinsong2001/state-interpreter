@@ -1,0 +1,55 @@
+{
+  "amendment_id": "xjtu_condition3_feature_scaling_amendment_v1",
+  "parent_experiment_id": "xjtu_condition3_feature_lstm_development_v1",
+  "status": "preregistered_before_scaling_audit_and_before_training",
+  "scope": {
+    "development": ["Bearing3_1", "Bearing3_2", "Bearing3_3"],
+    "protected_validation": ["Bearing3_4"],
+    "protected_blind": ["Bearing3_5"]
+  },
+  "input_cache": {
+    "directory": "cache/xjtu_condition3_feature_lstm_v1",
+    "entries": [
+      {"bearing_id": "Bearing3_1", "sha256": "7e4d33328bd1195c0b51f55b6d58db1d29b88b708a5840489d989bbf8d8e2a69"},
+      {"bearing_id": "Bearing3_2", "sha256": "9caf958295ec59908d5040b175a009d439e8f5420d6baf65acc14e5a899059da"},
+      {"bearing_id": "Bearing3_3", "sha256": "33696c4127593eb4a35818615387bcc29bf727098928bd5baeeef4e3fa9ba765"}
+    ]
+  },
+  "fixed_calibration_steps": 15,
+  "candidates": [
+    {
+      "mode": "baseline_zscore",
+      "formula": "z=(x-early_mean)/max(early_std,1e-6)",
+      "strictly_monotonic": true
+    },
+    {
+      "mode": "signed_log1p",
+      "formula": "sign(z)*log1p(abs(z))",
+      "strictly_monotonic": true
+    },
+    {
+      "mode": "clip_20",
+      "formula": "clip(z,-20,20)",
+      "strictly_monotonic": false
+    }
+  ],
+  "selection_gate": {
+    "all_bearings_finite": true,
+    "maximum_absolute_value_at_most": 25.0,
+    "p99_absolute_value_at_most": 20.0,
+    "strictly_monotonic_transform_required": true,
+    "selection_rule": "select the first candidate in listed order that passes every gate on every development bearing"
+  },
+  "prohibited": [
+    "reading Bearing3_4",
+    "reading Bearing3_5",
+    "training Feature LSTM during scaling audit",
+    "selecting a rule using RUL prediction performance",
+    "changing feature count or deleting dimensions"
+  ],
+  "frozen_scaler": {
+    "path": "src/state_interpreter/data/stable_feature_scaling.py",
+    "sha256": "96a3a557882822c7226a3bd74e1d1b6e56041eac3e7edf0ff4e46425319fcd6b"
+  },
+  "execution_token": "AUDIT_CONDITION3_FEATURE_SCALING_ONCE"
+}

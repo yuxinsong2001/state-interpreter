@@ -1,0 +1,17 @@
+{
+  "amendment_id": "xjtu_condition3_feature_scaling_amendment_v1",
+  "status": "scaling_audit_completed",
+  "date": "2026-09-18",
+  "selected_mode": "signed_log1p",
+  "selection_basis": "predefined numerical stability and strict monotonicity gates",
+  "development_bearings": ["Bearing3_1", "Bearing3_2", "Bearing3_3"],
+  "selected_metrics": {
+    "Bearing3_1": {"max_abs": 23.189376831054688, "p99_abs": 19.506187438964844},
+    "Bearing3_2": {"max_abs": 7.72347354888916, "p99_abs": 3.682129383087158},
+    "Bearing3_3": {"max_abs": 7.388916015625, "p99_abs": 5.295162200927734}
+  },
+  "protected_bearings_not_read": ["Bearing3_4", "Bearing3_5"],
+  "training_performed": false,
+  "full_tests_passed": 157,
+  "next_action": "freeze Feature LSTM training protocol v2 with signed_log1p"
+}
