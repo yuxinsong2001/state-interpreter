@@ -138,3 +138,9 @@ Engineering-Baseline `thfmn/xjtu-sy-bearing`:
 
 In diesem Schritt werden weder RUL-/Onset-Labels noch reale XJTU-SY-Bearings
 gelesen. Herkunft und MIT-Lizenzhinweis stehen in `THIRD_PARTY_NOTICES.md`.
+
+Das geschützte Entwicklungsprotokoll für Condition 3 ist in
+`configs/xjtu_condition3_feature_lstm_development_v1.json` vorregistriert. Der
+Preflight akzeptiert keinen Datensatzpfad. Ein späterer Materialisierungsschritt
+darf ausschließlich `Bearing3_1` bis `Bearing3_3` lesen; `Bearing3_4` und
+`Bearing3_5` bleiben geschützt.

@@ -176,3 +176,8 @@ The repository now contains a minimal PyTorch port of the audited
 This stage does not use RUL/onset labels and does not read any XJTU-SY bearing.
 Attribution and the upstream MIT notice are recorded in
 `THIRD_PARTY_NOTICES.md`.
+
+The protected Condition 3 development protocol is preregistered in
+`configs/xjtu_condition3_feature_lstm_development_v1.json`. Its preflight does
+not accept a dataset path and permits a later materialization step for exactly
+`Bearing3_1`–`Bearing3_3`; `Bearing3_4` and `Bearing3_5` remain protected.
