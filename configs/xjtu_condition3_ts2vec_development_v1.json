@@ -1,0 +1,94 @@
+{
+  "experiment_id": "xjtu_condition3_ts2vec_development_v1",
+  "status": "preregistered_preflight_no_cache_read",
+  "method": "compact_TS2Vec_adaptation_from_official_core",
+  "upstream": {
+    "repository": "https://github.com/zhihanyue/ts2vec",
+    "commit": "b0088e14a99706c05451316dc6db8d3da9351163",
+    "license": "MIT"
+  },
+  "development_bearings": ["Bearing3_1", "Bearing3_2", "Bearing3_3"],
+  "protected_validation": ["Bearing3_4"],
+  "protected_blind": ["Bearing3_5"],
+  "outer_lobo_folds": [
+    {"test": "Bearing3_1", "train": ["Bearing3_2", "Bearing3_3"]},
+    {"test": "Bearing3_2", "train": ["Bearing3_1", "Bearing3_3"]},
+    {"test": "Bearing3_3", "train": ["Bearing3_1", "Bearing3_2"]}
+  ],
+  "input": {
+    "feature_count": 65,
+    "calibration_steps": 15,
+    "scaling_mode": "signed_log1p",
+    "cache_directory": "cache/xjtu_condition3_feature_lstm_v1",
+    "cache_entries": [
+      {"bearing_id": "Bearing3_1", "sha256": "7e4d33328bd1195c0b51f55b6d58db1d29b88b708a5840489d989bbf8d8e2a69"},
+      {"bearing_id": "Bearing3_2", "sha256": "9caf958295ec59908d5040b175a009d439e8f5420d6baf65acc14e5a899059da"},
+      {"bearing_id": "Bearing3_3", "sha256": "33696c4127593eb4a35818615387bcc29bf727098928bd5baeeef4e3fa9ba765"}
+    ]
+  },
+  "training_chunks": {
+    "chunk_length": 128,
+    "chunks_per_training_bearing": 16,
+    "selection": "evenly_spaced_including_both_lifecycle_ends",
+    "batch_size": 8
+  },
+  "encoder": {
+    "input_dims": 65,
+    "output_dims": 64,
+    "hidden_dims": 32,
+    "depth": 6,
+    "mask_probability": 0.5,
+    "contrastive_alpha": 0.5,
+    "temporal_unit": 0,
+    "compact_adaptation": true
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "fixed_iterations": 200,
+    "swa_update": "after_every_iteration",
+    "seeds": [20260918, 20260921, 20260924],
+    "device": "cpu",
+    "checkpoint_selection": "fixed_final_iteration_no_outer_test_selection"
+  },
+  "causal_inference": {
+    "context_length": 128,
+    "padding": "left_nan_only",
+    "representation": "last_timestamp_output",
+    "future_context_allowed": false
+  },
+  "health_readout": {
+    "model": "Ridge",
+    "alpha": 1.0,
+    "target": "normalized_lifetime",
+    "equal_samples_per_training_bearing": 300,
+    "fit_scope": "outer_training_bearings_only",
+    "reported_progress": "clipped_predicted_normalized_lifetime"
+  },
+  "identity_probe": {
+    "classifier": "nearest_centroid",
+    "equal_samples_per_bearing": 300,
+    "contiguous_lifetime_folds": 5,
+    "fit_and_evaluate_separately_for_each_outer_model": true
+  },
+  "evaluation_gate": {
+    "health": {
+      "all_three_mean_spearman_positive": true,
+      "at_least_two_mean_spearman_at_least": 0.5,
+      "minimum_positive_seeds_per_bearing": 2
+    },
+    "identity": {
+      "mean_accuracy_at_most": 0.8,
+      "reference_feature_identity_accuracy": 0.9033333333333333
+    },
+    "combined_rule": "health_gate_and_identity_gate_must_both_pass"
+  },
+  "output_directory": "results/2026-09-18_ts2vec_development_v1",
+  "execution_token": "TRAIN_TS2VEC_CONDITION3_DEVELOPMENT_LOBO_ONCE",
+  "frozen_artifacts": [
+    {"path": "src/state_interpreter/encoders/ts2vec.py", "sha256": "1adc5845ff521c39fe82b5304cb9d5071a80f6abcdfde7aad38fb6acf47bf38a"},
+    {"path": "src/state_interpreter/ts2vec_experiment.py", "sha256": "b5cf7562cba48d4e292a979c3bd1071aee7f87691cd6558dcfb814d8bcf37eb2"},
+    {"path": "src/state_interpreter/data/stable_feature_scaling.py", "sha256": "96a3a557882822c7226a3bd74e1d1b6e56041eac3e7edf0ff4e46425319fcd6b"}
+  ]
+}

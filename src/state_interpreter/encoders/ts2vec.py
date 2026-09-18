@@ -8,6 +8,7 @@ leaving experiment policy, data access, and evaluation in local code.
 
 from __future__ import annotations
 
+from dataclasses import dataclass
 import numpy as np
 import torch
 from torch import nn
@@ -209,12 +210,19 @@ def take_per_row(values: torch.Tensor, offsets: np.ndarray, length: int) -> torc
     return values[rows, columns]
 
 
+@dataclass(frozen=True)
+class TS2VecContextViews:
+    first: torch.Tensor
+    second: torch.Tensor
+    overlap_length: int
+
+
 def sample_context_views(
     values: torch.Tensor,
     *,
     temporal_unit: int,
     random_state: np.random.Generator,
-) -> tuple[torch.Tensor, torch.Tensor]:
+) -> TS2VecContextViews:
     """Create official overlapping context views for one training iteration."""
 
     timestamps = values.shape[1]
@@ -237,4 +245,8 @@ def sample_context_views(
     second = take_per_row(
         values, offsets + crop_left, extended_right - crop_left
     )
-    return first, second
+    return TS2VecContextViews(
+        first=first,
+        second=second,
+        overlap_length=crop_length,
+    )

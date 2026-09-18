@@ -29,13 +29,13 @@ def test_hierarchical_loss_backpropagates() -> None:
 
 def test_context_views_align_to_same_crop_length_after_encoding_slice() -> None:
     values = torch.arange(2 * 40 * 3, dtype=torch.float32).reshape(2, 40, 3)
-    first, second = sample_context_views(
+    views = sample_context_views(
         values, temporal_unit=0, random_state=np.random.default_rng(17)
     )
-    assert first.shape[0] == second.shape[0] == 2
-    assert first.shape[2] == second.shape[2] == 3
-    assert first.shape[1] >= 2
-    assert second.shape[1] >= 2
+    assert views.first.shape[0] == views.second.shape[0] == 2
+    assert views.first.shape[2] == views.second.shape[2] == 3
+    assert views.first.shape[1] >= views.overlap_length >= 2
+    assert views.second.shape[1] >= views.overlap_length
 
 
 def test_encoder_handles_nan_padding() -> None:
