@@ -1,0 +1,19 @@
+{
+  "experiment_id": "xjtu_condition3_feature_lstm_training_v2",
+  "status": "development_gate_failed_validation_not_authorized",
+  "date": "2026-09-18",
+  "config_sha256": "d43c0257932c951e9380d1d89b84bff33a9b9b5c815af4fd07dfb3fc04e56d52",
+  "summary": {
+    "Bearing3_1": {"mean_spearman": 0.3406160922093758, "std": 0.047148355206148775, "positive_seeds": 3},
+    "Bearing3_2": {"mean_spearman": 0.03678605502455138, "std": 0.4165597087304211, "positive_seeds": 2},
+    "Bearing3_3": {"mean_spearman": 0.39445194912261483, "std": 0.19169567171295004, "positive_seeds": 3}
+  },
+  "gate": {
+    "all_three_mean_positive": true,
+    "at_least_two_mean_at_least_0_5": false,
+    "minimum_two_positive_seeds_each": true,
+    "passed": false
+  },
+  "protected_bearings_not_read": ["Bearing3_4", "Bearing3_5"],
+  "validation_authorized": false
+}

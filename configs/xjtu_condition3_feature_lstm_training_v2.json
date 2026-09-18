@@ -1,0 +1,68 @@
+{
+  "experiment_id": "xjtu_condition3_feature_lstm_training_v2",
+  "parent_experiment_id": "xjtu_condition3_feature_lstm_development_v1",
+  "amendment_id": "xjtu_condition3_feature_scaling_amendment_v1",
+  "status": "preregistered_training_v2_signed_log1p",
+  "condition": "40Hz10kN",
+  "development_bearings": ["Bearing3_1", "Bearing3_2", "Bearing3_3"],
+  "protected_validation": ["Bearing3_4"],
+  "protected_blind": ["Bearing3_5"],
+  "outer_lobo_folds": [
+    {"test": "Bearing3_1", "train": ["Bearing3_2", "Bearing3_3"]},
+    {"test": "Bearing3_2", "train": ["Bearing3_1", "Bearing3_3"]},
+    {"test": "Bearing3_3", "train": ["Bearing3_1", "Bearing3_2"]}
+  ],
+  "input": {
+    "feature_count": 65,
+    "calibration_steps": 15,
+    "window_size": 10,
+    "scaling_mode": "signed_log1p",
+    "cache_directory": "cache/xjtu_condition3_feature_lstm_v1",
+    "cache_entries": [
+      {"bearing_id": "Bearing3_1", "sha256": "7e4d33328bd1195c0b51f55b6d58db1d29b88b708a5840489d989bbf8d8e2a69"},
+      {"bearing_id": "Bearing3_2", "sha256": "9caf958295ec59908d5040b175a009d439e8f5420d6baf65acc14e5a899059da"},
+      {"bearing_id": "Bearing3_3", "sha256": "33696c4127593eb4a35818615387bcc29bf727098928bd5baeeef4e3fa9ba765"}
+    ]
+  },
+  "model": {
+    "architecture": "FeatureLSTM",
+    "n_features": 65,
+    "hidden_size": 16,
+    "dense_size": 16,
+    "dropout": 0.2,
+    "bidirectional": true,
+    "parameter_count": 11169
+  },
+  "training": {
+    "target": "normalized_remaining_useful_life",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "loss": "HuberLoss",
+    "huber_delta": 0.08,
+    "batch_size": 32,
+    "fixed_epochs": 50,
+    "checkpoint_selection": "fixed_final_epoch_no_outer_test_selection",
+    "window_sampling": "uniform_over_all_training_windows",
+    "device": "cpu",
+    "seeds": [20260918, 20260921, 20260924]
+  },
+  "evaluation": {
+    "reported_progress": "1_minus_clipped_predicted_rul",
+    "primary_metric": "per_bearing_spearman_progress",
+    "secondary_metric": "backward_step_fraction",
+    "no_pooled_primary_metric": true,
+    "gate": {
+      "all_three_mean_spearman_positive": true,
+      "at_least_two_mean_spearman_at_least": 0.5,
+      "minimum_positive_seeds_per_bearing": 2
+    }
+  },
+  "output_directory": "results/2026-09-18_feature_lstm_training_v2",
+  "execution_token": "TRAIN_FEATURE_LSTM_V2_DEVELOPMENT_LOBO_ONCE",
+  "frozen_artifacts": [
+    {"path": "src/state_interpreter/encoders/feature_lstm.py", "sha256": "bbe6c1c5264a67f34288b4282c13c5c9fe78d9f79645c07f130d690d1eff00f8"},
+    {"path": "src/state_interpreter/data/feature_sequences.py", "sha256": "debfef78826f6d051afc9de98fca472fd64e9ecce58a922c14c3151e1f81ee2f"},
+    {"path": "src/state_interpreter/data/stable_feature_scaling.py", "sha256": "96a3a557882822c7226a3bd74e1d1b6e56041eac3e7edf0ff4e46425319fcd6b"}
+  ]
+}

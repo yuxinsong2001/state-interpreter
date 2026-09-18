@@ -1,0 +1,41 @@
+{
+  "experiment_id": "xjtu_condition3_feature_lstm_training_v2",
+  "status": "completed",
+  "elapsed_seconds": 148.4876992702484,
+  "config_sha256": "d43c0257932c951e9380d1d89b84bff33a9b9b5c815af4fd07dfb3fc04e56d52",
+  "summary": [
+    {
+      "bearing_id": "Bearing3_1",
+      "mean_spearman": 0.3406160922093758,
+      "std_spearman": 0.047148355206148775,
+      "positive_seed_count": 3,
+      "mean_backward_step_fraction": 0.4607067510548523
+    },
+    {
+      "bearing_id": "Bearing3_2",
+      "mean_spearman": 0.03678605502455138,
+      "std_spearman": 0.4165597087304211,
+      "positive_seed_count": 2,
+      "mean_backward_step_fraction": 0.48913917940466617
+    },
+    {
+      "bearing_id": "Bearing3_3",
+      "mean_spearman": 0.39445194912261483,
+      "std_spearman": 0.19169567171295004,
+      "positive_seed_count": 3,
+      "mean_backward_step_fraction": 0.4847645429362881
+    }
+  ],
+  "validation_gate": {
+    "all_three_mean_spearman_positive": true,
+    "at_least_two_mean_spearman_at_least_0_5": false,
+    "minimum_positive_seeds_per_bearing": true,
+    "passed": false
+  },
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "fixed_final_epoch_used": true,
+  "outer_test_used_for_checkpoint_selection": false
+}
