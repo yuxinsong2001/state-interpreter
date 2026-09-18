@@ -1,0 +1,16 @@
+{
+  "diagnosis_id": "xjtu_condition3_feature_failure_diagnosis_v1",
+  "status": "completed_representation_alignment_bottleneck",
+  "date": "2026-09-18",
+  "bearing_identity_accuracy": 0.9033333333333333,
+  "robust_direction_conflict_features": 34,
+  "strong_same_sign_all_three_features": 1,
+  "ridge_lobo_spearman": {
+    "Bearing3_1": -0.11069456327292526,
+    "Bearing3_2": -0.47364615162390694,
+    "Bearing3_3": -0.19890532117023518
+  },
+  "protected_bearings_not_read": ["Bearing3_4", "Bearing3_5"],
+  "feature_lstm_retrained": false,
+  "next_action": "preregister a mature contrastive/domain-aligned representation baseline"
+}

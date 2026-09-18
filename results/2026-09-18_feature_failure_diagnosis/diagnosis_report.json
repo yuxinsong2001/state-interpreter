@@ -1,0 +1,32 @@
+{
+  "diagnosis_id": "xjtu_condition3_feature_failure_diagnosis_v1",
+  "status": "completed",
+  "bearing_identity_accuracy": 0.9033333333333333,
+  "strong_bearing_identity": true,
+  "robust_direction_conflict_feature_count": 34,
+  "strong_same_sign_all_three_feature_count": 1,
+  "ridge_lobo": [
+    {
+      "test_bearing": "Bearing3_1",
+      "spearman_lifetime": -0.11069456327292526,
+      "mae_lifetime": 0.908665054165665
+    },
+    {
+      "test_bearing": "Bearing3_2",
+      "spearman_lifetime": -0.47364615162390694,
+      "mae_lifetime": 0.39146301257210725
+    },
+    {
+      "test_bearing": "Bearing3_3",
+      "spearman_lifetime": -0.19890532117023518,
+      "mae_lifetime": 0.5385082921028392
+    }
+  ],
+  "unstable_cross_bearing_rul_mapping": true,
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "feature_lstm_training_performed": false,
+  "input_cache_hashes_verified": true
+}
