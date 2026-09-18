@@ -1,0 +1,14 @@
+{
+  "experiment_id":"xjtu_condition3_two_sided_validation",
+  "status":"locked_before_validation_read",
+  "development_bearings":["Bearing3_1","Bearing3_2","Bearing3_3"],
+  "validation_bearing":"Bearing3_4",
+  "blind_bearing":"Bearing3_5",
+  "condition":"40Hz10kN",
+  "formula":"abs(causal_mean((z - mean(z_first_15)) dot condition3_development_PC1, window=10))",
+  "score_start_step":25,
+  "comparison":"signed projection using the identical fitted axis",
+  "decision_gate":"two-sided Level validation Spearman rho must be positive; report signed comparator without choosing a new formula",
+  "frozen_hashes":{"autoencoder_checkpoint":"6edb626d1961cb1b1a7a2c32c52c9c96b0100cabb712cda4d79ab3c2a2e7695a","model_localization_report":"1a88e275eec080318d4ae9815bf01ffeb62abd4cfec9210afe1eb23f03c4482d"},
+  "output_directory":"results/2026-09-18_condition3_two_sided_validation"
+}

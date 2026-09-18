@@ -1,0 +1,17 @@
+{
+  "status": "completed_locked",
+  "config_sha256": "6f45af671022d850d109bb2b914395975b6fbe5fb865a78e04ecec7faf86a86b",
+  "elapsed_seconds": 469.7061417102814,
+  "summary": {
+    "bearing_id": "Bearing3_4",
+    "samples": 1515,
+    "score_samples": 1490,
+    "signed_rho": 0.32771121752170734,
+    "two_sided_rho": 0.02569889206011011,
+    "two_sided_positive": true,
+    "first_last_delta": 11.460806128360048,
+    "backward_step_fraction": 0.4620550705171256,
+    "protected_blind_not_read": "Bearing3_5"
+  },
+  "interpretation": "Validation of a formula locked after Condition 3 development; Bearing3_5 remains unread."
+}

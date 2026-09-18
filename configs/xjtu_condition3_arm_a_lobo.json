@@ -1,0 +1,30 @@
+{
+  "experiment_id": "xjtu_condition3_arm_a_lobo",
+  "status": "preregistered_development_only",
+  "research_question": "Can condition-specific interpreter calibration recover cross-bearing performance while keeping the Condition 1 AutoEncoder and Residual-GRU frozen?",
+  "condition": "40Hz10kN",
+  "bearings": ["Bearing3_1", "Bearing3_2", "Bearing3_3"],
+  "protected_bearings": ["Bearing3_4", "Bearing3_5"],
+  "folds": [
+    {"test": "Bearing3_1", "train": ["Bearing3_2", "Bearing3_3"]},
+    {"test": "Bearing3_2", "train": ["Bearing3_1", "Bearing3_3"]},
+    {"test": "Bearing3_3", "train": ["Bearing3_1", "Bearing3_2"]}
+  ],
+  "frozen_autoencoder_checkpoint": "runs/ae_baseline_z8_20260801/best_checkpoint.pt",
+  "frozen_residual_checkpoints": [
+    "results/2026-09-17_residual_gru_termination/residual_seed_20260916_checkpoint.pt",
+    "results/2026-09-17_residual_gru_termination/residual_seed_20260917_checkpoint.pt",
+    "results/2026-09-17_residual_gru_termination/residual_seed_20260918_checkpoint.pt"
+  ],
+  "source_frozen_result": "results/2026-09-18_condition3_frozen_development/summary.csv",
+  "calibration_steps": 15,
+  "temporal_window": 10,
+  "score_start_step": 25,
+  "movement_quantile": 0.99,
+  "decision_rules": {
+    "primary": "per-bearing Level-lifetime Spearman rho",
+    "support_interpreter_bottleneck_if": "LOBO improves the majority of bearings without using the held-out bearing for axis or Movement calibration",
+    "continue_to_encoder_adaptation_if": "LOBO remains inconsistent or materially negative on any held-out bearing"
+  },
+  "output_directory": "results/2026-09-18_condition3_arm_a_lobo"
+}

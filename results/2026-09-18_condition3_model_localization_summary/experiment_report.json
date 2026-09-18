@@ -1,0 +1,31 @@
+{
+  "status": "completed",
+  "decision": {
+    "arm_a_interpreter_only_supported": false,
+    "arm_b_reconstruction_encoder_adaptation_supported": false,
+    "evidence": {
+      "B3_3_negative_all_arm_b_seeds": true,
+      "B3_1_sign_stable_across_arm_b_seeds": false,
+      "exploratory_two_sided_positive_all_bearings": true
+    },
+    "next_candidate": "Preregister a two-sided axial-displacement Level; do not call the post-hoc development check validation. Compare against signed Level on Condition 1 development evidence before deciding whether to unlock Bearing3_4.",
+    "protected_bearings_not_read": [
+      "Bearing3_4",
+      "Bearing3_5"
+    ]
+  },
+  "warning": "The two-sided Level was inspected after observing signed-Level failures and is hypothesis-generating only.",
+  "fallacy_scan_11_of_11": {
+    "simpsons_paradox": "All decisions remain per bearing; no pooled time series.",
+    "ecological_fallacy": "Bearing, not time point, is the evaluation unit.",
+    "berkson_bias": "Laboratory run-to-failure selection limits scope.",
+    "collider_bias": "No conditioned causal estimate.",
+    "base_rate_neglect": "No fault-event classification in this summary.",
+    "regression_to_mean": "No intervention comparison.",
+    "survivorship_bias": "Field censoring is absent.",
+    "look_elsewhere_effect": "Two-sided Level is explicitly labeled post-hoc exploratory.",
+    "researcher_degrees_of_freedom": "Arm A/B protocols were preregistered; the new candidate is not treated as confirmation.",
+    "correlation_causation": "Temporal association is not physical damage causation.",
+    "reverse_causality": "No causal direction is claimed."
+  }
+}

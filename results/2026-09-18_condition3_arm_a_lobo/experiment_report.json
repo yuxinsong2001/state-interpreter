@@ -1,0 +1,28 @@
+{
+  "experiment_id": "xjtu_condition3_arm_a_lobo",
+  "status": "completed",
+  "config_sha256": "e8ff48bc8bd8fc203b46ec0c1c8db6a5cb8e96ff048eaf895ae140fd0d3dc2d4",
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "elapsed_seconds": 784.5037457942963,
+  "decision": {
+    "majority_level_rho_improved": false,
+    "all_level_rho_positive": false,
+    "proceed_to_encoder_adaptation": true
+  },
+  "fallacy_scan_11_of_11": {
+    "simpsons_paradox": "Per-bearing LOBO results are primary; no pooled trajectory correlation.",
+    "ecological_fallacy": "Bearing is the evaluation unit; time samples are dependent.",
+    "berkson_bias": "Laboratory run-to-failure bearings are selected trajectories.",
+    "collider_bias": "No conditioned causal comparison is made.",
+    "base_rate_neglect": "Movement event fraction is reported per held-out bearing.",
+    "regression_to_mean": "No intervention or before-after causal claim.",
+    "survivorship_bias": "Complete trajectories do not represent field censoring.",
+    "look_elsewhere_effect": "Three folds and metrics were fixed before execution.",
+    "researcher_degrees_of_freedom": "Encoder, folds, calibration length and quantile were preregistered.",
+    "correlation_causation": "Time ordering is not physical damage causation.",
+    "reverse_causality": "Chronology is preserved; no causal mechanism is claimed."
+  }
+}

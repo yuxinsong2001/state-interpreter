@@ -1,0 +1,29 @@
+{
+  "experiment_id": "xjtu_condition3_arm_b_encoder_lobo_seed_20260924",
+  "status": "completed",
+  "config_sha256": "6ddbadab46e5ffb61385947131447802f9a6d49d61b91d5061ac78230e4fd625",
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "elapsed_seconds": 419.59868001937866,
+  "movement_not_scored_reason": "Movement is not scored because independently retrained AutoEncoders define new latent coordinate systems incompatible with the frozen Condition 1 Residual-GRU.",
+  "decision": {
+    "all_level_rho_positive": false,
+    "majority_improved_vs_baseline": true,
+    "encoder_adaptation_supported": false
+  },
+  "fallacy_scan_11_of_11": {
+    "simpsons_paradox": "Per-bearing LOBO results; no pooled correlation.",
+    "ecological_fallacy": "Bearing is the independent evaluation unit.",
+    "berkson_bias": "Laboratory run-to-failure selection limits deployment generalization.",
+    "collider_bias": "No causal conditioning claim.",
+    "base_rate_neglect": "No event classification is performed in Arm B.",
+    "regression_to_mean": "No intervention claim.",
+    "survivorship_bias": "Complete trajectories omit field censoring.",
+    "look_elsewhere_effect": "Folds, epochs, seed and metrics were preregistered.",
+    "researcher_degrees_of_freedom": "Fixed five epochs; held-out bearing is not used for checkpoint selection.",
+    "correlation_causation": "Lifetime correlation is not physical damage causation.",
+    "reverse_causality": "Temporal order is preserved without causal inference."
+  }
+}
