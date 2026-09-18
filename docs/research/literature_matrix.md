@@ -280,3 +280,16 @@ GRU 和 Attention 是候选实现，不是项目的先验要求。
 - Zhou et al. (2016). *Bearing Performance Degradation Assessment Using Lifting Wavelet Packet Symbolic Entropy and SVDD*. [Wiley](https://onlinelibrary.wiley.com/doi/abs/10.1155/2016/3086454)
 - Singleton et al. (2014). *Discovering the hidden health states in bearing vibration signals for fault prognosis*. [IEEE](https://ieeexplore.ieee.org/abstract/document/7049008/)
 
+## 12. 2026-09-18 GitHub成熟实现补充
+
+| 项目 | 主要方法 | 解决的问题 | 对当前项目的用途 | 采用优先级 |
+|---|---|---|---|---|
+| [XJTU-SY Bearing RUL Benchmark](https://github.com/thfmn/xjtu-sy-bearing) | 65维特征、onset detection、Feature BiLSTM、LightGBM、CNN、TCN-LSTM | XJTU-SY LOBO RUL与退化起点 | 直接复用特征、两阶段流程和评价协议 | 第一 |
+| [TS2Vec](https://github.com/zhihanyue/ts2vec) | 多尺度时间级/实例级对比学习 | 无标签时序表示 | 替换纯重建AutoEncoder，输出上下文化embedding | 第二 |
+| [TS-TCC](https://github.com/emadeldeen24/TS-TCC) | 强弱增强、跨视图预测、contextual contrast | 扰动不变和时序上下文 | 备选对比学习Encoder | 第二 |
+| [rul-adapt](https://github.com/tilman151/rul-adapt) | DANN、MMD、LatentAlign、TBiGRU等 | 跨数据集/工况RUL域适配 | 健康表示成立后处理Condition shift | 第三 |
+| [AdaTime](https://github.com/emadeldeen24/AdaTime) | 11种时序域适配统一基准 | 公平选择DA方法 | 提供source-only、target-only及无标签模型选择规范 | 第三 |
+| [TSLANet](https://github.com/emadeldeen24/TSLANet) | adaptive spectral block、自监督masking | 噪声下长短期时序表示 | 更复杂的轻量Encoder候选 | 后续 |
+| [PPDM Framework](https://github.com/panoskom/PPDM_framework) | AE→HI→随机RUL→维护RL模块化 | PHM到决策 | 借鉴接口边界，不直接作为性能基线 | 架构参考 |
+
+新的推荐主线为：先复现XJTU-SY两阶段Feature LSTM强基线，再以TS2Vec替换Encoder，最后才引入DANN/MMD。成熟实现同样显示，状态解释不是简单地把embedding投影到一条轴，而通常需要退化起点、序列上下文、健康目标和跨域对齐共同作用。
