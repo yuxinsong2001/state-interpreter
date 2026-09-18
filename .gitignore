@@ -6,7 +6,7 @@ _pytest_*/
 dist/
 build/
 *.egg-info/
-data/
+/data/
 checkpoints/
 outputs/
 runs/

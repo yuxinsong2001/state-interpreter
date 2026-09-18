@@ -131,6 +131,10 @@ Engineering-Baseline `thfmn/xjtu-sy-bearing`:
 - `FeatureLSTM`: `[batch, steps, 65] -> skalarer Score + 16-dimensionaler Hidden State`;
 - Tests mit synthetischen Daten für Shapes, numerische Stabilität,
   Kanaltrennung, charakteristische Frequenzen, Parameterzahl und Backpropagation.
+- `CausalFeatureStandardizer` bestimmt Mittelwert und Standardabweichung nur aus
+  einem festen frühen Kalibrierungsabschnitt;
+- `build_bearing_feature_windows` sortiert Messungen innerhalb jedes Bearings
+  und erzeugt keine Fenster über Bearing-Grenzen hinweg.
 
 In diesem Schritt werden weder RUL-/Onset-Labels noch reale XJTU-SY-Bearings
 gelesen. Herkunft und MIT-Lizenzhinweis stehen in `THIRD_PARTY_NOTICES.md`.

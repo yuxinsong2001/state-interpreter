@@ -169,6 +169,9 @@ The repository now contains a minimal PyTorch port of the audited
 - `FeatureLSTM`: `[batch, steps, 65] -> scalar score + 16-D hidden state`;
 - synthetic-data tests for shape, numerical stability, channel separation,
   characteristic frequencies, parameter count, and backpropagation.
+- `CausalFeatureStandardizer` fits mean/std from a fixed early prefix only;
+- `build_bearing_feature_windows` sorts measurements within each bearing and
+  creates windows that never cross bearing boundaries.
 
 This stage does not use RUL/onset labels and does not read any XJTU-SY bearing.
 Attribution and the upstream MIT notice are recorded in
