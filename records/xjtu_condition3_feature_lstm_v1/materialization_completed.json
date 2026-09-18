@@ -1,0 +1,42 @@
+{
+  "experiment_id": "xjtu_condition3_feature_lstm_development_v1",
+  "status": "development_features_materialized_training_blocked_by_quality_gate",
+  "date": "2026-09-18",
+  "condition": "40Hz10kN",
+  "config_sha256": "7607c4e78e2327b6a23e2f7fd74a57dee5e1e5cc4469d7556a56bdad48ad607b",
+  "entries": [
+    {
+      "bearing_id": "Bearing3_1",
+      "sample_count": 2538,
+      "shape": [2538, 65],
+      "cache_sha256": "7e4d33328bd1195c0b51f55b6d58db1d29b88b708a5840489d989bbf8d8e2a69"
+    },
+    {
+      "bearing_id": "Bearing3_2",
+      "sample_count": 2496,
+      "shape": [2496, 65],
+      "cache_sha256": "9caf958295ec59908d5040b175a009d439e8f5420d6baf65acc14e5a899059da"
+    },
+    {
+      "bearing_id": "Bearing3_3",
+      "sample_count": 371,
+      "shape": [371, 65],
+      "cache_sha256": "33696c4127593eb4a35818615387bcc29bf727098928bd5baeeef4e3fa9ba765"
+    }
+  ],
+  "integrity": {
+    "all_finite": true,
+    "step_ids_unique_and_consecutive": true,
+    "cache_hashes_independently_verified": true,
+    "targeted_tests_passed": 9,
+    "full_tests_passed": 152
+  },
+  "quality_gate": {
+    "passed_for_training": false,
+    "reason": "Early near-constant features cause extreme standardized magnitudes; maximum observed absolute value is approximately 1.18e10 on Bearing3_1.",
+    "required_next_action": "Preregister a development-only stable-scaling amendment before LOBO training."
+  },
+  "protected_bearings_not_read": ["Bearing3_4", "Bearing3_5"],
+  "training_performed": false,
+  "cache_location": "local-only: cache/xjtu_condition3_feature_lstm_v1"
+}
