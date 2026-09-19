@@ -1,0 +1,31 @@
+{
+  "status": "exploratory_development_diagnosis_completed",
+  "source_experiment": "xjtu_condition3_source_dann_development_v1",
+  "source_config_sha256": "b0b594a60e04366fefbb8894011ad587eb2e7b1749bdb58d1b6df6baae6cc45d",
+  "source_file_sha256": {
+    "experiment_report.json": "580b3dfa00b0cf338cc81ec238cc7b4b32b2c32f18d6b2c6aa0935c4b4febaa9",
+    "health_trajectories.csv": "8a7e3ab18c537eb7447e2cab362a43b28b2ed7beb06d34a4d357955264d9fe52",
+    "identity_probe.csv": "a5a47484a757ab03f0d0fe22e8682db651b223883b7d7ea1e57587fefaed0026",
+    "per_seed_health_metrics.csv": "6493fdc88b6fe1968e62e329e47b5528e0e71a5734837357e9f5b197deab3f55"
+  },
+  "five_equal_normalized_lifetime_blocks": true,
+  "three_seeds": [
+    20260918,
+    20260921,
+    20260924
+  ],
+  "three_development_bearings": [
+    "Bearing3_1",
+    "Bearing3_2",
+    "Bearing3_3"
+  ],
+  "paired_stage_health_rows": 45,
+  "paired_stage_identity_rows": 45,
+  "stage_summary_rows": 15,
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "no_new_training": true,
+  "verification_status": "ANALYZED"
+}

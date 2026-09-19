@@ -91,6 +91,8 @@
 
 最新结果：`experiments/xjtu_source_dann_development_result_2026-09-18.md` 记录Source-DANN在三个bearing上均改善配对相关性并降低平均identity，但健康与identity绝对门槛仍失败，B3_4/B3_5未读取。
 
+最新阶段诊断：`experiments/xjtu_source_dann_lifecycle_diagnosis_2026-09-19.md` 用现有CSV比较五个生命周期区间，发现identity下降与健康改善并不稳定共现；阶段条件对齐仍只是待验证假设。
+
 本周最终步骤：`experiments/joint_evaluation_rehearsal_2026-08-02.md` 记录 Arm A/B 在 Bearing2_4 上共享单次输入物化的联合评估演练；Bearing2_5 仍未读取。
 
 最新组会材料：`meetings/wochenupdate_2026-08-02_DE.md` 为包含方法、双分支结果、限制和下一步的德语周报。
