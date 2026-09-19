@@ -1,0 +1,229 @@
+{
+  "status": "numerical_preflight_completed_no_training",
+  "experiment_id": "xjtu_source_conditional_mmd_numerical_preflight_v1",
+  "source_config_sha256": "b0b594a60e04366fefbb8894011ad587eb2e7b1749bdb58d1b6df6baae6cc45d",
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "model_training_performed": false,
+  "kernel": "biased_three_scale_rbf_mmd2_median_initial_embedding_distance",
+  "fold_seed_rows": [
+    {
+      "outer_test_not_read": "Bearing3_1",
+      "train_bearings": [
+        "Bearing3_2",
+        "Bearing3_3"
+      ],
+      "seed": 20260918,
+      "batches_per_epoch": 10,
+      "batch_size": 60,
+      "cell_count_per_batch": 6,
+      "scalars": {
+        "health_mse": 0.44007089734077454,
+        "median_squared_embedding_distance": 0.9461021423339844,
+        "global_mmd2": 0.5734760165214539,
+        "conditional_mmd2": 0.8268203735351562
+      },
+      "encoder_gradient_norms": {
+        "health": 1.3091771602630615,
+        "global_mmd": 3.2663192749023438,
+        "conditional_mmd": 3.58821702003479
+      },
+      "global_to_health_gradient_ratio": 2.494940619225301,
+      "conditional_to_health_gradient_ratio": 2.740818530101599
+    },
+    {
+      "outer_test_not_read": "Bearing3_2",
+      "train_bearings": [
+        "Bearing3_1",
+        "Bearing3_3"
+      ],
+      "seed": 20260918,
+      "batches_per_epoch": 10,
+      "batch_size": 60,
+      "cell_count_per_batch": 6,
+      "scalars": {
+        "health_mse": 0.43184930086135864,
+        "median_squared_embedding_distance": 1.3774899244308472,
+        "global_mmd2": 0.8182482123374939,
+        "conditional_mmd2": 0.9510124325752258
+      },
+      "encoder_gradient_norms": {
+        "health": 1.6569164991378784,
+        "global_mmd": 5.328449726104736,
+        "conditional_mmd": 5.35884952545166
+      },
+      "global_to_health_gradient_ratio": 3.21588307490282,
+      "conditional_to_health_gradient_ratio": 3.2342302875491673
+    },
+    {
+      "outer_test_not_read": "Bearing3_3",
+      "train_bearings": [
+        "Bearing3_1",
+        "Bearing3_2"
+      ],
+      "seed": 20260918,
+      "batches_per_epoch": 10,
+      "batch_size": 60,
+      "cell_count_per_batch": 6,
+      "scalars": {
+        "health_mse": 0.5844812989234924,
+        "median_squared_embedding_distance": 1.2191386222839355,
+        "global_mmd2": 0.765639066696167,
+        "conditional_mmd2": 0.9446332454681396
+      },
+      "encoder_gradient_norms": {
+        "health": 2.2125086784362793,
+        "global_mmd": 5.279055595397949,
+        "conditional_mmd": 5.29088020324707
+      },
+      "global_to_health_gradient_ratio": 2.3860044694283387,
+      "conditional_to_health_gradient_ratio": 2.3913489039900497
+    },
+    {
+      "outer_test_not_read": "Bearing3_1",
+      "train_bearings": [
+        "Bearing3_2",
+        "Bearing3_3"
+      ],
+      "seed": 20260921,
+      "batches_per_epoch": 10,
+      "batch_size": 60,
+      "cell_count_per_batch": 6,
+      "scalars": {
+        "health_mse": 0.340366929769516,
+        "median_squared_embedding_distance": 0.7426480054855347,
+        "global_mmd2": 0.48802030086517334,
+        "conditional_mmd2": 0.8167490363121033
+      },
+      "encoder_gradient_norms": {
+        "health": 1.2712087631225586,
+        "global_mmd": 3.6215741634368896,
+        "conditional_mmd": 3.8560755252838135
+      },
+      "global_to_health_gradient_ratio": 2.848921647252466,
+      "conditional_to_health_gradient_ratio": 3.0333928125321186
+    },
+    {
+      "outer_test_not_read": "Bearing3_2",
+      "train_bearings": [
+        "Bearing3_1",
+        "Bearing3_3"
+      ],
+      "seed": 20260921,
+      "batches_per_epoch": 10,
+      "batch_size": 60,
+      "cell_count_per_batch": 6,
+      "scalars": {
+        "health_mse": 0.34894222021102905,
+        "median_squared_embedding_distance": 1.1065064668655396,
+        "global_mmd2": 0.5986921191215515,
+        "conditional_mmd2": 0.7617619037628174
+      },
+      "encoder_gradient_norms": {
+        "health": 1.657370924949646,
+        "global_mmd": 4.543393135070801,
+        "conditional_mmd": 4.580785751342773
+      },
+      "global_to_health_gradient_ratio": 2.7413254731790575,
+      "conditional_to_health_gradient_ratio": 2.7638868779370833
+    },
+    {
+      "outer_test_not_read": "Bearing3_3",
+      "train_bearings": [
+        "Bearing3_1",
+        "Bearing3_2"
+      ],
+      "seed": 20260921,
+      "batches_per_epoch": 10,
+      "batch_size": 60,
+      "cell_count_per_batch": 6,
+      "scalars": {
+        "health_mse": 0.4527524411678314,
+        "median_squared_embedding_distance": 1.245466709136963,
+        "global_mmd2": 0.6506621241569519,
+        "conditional_mmd2": 0.8354504108428955
+      },
+      "encoder_gradient_norms": {
+        "health": 2.1036319732666016,
+        "global_mmd": 4.022586345672607,
+        "conditional_mmd": 4.332723140716553
+      },
+      "global_to_health_gradient_ratio": 1.9122101188765346,
+      "conditional_to_health_gradient_ratio": 2.0596393265446196
+    },
+    {
+      "outer_test_not_read": "Bearing3_1",
+      "train_bearings": [
+        "Bearing3_2",
+        "Bearing3_3"
+      ],
+      "seed": 20260924,
+      "batches_per_epoch": 10,
+      "batch_size": 60,
+      "cell_count_per_batch": 6,
+      "scalars": {
+        "health_mse": 0.5323728919029236,
+        "median_squared_embedding_distance": 1.0793964862823486,
+        "global_mmd2": 0.640887439250946,
+        "conditional_mmd2": 0.8585662245750427
+      },
+      "encoder_gradient_norms": {
+        "health": 1.4785722494125366,
+        "global_mmd": 3.852444648742676,
+        "conditional_mmd": 3.9156596660614014
+      },
+      "global_to_health_gradient_ratio": 2.605516673448539,
+      "conditional_to_health_gradient_ratio": 2.648270767706592
+    },
+    {
+      "outer_test_not_read": "Bearing3_2",
+      "train_bearings": [
+        "Bearing3_1",
+        "Bearing3_3"
+      ],
+      "seed": 20260924,
+      "batches_per_epoch": 10,
+      "batch_size": 60,
+      "cell_count_per_batch": 6,
+      "scalars": {
+        "health_mse": 0.7086857557296753,
+        "median_squared_embedding_distance": 1.8216359615325928,
+        "global_mmd2": 0.7828425765037537,
+        "conditional_mmd2": 0.9240555167198181
+      },
+      "encoder_gradient_norms": {
+        "health": 2.5336649417877197,
+        "global_mmd": 4.504903316497803,
+        "conditional_mmd": 4.32885217666626
+      },
+      "global_to_health_gradient_ratio": 1.778018569937351,
+      "conditional_to_health_gradient_ratio": 1.708533794374516
+    },
+    {
+      "outer_test_not_read": "Bearing3_3",
+      "train_bearings": [
+        "Bearing3_1",
+        "Bearing3_2"
+      ],
+      "seed": 20260924,
+      "batches_per_epoch": 10,
+      "batch_size": 60,
+      "cell_count_per_batch": 6,
+      "scalars": {
+        "health_mse": 0.7907525897026062,
+        "median_squared_embedding_distance": 1.5241492986679077,
+        "global_mmd2": 0.6914270520210266,
+        "conditional_mmd2": 0.8805213570594788
+      },
+      "encoder_gradient_norms": {
+        "health": 2.9702470302581787,
+        "global_mmd": 4.394937992095947,
+        "conditional_mmd": 4.442785263061523
+      },
+      "global_to_health_gradient_ratio": 1.4796540312385842,
+      "conditional_to_health_gradient_ratio": 1.4957628836263324
+    }
+  ]
+}
