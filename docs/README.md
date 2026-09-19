@@ -105,6 +105,8 @@
 
 三分支开发实验结果：`experiments/xjtu_source_conditional_mmd_development_result_2026-09-19.md` 记录一次性配对运行。Conditional MMD降低identity可识别性，但B3_2/B3_3健康排序仍为负，联合门槛未过；B3_4/B3_5未读取。
 
+条件MMD失败轨迹诊断：`experiments/xjtu_conditional_mmd_failure_diagnosis_2026-09-19.md` 仅用已保存CSV分析五段与逐seed原始曲线：B3_2整体方向偏反，B3_3前中段下降、末端急升；这是探索性诊断，不改变推进门槛。
+
 本周最终步骤：`experiments/joint_evaluation_rehearsal_2026-08-02.md` 记录 Arm A/B 在 Bearing2_4 上共享单次输入物化的联合评估演练；Bearing2_5 仍未读取。
 
 最新组会材料：`meetings/wochenupdate_2026-08-02_DE.md` 为包含方法、双分支结果、限制和下一步的德语周报。

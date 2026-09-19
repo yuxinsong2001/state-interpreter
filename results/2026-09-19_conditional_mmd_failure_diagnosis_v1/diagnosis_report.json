@@ -1,0 +1,25 @@
+{
+  "status": "exploratory_read_only_diagnosis_completed",
+  "source_experiment": "xjtu_condition3_source_conditional_mmd_development_v1",
+  "source_sha256": {
+    "experiment_report.json": "f110c9e9e6f10cc7729307ab6a3661a38539e49e0a553e040802dd844385dad5",
+    "health_trajectories.csv": "efca31be59fbb35dedec12a8291cdf258011d7b01872d39cc9e1759e14ad5031",
+    "per_seed_health_metrics.csv": "2895f7bea9877bed64e1a47019c9628a76ca025d6c2f45e7dc877d40f67ab8e1"
+  },
+  "source_bearings_only": [
+    "Bearing3_1",
+    "Bearing3_2",
+    "Bearing3_3"
+  ],
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "trajectories": 27,
+  "within_block_rows": 135,
+  "paired_rows": 18,
+  "warnings": [
+    "time blocks are measurement-progress bins, not verified damage stages",
+    "diagnosis is exploratory and cannot re-open preregistered gate"
+  ]
+}
