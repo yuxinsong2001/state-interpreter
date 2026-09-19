@@ -1,0 +1,9 @@
+{
+  "status": "development_completed_candidate_events_only",
+  "config_sha256": "5e72b9646d4bcbfb11994b9ff346628ac61eb95145ba6c13ad103edff0b353b0",
+  "result_report_sha256": "278984eb2559f06d9a569d974c927dc45909f8c97751fef950c96d7e0237a329",
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ]
+}

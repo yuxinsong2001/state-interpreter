@@ -1,0 +1,140 @@
+{
+  "status": "development_completed_candidate_events_only",
+  "experiment_id": "xjtu_condition3_weak_event_development_v1",
+  "config_sha256": "5e72b9646d4bcbfb11994b9ff346628ac61eb95145ba6c13ad103edff0b353b0",
+  "preflight": {
+    "status": "preflight_passed_no_npz_parsing_no_event_execution",
+    "verified_cache_sha256": {
+      "Bearing3_1": "7e4d33328bd1195c0b51f55b6d58db1d29b88b708a5840489d989bbf8d8e2a69",
+      "Bearing3_2": "9caf958295ec59908d5040b175a009d439e8f5420d6baf65acc14e5a899059da",
+      "Bearing3_3": "33696c4127593eb4a35818615387bcc29bf727098928bd5baeeef4e3fa9ba765"
+    },
+    "manifest_sha256": "d9a13bab542446a3cdd38646bb6829c03dd0d1e777032f36c85c55b2866f12b2",
+    "detector_sha256": "e2d1f8e969301286c78b08ee7619e9ca78638e41464533d18aa115cd0de5125f",
+    "development": [
+      "Bearing3_1",
+      "Bearing3_2",
+      "Bearing3_3"
+    ],
+    "protected_not_read": [
+      "Bearing3_4",
+      "Bearing3_5"
+    ],
+    "output_directory": "results/2026-09-19_condition3_weak_event_development_v1",
+    "record_path": "records/xjtu_condition3_weak_event_development_v1/evaluation_record.json",
+    "verified_execution_code": {
+      "configs/xjtu_condition3_weak_event_development_v1.json": "5e72b9646d4bcbfb11994b9ff346628ac61eb95145ba6c13ad103edff0b353b0",
+      "src/state_interpreter/weak_event_development.py": "9e4d6ca27e104091f956b6aa810690e63502ca2aa9c6dafb943a29f1d4830dc0",
+      "scripts/run_weak_event_condition3_development.py": "fd7bd01724d51d3f5087ada00f8b56b088461de10f2d7baddea24af8b2671450"
+    }
+  },
+  "summaries": [
+    {
+      "bearing_id": "Bearing3_1",
+      "provenance": "rms_threshold_v1",
+      "measurement_count": 2538,
+      "first_step": 0,
+      "recorded_end_step": 2537,
+      "reference_valid": true,
+      "reference_mean": 0.5084686269362767,
+      "reference_std": 0.009017163579079385,
+      "threshold": 0.5265029540944355,
+      "gap_count": 0,
+      "event_confirm_step": 24,
+      "candidate_start_step": 20,
+      "event_fraction": 0.009459992116673236,
+      "lead_to_recorded_end_measurements": 2513,
+      "interpretation": "algorithmic candidate event, not verified fault onset"
+    },
+    {
+      "bearing_id": "Bearing3_1",
+      "provenance": "kurtosis_threshold_v1",
+      "measurement_count": 2538,
+      "first_step": 0,
+      "recorded_end_step": 2537,
+      "reference_valid": true,
+      "reference_mean": 0.03385248202054451,
+      "reference_std": 0.02148668492099509,
+      "threshold": 0.07682585186253468,
+      "gap_count": 0,
+      "event_confirm_step": 2352,
+      "candidate_start_step": 2348,
+      "event_fraction": 0.9270792274339772,
+      "lead_to_recorded_end_measurements": 185,
+      "interpretation": "algorithmic candidate event, not verified fault onset"
+    },
+    {
+      "bearing_id": "Bearing3_2",
+      "provenance": "rms_threshold_v1",
+      "measurement_count": 2496,
+      "first_step": 0,
+      "recorded_end_step": 2495,
+      "reference_valid": true,
+      "reference_mean": 1.0028311173121134,
+      "reference_std": 0.06500101426371471,
+      "threshold": 1.1328331458395429,
+      "gap_count": 0,
+      "event_confirm_step": 1235,
+      "candidate_start_step": 1231,
+      "event_fraction": 0.49498997995991983,
+      "lead_to_recorded_end_measurements": 1260,
+      "interpretation": "algorithmic candidate event, not verified fault onset"
+    },
+    {
+      "bearing_id": "Bearing3_2",
+      "provenance": "kurtosis_threshold_v1",
+      "measurement_count": 2496,
+      "first_step": 0,
+      "recorded_end_step": 2495,
+      "reference_valid": true,
+      "reference_mean": 1.4520849903424582,
+      "reference_std": 0.10494710082195696,
+      "threshold": 1.6619791919863722,
+      "gap_count": 0,
+      "event_confirm_step": null,
+      "candidate_start_step": null,
+      "event_fraction": null,
+      "lead_to_recorded_end_measurements": null,
+      "interpretation": "algorithmic candidate event, not verified fault onset"
+    },
+    {
+      "bearing_id": "Bearing3_3",
+      "provenance": "rms_threshold_v1",
+      "measurement_count": 371,
+      "first_step": 0,
+      "recorded_end_step": 370,
+      "reference_valid": true,
+      "reference_mean": 0.6834032595157623,
+      "reference_std": 0.03487112808864802,
+      "threshold": 0.7531455156930583,
+      "gap_count": 0,
+      "event_confirm_step": 345,
+      "candidate_start_step": 341,
+      "event_fraction": 0.9324324324324325,
+      "lead_to_recorded_end_measurements": 25,
+      "interpretation": "algorithmic candidate event, not verified fault onset"
+    },
+    {
+      "bearing_id": "Bearing3_3",
+      "provenance": "kurtosis_threshold_v1",
+      "measurement_count": 371,
+      "first_step": 0,
+      "recorded_end_step": 370,
+      "reference_valid": true,
+      "reference_mean": 0.058246213019204636,
+      "reference_std": 0.019563917636549435,
+      "threshold": 0.0973740482923035,
+      "gap_count": 0,
+      "event_confirm_step": 343,
+      "candidate_start_step": 339,
+      "event_fraction": 0.927027027027027,
+      "lead_to_recorded_end_measurements": 27,
+      "interpretation": "algorithmic candidate event, not verified fault onset"
+    }
+  ],
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "physical_onset_accuracy": null
+}
