@@ -117,6 +117,8 @@ Condition 3健康锚点来源审计：`experiments/xjtu_condition3_health_anchor
 
 弱事件开发预检：`experiments/xjtu_condition3_weak_event_preflight_2026-09-19.md` 记录固定输入哈希、15/2σ/5规则和保护集门禁；尚未解析NPZ或执行真实报警。
 
+弱事件执行入口合成演练：`experiments/xjtu_condition3_weak_event_runner_rehearsal_2026-09-19.md` 记录双规则输出契约、执行代码哈希和异常数据拒绝；真实开发运行尚未执行。
+
 本周最终步骤：`experiments/joint_evaluation_rehearsal_2026-08-02.md` 记录 Arm A/B 在 Bearing2_4 上共享单次输入物化的联合评估演练；Bearing2_5 仍未读取。
 
 最新组会材料：`meetings/wochenupdate_2026-08-02_DE.md` 为包含方法、双分支结果、限制和下一步的德语周报。
