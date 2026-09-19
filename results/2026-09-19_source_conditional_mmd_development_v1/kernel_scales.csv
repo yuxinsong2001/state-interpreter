@@ -1,0 +1,10 @@
+seed,outer_test_bearing,train_bearings,initial_squared_scale
+20260918,Bearing3_1,Bearing3_2+Bearing3_3,0.9461021423339844
+20260918,Bearing3_2,Bearing3_1+Bearing3_3,1.3774899244308472
+20260918,Bearing3_3,Bearing3_1+Bearing3_2,1.2191386222839355
+20260921,Bearing3_1,Bearing3_2+Bearing3_3,0.7426480054855347
+20260921,Bearing3_2,Bearing3_1+Bearing3_3,1.1065064668655396
+20260921,Bearing3_3,Bearing3_1+Bearing3_2,1.245466709136963
+20260924,Bearing3_1,Bearing3_2+Bearing3_3,1.0793964862823486
+20260924,Bearing3_2,Bearing3_1+Bearing3_3,1.8216359615325928
+20260924,Bearing3_3,Bearing3_1+Bearing3_2,1.5241492986679077

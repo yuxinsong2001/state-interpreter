@@ -68,6 +68,17 @@ def test_model_initialization_and_paired_batch_are_reproducible():
 
 def test_no_training_without_exact_token():
     import subprocess
+    output = ROOT / config()["output_directory"]
+
+    def snapshot() -> dict:
+        if not output.exists():
+            return {}
+        return {
+            str(path.relative_to(output)): (path.stat().st_size, path.stat().st_mtime_ns)
+            for path in output.rglob("*") if path.is_file()
+        }
+
+    before = snapshot()
     result = subprocess.run(
         [sys.executable, str(ROOT / "scripts/train_source_conditional_mmd_condition3_development.py"),
          "--config", str(ROOT / "configs/xjtu_condition3_source_conditional_mmd_development_v1.json"),
@@ -76,7 +87,7 @@ def test_no_training_without_exact_token():
     )
     assert result.returncode != 0
     assert "exact development training token required" in result.stderr
-    assert not (ROOT / config()["output_directory"]).exists()
+    assert snapshot() == before
 
 
 def test_three_arms_take_finite_synthetic_training_step():
