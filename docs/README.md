@@ -95,6 +95,8 @@
 
 下一方法审计：`research/conditional_alignment_method_audit_2026-09-19.md` 核对CDAN/DSAN与当前严格LOBO的边界；`experiments/xjtu_source_conditional_mmd_protocol_2026-09-19.md` 是source-only、global MMD、time-bin conditional MMD三分支的**未冻结草案**，目前没有新训练或结果。
 
+条件 MMD 元数据预检：`experiments/xjtu_source_conditional_mmd_metadata_preflight_2026-09-19.md` 确认开发 bearing 的五个时间区间均有至少59个训练 endpoint，但核尺度、梯度与配对采样尚未验证，正式训练仍未开放。
+
 本周最终步骤：`experiments/joint_evaluation_rehearsal_2026-08-02.md` 记录 Arm A/B 在 Bearing2_4 上共享单次输入物化的联合评估演练；Bearing2_5 仍未读取。
 
 最新组会材料：`meetings/wochenupdate_2026-08-02_DE.md` 为包含方法、双分支结果、限制和下一步的德语周报。
