@@ -97,6 +97,8 @@
 
 条件 MMD 元数据预检：`experiments/xjtu_source_conditional_mmd_metadata_preflight_2026-09-19.md` 确认开发 bearing 的五个时间区间均有至少59个训练 endpoint，但核尺度、梯度与配对采样尚未验证，正式训练仍未开放。
 
+数值预检设计：`experiments/xjtu_source_conditional_mmd_numerical_preflight_design_2026-09-19.md` 固定2 bearing×5时间区间×6 endpoint的配对batch思路和训练来源限定的核/梯度检查；它是未执行的计划，不是MMD实验结果。
+
 本周最终步骤：`experiments/joint_evaluation_rehearsal_2026-08-02.md` 记录 Arm A/B 在 Bearing2_4 上共享单次输入物化的联合评估演练；Bearing2_5 仍未读取。
 
 最新组会材料：`meetings/wochenupdate_2026-08-02_DE.md` 为包含方法、双分支结果、限制和下一步的德语周报。
