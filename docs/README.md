@@ -101,6 +101,8 @@
 
 数值预检结果：`experiments/xjtu_source_conditional_mmd_numerical_preflight_result_2026-09-19.md` 记录九组开发折×seed的初始化MMD、核尺度与梯度诊断；194项测试通过，尚未训练三分支模型或读取保护集。
 
+三分支开发实验预注册：`experiments/xjtu_source_conditional_mmd_development_preregistration_2026-09-19.md` 锁定source-only/global MMD/conditional MMD同索引比较、λ=0.1、三折三seed与双门槛；配置及入口`--check-only`通过，200项测试通过，尚未正式运行。
+
 本周最终步骤：`experiments/joint_evaluation_rehearsal_2026-08-02.md` 记录 Arm A/B 在 Bearing2_4 上共享单次输入物化的联合评估演练；Bearing2_5 仍未读取。
 
 最新组会材料：`meetings/wochenupdate_2026-08-02_DE.md` 为包含方法、双分支结果、限制和下一步的德语周报。
