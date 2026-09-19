@@ -111,6 +111,8 @@ Condition 3局部特征核查：`experiments/xjtu_condition3_local_feature_audit
 
 Condition 3健康锚点来源审计：`experiments/xjtu_condition3_health_anchor_inventory_2026-09-19.md` 区分官方run终点／故障部件、线性时间代理和第三方派生onset；当前没有已确认的逐时刻物理健康真值，下一轮需先定义标签与事件协议。
 
+因果候选事件弱标签草案：`experiments/xjtu_condition3_weak_event_protocol_draft_2026-09-19.md` 定义固定15步参考、RMS主基线与峭度对照、五次确认及标签provenance；只设计未运行，不将伪报警称为真实故障起点。
+
 本周最终步骤：`experiments/joint_evaluation_rehearsal_2026-08-02.md` 记录 Arm A/B 在 Bearing2_4 上共享单次输入物化的联合评估演练；Bearing2_5 仍未读取。
 
 最新组会材料：`meetings/wochenupdate_2026-08-02_DE.md` 为包含方法、双分支结果、限制和下一步的德语周报。
