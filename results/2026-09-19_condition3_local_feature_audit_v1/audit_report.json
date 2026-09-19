@@ -1,0 +1,36 @@
+{
+  "status": "exploratory_read_only_feature_audit_completed",
+  "config_sha256": "1d9e9cfbf8b5f04bc2beaccdd5fd18fa8abf1a57b1efbef1c17cc921b826114b",
+  "development_cache_sha256": {
+    "Bearing3_1": "7e4d33328bd1195c0b51f55b6d58db1d29b88b708a5840489d989bbf8d8e2a69",
+    "Bearing3_2": "9caf958295ec59908d5040b175a009d439e8f5420d6baf65acc14e5a899059da",
+    "Bearing3_3": "33696c4127593eb4a35818615387bcc29bf727098928bd5baeeef4e3fa9ba765"
+  },
+  "source_bearings_only": [
+    "Bearing3_1",
+    "Bearing3_2",
+    "Bearing3_3"
+  ],
+  "protected_bearings_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "feature_count": 65,
+  "preselected_features": [
+    "h_rms",
+    "v_rms",
+    "h_kurtosis",
+    "v_kurtosis",
+    "h_bpfo_band_power",
+    "v_bpfo_band_power",
+    "h_bpfi_band_power",
+    "v_bpfi_band_power"
+  ],
+  "full_rows": 195,
+  "block_rows": 975,
+  "warnings": [
+    "normalized lifetime is measurement progress, not physical damage",
+    "feature associations are exploratory, not model attribution or causal effects",
+    "do not select features or reopen development gate based on this audit"
+  ]
+}

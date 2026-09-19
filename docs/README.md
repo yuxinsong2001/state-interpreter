@@ -107,6 +107,8 @@
 
 条件MMD失败轨迹诊断：`experiments/xjtu_conditional_mmd_failure_diagnosis_2026-09-19.md` 仅用已保存CSV分析五段与逐seed原始曲线：B3_2整体方向偏反，B3_3前中段下降、末端急升；这是探索性诊断，不改变推进门槛。
 
+Condition 3局部特征核查：`experiments/xjtu_condition3_local_feature_audit_2026-09-19.md` 核对冻结开发缓存中65维工程特征的整段/五段方向。B3_2 RMS上升而模型预测下降；B3_3多项特征前中段下降、末段跃升。仅为相关性诊断，不开放保护集。
+
 本周最终步骤：`experiments/joint_evaluation_rehearsal_2026-08-02.md` 记录 Arm A/B 在 Bearing2_4 上共享单次输入物化的联合评估演练；Bearing2_5 仍未读取。
 
 最新组会材料：`meetings/wochenupdate_2026-08-02_DE.md` 为包含方法、双分支结果、限制和下一步的德语周报。
