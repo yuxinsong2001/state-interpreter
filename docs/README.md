@@ -93,6 +93,8 @@
 
 最新阶段诊断：`experiments/xjtu_source_dann_lifecycle_diagnosis_2026-09-19.md` 用现有CSV比较五个生命周期区间，发现identity下降与健康改善并不稳定共现；阶段条件对齐仍只是待验证假设。
 
+下一方法审计：`research/conditional_alignment_method_audit_2026-09-19.md` 核对CDAN/DSAN与当前严格LOBO的边界；`experiments/xjtu_source_conditional_mmd_protocol_2026-09-19.md` 是source-only、global MMD、time-bin conditional MMD三分支的**未冻结草案**，目前没有新训练或结果。
+
 本周最终步骤：`experiments/joint_evaluation_rehearsal_2026-08-02.md` 记录 Arm A/B 在 Bearing2_4 上共享单次输入物化的联合评估演练；Bearing2_5 仍未读取。
 
 最新组会材料：`meetings/wochenupdate_2026-08-02_DE.md` 为包含方法、双分支结果、限制和下一步的德语周报。
