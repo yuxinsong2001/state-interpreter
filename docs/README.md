@@ -64,10 +64,7 @@
 
 ## 持续维护文档
 
-以下两份文件仍保留在仓库根目录，方便每次工作后更新：
-
-- [`../../work_log.md`](../../work_log.md)：个人工作思路、任务和问题记录。
-- [`../../presentation_notes.md`](../../presentation_notes.md)：未来组会、实习报告和论文汇报素材。
+个人工作日志和汇报笔记在私有工作区中持续维护，不包含在本公开代码仓库内。
 
 ## 边界说明
 
@@ -120,6 +117,8 @@ Condition 3健康锚点来源审计：`experiments/xjtu_condition3_health_anchor
 弱事件执行入口合成演练：`experiments/xjtu_condition3_weak_event_runner_rehearsal_2026-09-19.md` 记录双规则输出契约、执行代码哈希和异常数据拒绝；真实开发运行尚未执行。
 
 弱事件开发运行结果：`experiments/xjtu_condition3_weak_event_development_result_2026-09-19.md` 记录B3_1–B3_3一次性执行的六行汇总；`experiments/xjtu_condition3_weak_event_disagreement_diagnosis_2026-09-19.md` 只读分析规则分歧，不把候选事件当真实故障起点。
+
+可解除候选事件v2原型：`experiments/xjtu_condition3_episodic_weak_event_v2_prototype_2026-09-19.md` 记录进入/退出/再确认的合成验证；未在真实bearing上运行。
 
 本周最终步骤：`experiments/joint_evaluation_rehearsal_2026-08-02.md` 记录 Arm A/B 在 Bearing2_4 上共享单次输入物化的联合评估演练；Bearing2_5 仍未读取。
 

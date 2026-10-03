@@ -58,7 +58,7 @@
     "scripts\\run_gru_interpreter_exploratory.py": "35b66636d1dfda6b84d970c1ff29ea548cd8a53b92469ea4f958a0e8c28f6b44"
   },
   "environment": {
-    "executable": "C:\\Users\\syx\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "executable": "python",
     "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
     "torch": "2.13.0+cpu",
     "numpy": "2.5.3",

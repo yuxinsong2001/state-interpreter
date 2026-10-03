@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this research code, please cite the repository."
+title: "State Interpreter for Interpretable Machine Condition Analysis"
+type: software
+authors:
+  - family-names: "Song"
+    given-names: "Yuxin"
+repository-code: "https://github.com/yuxinsong2001/state-interpreter"
+version: "0.1.0"
+date-released: "2026-10-03"
+abstract: >-
+  Research code for learning compact vibration representations and mapping
+  chronological embeddings to causal relative machine-state indicators.
+

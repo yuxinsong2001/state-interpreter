@@ -73,7 +73,7 @@
     "residual_seed_20260918_checkpoint.pt": "068233b742232a88c4c011801cce875e42c36f275b99fc7fb56502adcde80cff"
   },
   "environment": {
-    "executable": "D:\\python3.13\\python.exe",
+    "executable": "python",
     "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
     "torch": "2.12.1+cpu",
     "numpy": "2.4.4",

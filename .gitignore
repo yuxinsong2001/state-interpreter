@@ -4,6 +4,8 @@ __pycache__/
 _pytest_*/
 .pytest_*/
 .venv/
+.idea/
+.vscode/
 dist/
 build/
 *.egg-info/
@@ -12,3 +14,7 @@ build/
 checkpoints/
 outputs/
 runs/
+*.pt
+*.pth
+*.ckpt
+*.log

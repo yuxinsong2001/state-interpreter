@@ -47,6 +47,6 @@ The health-aware LOBO experiment completed with rho 0.709/0.522/-0.398 for B3_1/
 ## Resume command
 
 ```powershell
-cd "D:\1\德国留学\斯图加特大学在校资料\hiwi工作\state-interpreter"
-D:\python3.13\python.exe -m pytest -q -p no:cacheprovider --basetemp "D:\1\德国留学\斯图加特大学在校资料\hiwi工作\student_handover 2\.pytest_resume_relative_v2"
+cd "<REPOSITORY_ROOT>"
+python -m pytest -q -p no:cacheprovider --basetemp "<TEMP_DIRECTORY>\pytest"
 ```

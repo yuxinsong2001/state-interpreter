@@ -68,7 +68,7 @@
     "scripts\\run_gru_interpreter_exploratory.py": "35b66636d1dfda6b84d970c1ff29ea548cd8a53b92469ea4f958a0e8c28f6b44"
   },
   "environment": {
-    "executable": "D:\\python3.13\\python.exe",
+    "executable": "python",
     "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
     "torch": "2.12.1+cpu",
     "numpy": "2.4.4",

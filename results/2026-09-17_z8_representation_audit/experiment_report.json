@@ -53,7 +53,7 @@
     "src/state_interpreter/representation_audit.py": "fe697df09678cee0b2daaf4405c7f62c8123f6815cd4cc77ea65fb211fb0a1cc"
   },
   "environment": {
-    "executable": "D:\\python3.13\\python.exe",
+    "executable": "python",
     "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
     "numpy": "2.4.4",
     "pandas": "3.0.2",
