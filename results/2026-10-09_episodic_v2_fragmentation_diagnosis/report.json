@@ -1,0 +1,87 @@
+{
+  "status": "ANALYZED",
+  "input_sha256": {
+    "trajectories.csv": "3d66022547712d70c7e5bb7979839da3a8267c8eb39b0e8f12b904473fe22110",
+    "episodes.csv": "4c16ff68405066062a72e78286bd8c380bfc86d8b9a664fc5a3127fc8df9fdb6",
+    "summary.csv": "df318b960113778ad553bf1e7b94993eb8e6445d2e80bc501f27c90bc1a609de"
+  },
+  "episode_count": 19,
+  "groups": [
+    {
+      "bearing_id": "Bearing3_1",
+      "feature": "rms",
+      "episode_count": 2,
+      "completed_durations": [
+        10
+      ],
+      "right_censored_durations": [
+        199
+      ]
+    },
+    {
+      "bearing_id": "Bearing3_1",
+      "feature": "kurtosis",
+      "episode_count": 3,
+      "completed_durations": [
+        20,
+        24
+      ],
+      "right_censored_durations": [
+        10
+      ]
+    },
+    {
+      "bearing_id": "Bearing3_2",
+      "feature": "rms",
+      "episode_count": 12,
+      "completed_durations": [
+        13,
+        7,
+        7,
+        8,
+        16,
+        13,
+        17,
+        15,
+        60,
+        74,
+        612
+      ],
+      "right_censored_durations": [
+        158
+      ]
+    },
+    {
+      "bearing_id": "Bearing3_2",
+      "feature": "kurtosis",
+      "episode_count": 0,
+      "completed_durations": [],
+      "right_censored_durations": []
+    },
+    {
+      "bearing_id": "Bearing3_3",
+      "feature": "rms",
+      "episode_count": 1,
+      "completed_durations": [],
+      "right_censored_durations": [
+        26
+      ]
+    },
+    {
+      "bearing_id": "Bearing3_3",
+      "feature": "kurtosis",
+      "episode_count": 1,
+      "completed_durations": [],
+      "right_censored_durations": [
+        28
+      ]
+    }
+  ],
+  "protected_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "interpretation": "post-hoc descriptive trajectory diagnosis; no physical event accuracy",
+  "rules_unchanged": true,
+  "retrained": false
+}

@@ -1,0 +1,82 @@
+{
+  "experiment_id": "condition3_episodic_v2_development_20261009",
+  "development": [
+    "Bearing3_1",
+    "Bearing3_2",
+    "Bearing3_3"
+  ],
+  "protected_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "parameters": {
+    "calibration_steps": 15,
+    "sigma_multiplier": 2.0,
+    "enter_steps": 5,
+    "exit_steps": 5,
+    "trend_window": 10,
+    "min_reference_std": 1e-08
+  },
+  "input": {
+    "cache_directory": "cache/xjtu_condition3_feature_lstm_v1",
+    "manifest_sha256": "d9a13bab542446a3cdd38646bb6829c03dd0d1e777032f36c85c55b2866f12b2",
+    "cache_schema": "xjtu_feature_cache_v1",
+    "required_fields": [
+      "features",
+      "step_ids",
+      "source_paths"
+    ],
+    "feature_count": 65,
+    "feature_pairs": {
+      "rms_threshold_v1": [
+        "h_rms",
+        "v_rms"
+      ],
+      "kurtosis_threshold_v1": [
+        "h_kurtosis",
+        "v_kurtosis"
+      ]
+    },
+    "cache_entries": [
+      {
+        "bearing_id": "Bearing3_1",
+        "path": "Bearing3_1.npz",
+        "sha256": "7e4d33328bd1195c0b51f55b6d58db1d29b88b708a5840489d989bbf8d8e2a69",
+        "sample_count": 2538
+      },
+      {
+        "bearing_id": "Bearing3_2",
+        "path": "Bearing3_2.npz",
+        "sha256": "9caf958295ec59908d5040b175a009d439e8f5420d6baf65acc14e5a899059da",
+        "sample_count": 2496
+      },
+      {
+        "bearing_id": "Bearing3_3",
+        "path": "Bearing3_3.npz",
+        "sha256": "33696c4127593eb4a35818615387bcc29bf727098928bd5baeeef4e3fa9ba765",
+        "sample_count": 371
+      }
+    ]
+  },
+  "dependencies": {
+    "src/state_interpreter/episodic_weak_event.py": "6ae25a09efdbaaa3caffb398408d59593215e233b7d856936505399a572a6847",
+    "src/state_interpreter/weak_event_detector.py": "e2d1f8e969301286c78b08ee7619e9ca78638e41464533d18aa115cd0de5125f",
+    "src/state_interpreter/weak_event_development.py": "9e4d6ca27e104091f956b6aa810690e63502ca2aa9c6dafb943a29f1d4830dc0",
+    "src/state_interpreter/features/bearing_features.py": "6d6577a736a4159e1d5e0395bd6e539f9d155eb4fdddf3e9fa5ff67844966aed",
+    "configs/xjtu_condition3_weak_event_development_v1.json": "5e72b9646d4bcbfb11994b9ff346628ac61eb95145ba6c13ad103edff0b353b0",
+    "results/2026-09-19_condition3_weak_event_development_v1/candidate_event_trajectories.csv": "5542de6e7e9a43ae77948d3eb9d807267d153f8017e5a36dd5e71ba6ece03485"
+  },
+  "runner_sha256": "58f4dc975d456194e50bd070d31bd054e54667e6be458c39fa51a942161fc899",
+  "output": "results/2026-10-09_condition3_episodic_v2_development",
+  "record": "records/condition3_episodic_v2_20261009/evaluation_record.json",
+  "criteria": [
+    "six valid references",
+    "finite continuous outputs",
+    "exact causal prefix equality at steps 15,25,half,N-1",
+    "entry and exit only after five consecutive observations",
+    "first v2 entry equals v1 confirmation",
+    "archived v1 exact replay"
+  ],
+  "interpretation": "algorithmic sustained vibration-change episodes; no physical onset accuracy",
+  "validation_release": "not automatic; separate prospective protocol required"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "verified_against_archived_csv",
+  "state_rows": 10810,
+  "termination_records": 19,
+  "completed_events": 14,
+  "right_censored_events": 5,
+  "all_original_observation_fields_exactly_equal": true,
+  "all_episode_metadata_matches_archive": true,
+  "protected_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "input_sha256": {
+    "trajectories.csv": "3d66022547712d70c7e5bb7979839da3a8267c8eb39b0e8f12b904473fe22110",
+    "episodes.csv": "4c16ff68405066062a72e78286bd8c380bfc86d8b9a664fc5a3127fc8df9fdb6"
+  },
+  "module_sha256": "00e6691f794f480513c2205bef076297462c6e89dc29c23c053eb8c303189972",
+  "interpretation": "interface verification; no new health-performance evidence"
+}
