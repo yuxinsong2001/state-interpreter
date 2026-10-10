@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "verification_status": "ANALYZED",
+  "input_sha256": {
+    "ae": "55d78c2778e2e499598d156bb6c2ae9422a791f6af2e220932fd033361363156",
+    "ts2vec": "dc2f8faad20eb3c054a83952c39f336901699487979f4841163d695992ea66da"
+  },
+  "inputs_unchanged": true,
+  "no_training": true,
+  "no_gate_changes": true,
+  "definition": "fixed per-seed absolute-Trend percentile strata, matched timestamp pairs",
+  "limitations": [
+    "relative amplitude strata do not identify sensor noise or practical significance",
+    "percentiles use whole archived scored trajectory; diagnostic not online calibration",
+    "strata overlap; shares cannot be summed",
+    "three seed pairs share seeds and devices; no independence or significance claim"
+  ]
+}
