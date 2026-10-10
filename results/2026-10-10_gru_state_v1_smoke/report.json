@@ -1,0 +1,25 @@
+{
+  "status": "completed",
+  "purpose": "five-epoch integration smoke training only",
+  "best_epoch": 5,
+  "best_validation_joint": 0.31250521540641785,
+  "target_scale": 7.77154016494751,
+  "sample_counts": {
+    "Bearing1_2": 161,
+    "Bearing1_4": 122,
+    "Bearing1_3": 158,
+    "Bearing1_1": 123
+  },
+  "source_sha256": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+  "config_sha256": "1348fb43f16a8b0f52502cb8fcf5bdb0a1413dda46bcc452965616f46f7319d7",
+  "inputs_unchanged": true,
+  "train_statistics_validation_invariant": true,
+  "prefix_checks_passed": true,
+  "excluded_bearing_embeddings_loaded": 0,
+  "real_raw_reads": 0,
+  "limitations": [
+    "short integration training, not final model evidence",
+    "explicit relative-distance proxy, not health label",
+    "shared CSV scanned structurally, excluded embeddings never materialized"
+  ]
+}
