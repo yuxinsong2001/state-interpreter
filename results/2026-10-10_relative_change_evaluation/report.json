@@ -1,0 +1,33 @@
+{
+  "status": "completed",
+  "synthetic_checks": {
+    "stable_causal_prefix": true,
+    "stable_reset_repeat": true,
+    "stable": true,
+    "outward_causal_prefix": true,
+    "outward_reset_repeat": true,
+    "outward": true,
+    "return_causal_prefix": true,
+    "return_reset_repeat": true,
+    "return": true,
+    "jump_causal_prefix": true,
+    "jump_reset_repeat": true,
+    "jump": true,
+    "circle_causal_prefix": true,
+    "circle_reset_repeat": true,
+    "circle": true
+  },
+  "source_sha256": "44848b225765fcb3f7e5ac29b6b2cab4d211c6023acd70143cb4986704546e46",
+  "inputs_unchanged": true,
+  "decision": "stop_stable_cross_seed_claim",
+  "stability_gate_passed": false,
+  "no_training": true,
+  "no_protected_read": true,
+  "limitations": [
+    "engineering thresholds, not statistical significance",
+    "no physical labels",
+    "synthetic geometry does not prove useful machine semantics",
+    "different seeds share bearings; no independent-device inference",
+    "no new scaling or calibration quality gate implemented"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "verification_status": "ANALYZED",
+  "source_sha256": "44848b225765fcb3f7e5ac29b6b2cab4d211c6023acd70143cb4986704546e46",
+  "inputs_unchanged": true,
+  "windows": {
+    "initial": "first15",
+    "middle": "40\u201360%",
+    "prelate": "80\u201390%",
+    "end": "last15"
+  },
+  "no_training": true,
+  "no_protected_data_read": true,
+  "limitations": [
+    "fixed retrospective windows use total length, not online phase detection",
+    "affine RMS association fitted on same trajectory, descriptive in-sample only",
+    "cosines within each model only; latent coordinates not comparable across separately trained models",
+    "no physical health labels; no causal claims"
+  ]
+}
