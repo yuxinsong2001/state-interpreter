@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "experiment_kind": "level_only_objective_ablation_development",
+  "source_sha256": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+  "config_sha256": "8bf678148f3429c22941b3ecb773dedda59acc35cd3731ee693dd85c75d62b3d",
+  "runner_sha256": "e3f0e216ff1aee83be9612fef69c68d1e2705b52d0a530e5a50323171974d93d",
+  "prediction_head_frozen_verified": true,
+  "inputs_unchanged": true,
+  "checkpoint_reload_exact": true,
+  "prefix_checks_passed": true,
+  "loss_alignment_verified": true,
+  "train_statistics_validation_invariant": true,
+  "embedding_bearings_loaded": [
+    "Bearing1_1",
+    "Bearing1_2",
+    "Bearing1_3",
+    "Bearing1_4"
+  ],
+  "raw_reads": 0,
+  "protected_directory_reads": 0,
+  "level_target_scale": 7.77154016494751,
+  "limitations": [
+    "development only; checkpoints selected on B1_4 with original joint criterion",
+    "relative Level proxy, not health truth",
+    "prediction is frozen zero-residual Persistence, not learned forecast; no Movement state emitted",
+    "excluded CSV rows scanned, embeddings not materialized"
+  ]
+}
