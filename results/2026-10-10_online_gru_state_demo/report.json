@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "seed": 20260916,
+  "checkpoint_sha256": "b842d589f7bbef930b7bcead194333ddf5ace00d697297bc5453a9e27016fe7d",
+  "source_sha256": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+  "bearings": [
+    "Bearing1_1",
+    "Bearing1_2",
+    "Bearing1_3",
+    "Bearing1_4"
+  ],
+  "total_rows": 564,
+  "ready_rows": 464,
+  "max_absolute_online_offline_error": {
+    "level": 9.5367431640625e-07,
+    "trend": 1.2130476534366608e-07,
+    "movement": 6.332993507385254e-08
+  },
+  "reset_replay_exact": true,
+  "limitations": [
+    "archived embedding replay, not live sensor deployment",
+    "B1_4 is development validation",
+    "known early overestimate and late underestimate retained",
+    "no health thresholds or maintenance decisions",
+    "excluded CSV rows scanned but embeddings not materialized"
+  ]
+}
