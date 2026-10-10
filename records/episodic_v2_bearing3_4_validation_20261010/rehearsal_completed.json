@@ -1,0 +1,130 @@
+{
+  "status": "completed",
+  "mode": "rehearsal",
+  "config_sha256": "0fb7d07461cf27d617ebeddac02bff569e7f96f3d84aa7b93aead98e906c1c42",
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "input_valid": true,
+      "references_valid": true,
+      "finite_present_outputs": true,
+      "causal_prefix_equality": true,
+      "entry_exit_rules_valid": true,
+      "termination_metadata_complete": true
+    },
+    {
+      "input_valid": true,
+      "references_valid": true,
+      "finite_present_outputs": true,
+      "causal_prefix_equality": true,
+      "entry_exit_rules_valid": true,
+      "termination_metadata_complete": true
+    },
+    {
+      "input_valid": true,
+      "references_valid": true,
+      "finite_present_outputs": true,
+      "causal_prefix_equality": true,
+      "entry_exit_rules_valid": true,
+      "termination_metadata_complete": true
+    }
+  ],
+  "archive_exact_match": true,
+  "state_rows": 10810,
+  "episode_count": 19,
+  "summaries": [
+    {
+      "bearing_id": "Bearing3_1",
+      "feature": "rms",
+      "measurements": 2538,
+      "reference_valid": true,
+      "reference_mean": 0.5084686269362767,
+      "reference_std": 0.009017163579079385,
+      "threshold": 0.5265029540944355,
+      "episodes": 2,
+      "active_observed_measurements": 209,
+      "unknown_gap_steps": 0,
+      "first_confirmation_step": 24,
+      "rules_and_prefix_checks_passed": true
+    },
+    {
+      "bearing_id": "Bearing3_1",
+      "feature": "kurtosis",
+      "measurements": 2538,
+      "reference_valid": true,
+      "reference_mean": 0.03385248202054451,
+      "reference_std": 0.02148668492099509,
+      "threshold": 0.07682585186253468,
+      "episodes": 3,
+      "active_observed_measurements": 54,
+      "unknown_gap_steps": 0,
+      "first_confirmation_step": 2352,
+      "rules_and_prefix_checks_passed": true
+    },
+    {
+      "bearing_id": "Bearing3_2",
+      "feature": "rms",
+      "measurements": 2496,
+      "reference_valid": true,
+      "reference_mean": 1.0028311173121134,
+      "reference_std": 0.06500101426371471,
+      "threshold": 1.1328331458395429,
+      "episodes": 12,
+      "active_observed_measurements": 1000,
+      "unknown_gap_steps": 0,
+      "first_confirmation_step": 1235,
+      "rules_and_prefix_checks_passed": true
+    },
+    {
+      "bearing_id": "Bearing3_2",
+      "feature": "kurtosis",
+      "measurements": 2496,
+      "reference_valid": true,
+      "reference_mean": 1.4520849903424582,
+      "reference_std": 0.10494710082195696,
+      "threshold": 1.6619791919863722,
+      "episodes": 0,
+      "active_observed_measurements": 0,
+      "unknown_gap_steps": 0,
+      "first_confirmation_step": null,
+      "rules_and_prefix_checks_passed": true
+    },
+    {
+      "bearing_id": "Bearing3_3",
+      "feature": "rms",
+      "measurements": 371,
+      "reference_valid": true,
+      "reference_mean": 0.6834032595157623,
+      "reference_std": 0.03487112808864802,
+      "threshold": 0.7531455156930583,
+      "episodes": 1,
+      "active_observed_measurements": 26,
+      "unknown_gap_steps": 0,
+      "first_confirmation_step": 345,
+      "rules_and_prefix_checks_passed": true
+    },
+    {
+      "bearing_id": "Bearing3_3",
+      "feature": "kurtosis",
+      "measurements": 371,
+      "reference_valid": true,
+      "reference_mean": 0.058246213019204636,
+      "reference_std": 0.019563917636549435,
+      "threshold": 0.0973740482923035,
+      "episodes": 1,
+      "active_observed_measurements": 28,
+      "unknown_gap_steps": 0,
+      "first_confirmation_step": 343,
+      "rules_and_prefix_checks_passed": true
+    }
+  ],
+  "protected_blind_not_read": "Bearing3_5",
+  "validation_data_read": false,
+  "interpretation": "operational vibration-change events, no physical fault accuracy; not project-wide blind test",
+  "output_sha256": {
+    "episode_terminations.csv": "1ec1c76ba0170983bab3c2764e0361e2061d7bc5808b28b6cc35bcbf197f4e11",
+    "report.json": "84f06a3191fd5c9f9c40577bc11e222a6081350f60b772886348ca6da30fad24",
+    "states.csv": "bb9637469a1eca701ecb960eecfeefd98787394c31bc614ea46fa0e8f7586c33",
+    "summary.csv": "483c8beb75652bac122f266dfafd97de427ed2fbaf21e961fff6622cd43c4ef6"
+  }
+}

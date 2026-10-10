@@ -1,0 +1,42 @@
+{
+  "experiment_id": "episodic_v2_bearing3_4_validation_20261010",
+  "condition": "40Hz10kN",
+  "validation_bearing": "Bearing3_4",
+  "protected_blind": "Bearing3_5",
+  "parameters": {
+    "calibration_steps": 15,
+    "sigma_multiplier": 2.0,
+    "enter_steps": 5,
+    "exit_steps": 5,
+    "trend_window": 10,
+    "min_reference_std": 1e-08
+  },
+  "dependencies": {
+    "src/state_interpreter/episodic_weak_event.py": "6ae25a09efdbaaa3caffb398408d59593215e233b7d856936505399a572a6847",
+    "src/state_interpreter/relative_event_state.py": "00e6691f794f480513c2205bef076297462c6e89dc29c23c053eb8c303189972",
+    "src/state_interpreter/episodic_validation.py": "e7034319efe125b6b1d666422e8cf7adbd474f3a1306312c0ba14213854fc123",
+    "src/state_interpreter/features/bearing_features.py": "6d6577a736a4159e1d5e0395bd6e539f9d155eb4fdddf3e9fa5ff67844966aed",
+    "src/state_interpreter/adapters/xjtu_sy.py": "d8f1f599d889e4cb13f48ed718980a6626f1dad9c69f11985c7ca9478c20abb0",
+    "scripts/run_episodic_v2_validation.py": "c2731c6eddb781a38748ddc73bb05f13d7a5b39f53315dbc46abcd6601244b31",
+    "results/2026-10-09_relative_event_state_interface/states.csv": "bb9637469a1eca701ecb960eecfeefd98787394c31bc614ea46fa0e8f7586c33",
+    "results/2026-10-09_relative_event_state_interface/episode_terminations.csv": "1ec1c76ba0170983bab3c2764e0361e2061d7bc5808b28b6cc35bcbf197f4e11"
+  },
+  "input_method": "fixed 65-feature extractor; horizontal/vertical pair means for RMS and kurtosis",
+  "rehearsal_output": "results/2026-10-10_episodic_v2_validation_rehearsal",
+  "validation_output": "results/2026-10-10_episodic_v2_bearing3_4_validation",
+  "records": "records/episodic_v2_bearing3_4_validation_20261010",
+  "tokens": {
+    "rehearsal": "REHEARSE_EPISODIC_V2_ON_DEVELOPMENT_ARCHIVE",
+    "validation": "EXECUTE_EPISODIC_V2_BEARING3_4_ONCE"
+  },
+  "checks": [
+    "input_valid",
+    "references_valid",
+    "finite_present_outputs",
+    "causal_prefix_equality",
+    "entry_exit_rules_valid",
+    "termination_metadata_complete"
+  ],
+  "interpretation": "operational vibration-change events, no physical fault accuracy; not project-wide blind test",
+  "no_automatic_blind_release": true
+}
