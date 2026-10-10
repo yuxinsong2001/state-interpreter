@@ -1,0 +1,3 @@
+bearing_id,feature,episode_id,candidate_start_step,confirm_step,last_observed_active_step,termination_observed_step,observed_active_measurements,reason,right_censored
+Bearing3_4,rms,1,1417,1421,1514,1514,94,record_end,True
+Bearing3_4,kurtosis,1,1417,1421,1514,1514,94,record_end,True

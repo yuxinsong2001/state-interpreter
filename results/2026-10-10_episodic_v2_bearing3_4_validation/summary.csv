@@ -1,0 +1,3 @@
+bearing_id,feature,measurements,reference_valid,reference_mean,reference_std,threshold,episodes,active_observed_measurements,unknown_gap_steps,first_confirmation_step,rules_and_prefix_checks_passed
+Bearing3_4,rms,1515,True,0.5977610905965169,0.007533285467507216,0.6128276615315313,1,94,0,1421,True
+Bearing3_4,kurtosis,1515,True,0.7104980786175777,0.08385889060138058,0.8782158598203389,1,94,0,1421,True

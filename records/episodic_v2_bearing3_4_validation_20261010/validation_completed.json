@@ -1,0 +1,59 @@
+{
+  "status": "completed",
+  "mode": "validation",
+  "config_sha256": "0fb7d07461cf27d617ebeddac02bff569e7f96f3d84aa7b93aead98e906c1c42",
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "input_valid": true,
+      "references_valid": true,
+      "finite_present_outputs": true,
+      "causal_prefix_equality": true,
+      "entry_exit_rules_valid": true,
+      "termination_metadata_complete": true
+    }
+  ],
+  "archive_exact_match": null,
+  "state_rows": 3030,
+  "episode_count": 2,
+  "summaries": [
+    {
+      "bearing_id": "Bearing3_4",
+      "feature": "rms",
+      "measurements": 1515,
+      "reference_valid": true,
+      "reference_mean": 0.5977610905965169,
+      "reference_std": 0.007533285467507216,
+      "threshold": 0.6128276615315313,
+      "episodes": 1,
+      "active_observed_measurements": 94,
+      "unknown_gap_steps": 0,
+      "first_confirmation_step": 1421,
+      "rules_and_prefix_checks_passed": true
+    },
+    {
+      "bearing_id": "Bearing3_4",
+      "feature": "kurtosis",
+      "measurements": 1515,
+      "reference_valid": true,
+      "reference_mean": 0.7104980786175777,
+      "reference_std": 0.08385889060138058,
+      "threshold": 0.8782158598203389,
+      "episodes": 1,
+      "active_observed_measurements": 94,
+      "unknown_gap_steps": 0,
+      "first_confirmation_step": 1421,
+      "rules_and_prefix_checks_passed": true
+    }
+  ],
+  "protected_blind_not_read": "Bearing3_5",
+  "validation_data_read": true,
+  "interpretation": "operational vibration-change events, no physical fault accuracy; not project-wide blind test",
+  "output_sha256": {
+    "episode_terminations.csv": "8e7f6e7dc7f804a73cbde1e5aae486fdeff95846de430c829b14b3f1ec79d586",
+    "raw_input_manifest.json": "d1491fea7824680e32ad2d70f965fc757e8e887c89d3ce2e9da7456150d6642d",
+    "report.json": "7bf3dcd5abf3444fe4b547e32441713b32e7c27670633d7517555202a317cb81",
+    "states.csv": "9ec5c0bbb223290f4d45382db1089307c7df2e94fa28d31f822bb371e0b1356b",
+    "summary.csv": "655330b769818783f3f429afeffbec646faa7feeddd3f0257106e510c9d230c4"
+  }
+}
