@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "rows": 346,
+  "bearing": "Bearing3_3",
+  "base_seed": 20260918,
+  "source_hashes": {
+    "results\\2026-10-10_existing_ae_multiseed_audit\\heldout_latents.csv": "44848b225765fcb3f7e5ac29b6b2cab4d211c6023acd70143cb4986704546e46",
+    "results\\2026-10-10_relative_change_evaluation\\state_traces.csv": "55d78c2778e2e499598d156bb6c2ae9422a791f6af2e220932fd033361363156"
+  },
+  "inputs_unchanged": true,
+  "raw_reads": 0,
+  "training": false,
+  "interpretation": "descriptive alignment only; no local waveform or spectral diagnosis"
+}
