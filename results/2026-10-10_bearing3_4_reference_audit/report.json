@@ -1,0 +1,72 @@
+{
+  "verification_status": "ANALYZED",
+  "method": "post-validation descriptive windows, no parameter tuning or raw-data replay",
+  "input_sha256": {
+    "states.csv": "9ec5c0bbb223290f4d45382db1089307c7df2e94fa28d31f822bb371e0b1356b",
+    "episode_terminations.csv": "8e7f6e7dc7f804a73cbde1e5aae486fdeff95846de430c829b14b3f1ec79d586",
+    "report.json": "7bf3dcd5abf3444fe4b547e32441713b32e7c27670633d7517555202a317cb81"
+  },
+  "input_unchanged": true,
+  "validation_not_reexecuted": true,
+  "protected_bearing3_5_not_read": true,
+  "window_selection": "exploratory; calibration, adjacent windows, broad temporal regions and archived event boundaries; not confirmatory inference",
+  "features": [
+    {
+      "feature": "rms",
+      "above_threshold_runs": [
+        {
+          "start_step": 50,
+          "last_step": 50,
+          "length": 1
+        },
+        {
+          "start_step": 1012,
+          "last_step": 1012,
+          "length": 1
+        },
+        {
+          "start_step": 1015,
+          "last_step": 1015,
+          "length": 1
+        },
+        {
+          "start_step": 1019,
+          "last_step": 1019,
+          "length": 1
+        },
+        {
+          "start_step": 1266,
+          "last_step": 1266,
+          "length": 1
+        },
+        {
+          "start_step": 1417,
+          "last_step": 1514,
+          "length": 98
+        }
+      ],
+      "tail_all_above_threshold": true,
+      "tail_min_reference_z": 48.8712669974684,
+      "tail_median_reference_z": 404.9562321478025,
+      "post_calibration_fraction_below_minus_2sd": 0.8994293865905849,
+      "first5_mean": 0.5961924731731415,
+      "last5_of_calibration_mean": 0.5960477471351624
+    },
+    {
+      "feature": "kurtosis",
+      "above_threshold_runs": [
+        {
+          "start_step": 1417,
+          "last_step": 1514,
+          "length": 98
+        }
+      ],
+      "tail_all_above_threshold": true,
+      "tail_min_reference_z": 3.70476431163378,
+      "tail_median_reference_z": 11.452322209768692,
+      "post_calibration_fraction_below_minus_2sd": 0.9864479315263909,
+      "first5_mean": 0.6927671053446829,
+      "last5_of_calibration_mean": 0.7184515899512917
+    }
+  ]
+}
