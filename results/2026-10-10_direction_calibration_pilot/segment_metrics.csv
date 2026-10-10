@@ -1,0 +1,4 @@
+segment,start,end_exclusive,n,directional_coverage,away_count,toward_count,unresolved_count,adjacent_direction_reversals,active_policy
+fit,25,65,40,0.2,0,8,32,0,False
+reference_check,65,85,20,0.0,0,0,20,0,False
+evaluation,85,371,286,0.11188811188811189,32,0,254,0,True

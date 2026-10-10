@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "verification_status": "ANALYZED",
+  "quantile": 0.8,
+  "trend_limit": 0.016009069795110582,
+  "reference_drift_suspected": false,
+  "reference_level_time_rho": -0.9136960600375236,
+  "reference_level_mad": 0.12841043164972066,
+  "reference_first_last_median_shift": -0.27725222808822214,
+  "policy_activated": true,
+  "checkpoint_sha256": "b9eee70d80c5ad69dc3ed55c3bbc0fa7c6265b835b0590bc202b6bdad11ce4c6",
+  "inputs_unchanged": true,
+  "limitations": [
+    "single previously used development bearing",
+    "no certified stationary reference or health labels",
+    "non-overlapping segments remain temporally dependent; boundary smoothing carries past context",
+    "q80 is engineering choice, not validated false-alarm rate",
+    "coverage is not accuracy",
+    "drift flag is engineering guard, not statistical stationarity test"
+  ]
+}
