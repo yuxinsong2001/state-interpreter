@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "experiment_kind": "pcgrad_smoke_integration_only",
+  "source_sha256": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+  "config_sha256": "4840dac8c01a7e9534a3ef47483f0165415e38f8ffa11ec1123004eb03d1ddfb",
+  "runner_sha256": "1fc1d9ede83a0717be774d572aec4b278b0560ac7f51ac0188fce797bf25469e",
+  "pcgrad_module_sha256": "840781c3661ce48e24b1c3e9fb1a5bcc0760f77286157f5b28e56b35568b1dec",
+  "inputs_unchanged": true,
+  "checkpoint_reload_exact": true,
+  "prefix_checks_passed": true,
+  "loss_alignment_verified": true,
+  "train_statistics_validation_invariant": true,
+  "embedding_bearings_loaded": [
+    "Bearing1_1",
+    "Bearing1_2",
+    "Bearing1_3",
+    "Bearing1_4"
+  ],
+  "raw_reads": 0,
+  "protected_directory_reads": 0,
+  "level_target_scale": 7.77154016494751,
+  "limitations": [
+    "development only; checkpoints selected on B1_4",
+    "relative Level proxy, not health truth",
+    "excluded CSV rows scanned, embeddings not materialized"
+  ]
+}

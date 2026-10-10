@@ -1,0 +1,17 @@
+{
+  "experiment_kind": "pcgrad_formal_development",
+  "input_latents": "runs/latent_analysis_z8_20260801/latent_trajectories.csv",
+  "train_bearings": ["Bearing1_1", "Bearing1_2", "Bearing1_3"],
+  "validation_bearing": "Bearing1_4",
+  "calibration_steps": 15,
+  "temporal_window": 10,
+  "score_start": 25,
+  "seeds": [20260916, 20260917, 20260918],
+  "learning_rate": 0.001,
+  "weight_decay": 0.00001,
+  "max_epochs": 600,
+  "patience": 40,
+  "minimum_improvement": 1e-8,
+  "hard_timeout_seconds": 1800,
+  "shared_gradient_pcgrad": true
+}
