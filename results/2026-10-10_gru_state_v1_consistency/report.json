@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "input_sha256": "561c2c9f5f1043a5fb676d90a2bfe3ed0734341be76427c8ef83e82bdfd14bd8",
+  "inputs_unchanged": true,
+  "training": false,
+  "new_bearing_reads": false,
+  "numerical_zero_tolerance": 1e-09,
+  "top_decile": "retrospective within-episode ranking; not event threshold",
+  "limitations": [
+    "three seeds share same devices",
+    "validation selected weights",
+    "rank correlation not health accuracy",
+    "no preset reliability pass/fail gate"
+  ]
+}
