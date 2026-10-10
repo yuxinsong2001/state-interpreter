@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "synthetic_only": true,
+  "steps": 130,
+  "embedding_dim": 8,
+  "calibration_steps": 15,
+  "temporal_window": 10,
+  "synthetic_trend_limit": 0.05,
+  "continuous_outputs_identical": true,
+  "unreviewed_directions_suppressed": true,
+  "real_data_read": false,
+  "training": false,
+  "labels": [
+    "calibrating",
+    "moving_away",
+    "moving_toward",
+    "window_warmup",
+    "within_resolution"
+  ]
+}
