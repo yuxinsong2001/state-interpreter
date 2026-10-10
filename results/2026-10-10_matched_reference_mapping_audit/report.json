@@ -1,0 +1,62 @@
+{
+  "status": "completed",
+  "verification_status": "ANALYZED",
+  "input_sha256": {
+    ".episodic_v2_stage\\2026-10-10_existing_ae_multiseed_audit\\heldout_latents.csv": "44848b225765fcb3f7e5ac29b6b2cab4d211c6023acd70143cb4986704546e46",
+    ".episodic_v2_stage\\2026-10-10_existing_ae_multiseed_audit\\metrics.csv": "f1f8bc45cf3218ec668b4ab7f257604fffca2ad5a59ad8f0d28527230cf3a75d"
+  },
+  "checkpoints": [
+    {
+      "path": "..\\state-interpreter\\results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260918\\Bearing3_1_checkpoint.pt",
+      "sha256": "862332ebe07e66b4138f3b779c9c2694c23480c52c6e4690199f81c6acf2469f"
+    },
+    {
+      "path": "..\\state-interpreter\\results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260918\\Bearing3_2_checkpoint.pt",
+      "sha256": "8a330ad6b3042c7ac5106261aad90a34aca0861699b60d99c7109f28c24baae8"
+    },
+    {
+      "path": "..\\state-interpreter\\results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260918\\Bearing3_3_checkpoint.pt",
+      "sha256": "b9eee70d80c5ad69dc3ed55c3bbc0fa7c6265b835b0590bc202b6bdad11ce4c6"
+    },
+    {
+      "path": "..\\state-interpreter\\results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260921\\Bearing3_1_checkpoint.pt",
+      "sha256": "f5642003c48cce79456ed9a9bd71b27aa6dc4c5d24e1a7371f48baac0b7274ad"
+    },
+    {
+      "path": "..\\state-interpreter\\results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260921\\Bearing3_2_checkpoint.pt",
+      "sha256": "3a2541226528d3ccef6dcf05c3d2ac72c6e2928295651ca19a694a8d01fd3dd7"
+    },
+    {
+      "path": "..\\state-interpreter\\results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260921\\Bearing3_3_checkpoint.pt",
+      "sha256": "144f0382317717fb8669f104ff3a5cd2561ddaee7a49420a4d78fd0e8045f4bf"
+    },
+    {
+      "path": "..\\state-interpreter\\results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260924\\Bearing3_1_checkpoint.pt",
+      "sha256": "06736a32326e914dd68ea0b8868cbce3c985ccefcd903ce2987458be85d0f42c"
+    },
+    {
+      "path": "..\\state-interpreter\\results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260924\\Bearing3_2_checkpoint.pt",
+      "sha256": "ba949e1a3bf72f2ba3c0e62958babf6585026e1fe3dd2910fc2f2211e2b7a853"
+    },
+    {
+      "path": "..\\state-interpreter\\results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260924\\Bearing3_3_checkpoint.pt",
+      "sha256": "dab301ef56ef0476c725882838c9969c63e2f959ec9330830bcbfe37dce1cae7"
+    }
+  ],
+  "inputs_unchanged": true,
+  "no_training": true,
+  "no_raw_data_read": true,
+  "excluded": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "reference_windows": "fixed 15-step windows [15,30), [30,45), [45,60), descriptive only",
+  "limitations": [
+    "post-hoc on three previously used development bearings",
+    "seed repetitions are not independent devices",
+    "radial change need not represent degradation",
+    "initial window has no certified health labels",
+    "reference shift normalized by within-window RMS latent radius, not a significance test",
+    "no model or parameter selected from these results"
+  ]
+}
