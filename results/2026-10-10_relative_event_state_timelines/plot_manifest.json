@@ -1,0 +1,99 @@
+{
+  "status": "completed",
+  "input_sha256": {
+    "states.csv": "bb9637469a1eca701ecb960eecfeefd98787394c31bc614ea46fa0e8f7586c33",
+    "episode_terminations.csv": "1ec1c76ba0170983bab3c2764e0361e2061d7bc5808b28b6cc35bcbf197f4e11"
+  },
+  "input_unchanged": true,
+  "state_rows": 10810,
+  "episode_records": 19,
+  "plots": [
+    {
+      "file": "bearing3_1_rms_full.png",
+      "bearing_id": "Bearing3_1",
+      "feature": "rms",
+      "first_step": 0,
+      "last_step": 2537,
+      "selected_rows": 2538,
+      "view": "full"
+    },
+    {
+      "file": "bearing3_1_kurtosis_full.png",
+      "bearing_id": "Bearing3_1",
+      "feature": "kurtosis",
+      "first_step": 0,
+      "last_step": 2537,
+      "selected_rows": 2538,
+      "view": "full"
+    },
+    {
+      "file": "bearing3_2_rms_full.png",
+      "bearing_id": "Bearing3_2",
+      "feature": "rms",
+      "first_step": 0,
+      "last_step": 2495,
+      "selected_rows": 2496,
+      "view": "full"
+    },
+    {
+      "file": "bearing3_2_kurtosis_full.png",
+      "bearing_id": "Bearing3_2",
+      "feature": "kurtosis",
+      "first_step": 0,
+      "last_step": 2495,
+      "selected_rows": 2496,
+      "view": "full"
+    },
+    {
+      "file": "bearing3_3_rms_full.png",
+      "bearing_id": "Bearing3_3",
+      "feature": "rms",
+      "first_step": 0,
+      "last_step": 370,
+      "selected_rows": 371,
+      "view": "full"
+    },
+    {
+      "file": "bearing3_3_kurtosis_full.png",
+      "bearing_id": "Bearing3_3",
+      "feature": "kurtosis",
+      "first_step": 0,
+      "last_step": 370,
+      "selected_rows": 371,
+      "view": "full"
+    },
+    {
+      "file": "bearing3_1_rms_early_event.png",
+      "bearing_id": "Bearing3_1",
+      "feature": "rms",
+      "first_step": 0,
+      "last_step": 70,
+      "selected_rows": 71,
+      "view": "early_event"
+    },
+    {
+      "file": "bearing3_2_rms_repeated_events.png",
+      "bearing_id": "Bearing3_2",
+      "feature": "rms",
+      "first_step": 1200,
+      "last_step": 1750,
+      "selected_rows": 551,
+      "view": "repeated_events"
+    },
+    {
+      "file": "bearing3_2_rms_late_reentry.png",
+      "bearing_id": "Bearing3_2",
+      "feature": "rms",
+      "first_step": 2300,
+      "last_step": 2370,
+      "selected_rows": 71,
+      "view": "late_reentry"
+    }
+  ],
+  "protected_not_read": [
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "method": "archived CSV visualization; no state recomputation, training or parameter changes",
+  "interpretation": "relative feature change and candidate events; no physical health ground truth"
+}
