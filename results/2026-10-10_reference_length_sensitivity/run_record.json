@@ -1,0 +1,25 @@
+{
+  "status": "completed",
+  "source_sha256": "44848b225765fcb3f7e5ac29b6b2cab4d211c6023acd70143cb4986704546e46",
+  "reference_lengths": [
+    15,
+    30,
+    60
+  ],
+  "window": 10,
+  "quantile": 0.8,
+  "common_fit": [
+    80,
+    120
+  ],
+  "common_check": [
+    120,
+    140
+  ],
+  "common_evaluation_start": 140,
+  "raw_reads": 0,
+  "protected_reads": 0,
+  "training": false,
+  "inputs_unchanged": true,
+  "interpretation": "hypothetical labels only; no accepted reference qualification"
+}
