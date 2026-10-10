@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "input_hashes": {
+    "results\\2026-10-10_gru_state_v1_formal\\state_outputs.csv": "561c2c9f5f1043a5fb676d90a2bfe3ed0734341be76427c8ef83e82bdfd14bd8",
+    "results\\2026-10-10_gru_state_v1_formal\\training_history.csv": "8f1e098d504fa2293da0efbacc422f78ecc070a1bbca0875b8043feb709a812e",
+    "results\\2026-10-10_gru_state_v1_formal\\checkpoint_seed_20260916.pt": "32691b83e5b427ae1dce03cad6ffcfd0090ca30a9e23e39d3ed36a08241bd50b",
+    "results\\2026-10-10_gru_state_v1_formal\\checkpoint_seed_20260917.pt": "90ae25394d31fcd7c99f12ab8792b79ea2aca55bc45af8384bd0bc129e94cfe2",
+    "results\\2026-10-10_gru_state_v1_formal\\checkpoint_seed_20260918.pt": "c311c39865396d29e302ed4ad17832475a14be64d035862d154fd89629cff996",
+    "runs\\latent_analysis_z8_20260801\\latent_trajectories.csv": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0"
+  },
+  "inputs_unchanged": true,
+  "optimizer_steps": 0,
+  "gradient_data": "training episodes only",
+  "segmentation": "equal-count thirds of step>=25; retrospective, not physical stages",
+  "excluded_embeddings_loaded": 0,
+  "limitations": [
+    "gradient cosine at one frozen checkpoint is local, not causal proof",
+    "validation selected checkpoint",
+    "no health labels",
+    "late loss slope is not a convergence guarantee"
+  ]
+}
