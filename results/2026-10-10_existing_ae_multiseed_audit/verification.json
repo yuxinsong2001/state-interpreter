@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "base_seed": 20260918,
+      "test_bearing": "Bearing3_1",
+      "archived_signed_rho": -0.0072153547581187,
+      "recomputed_signed_rho": -0.0072158591053986835,
+      "absolute_rho_difference": 5.043472799835455e-07,
+      "absolute_mse_difference": 4.476219583882113e-08
+    },
+    {
+      "base_seed": 20260918,
+      "test_bearing": "Bearing3_2",
+      "archived_signed_rho": 0.9030833005817844,
+      "recomputed_signed_rho": 0.9030833005817843,
+      "absolute_rho_difference": 1.1102230246251565e-16,
+      "absolute_mse_difference": 7.641621113663177e-09
+    },
+    {
+      "base_seed": 20260918,
+      "test_bearing": "Bearing3_3",
+      "archived_signed_rho": -0.5535019949837512,
+      "recomputed_signed_rho": -0.5535019949837512,
+      "absolute_rho_difference": 0.0,
+      "absolute_mse_difference": 2.409891175503276e-10
+    },
+    {
+      "base_seed": 20260921,
+      "test_bearing": "Bearing3_1",
+      "archived_signed_rho": 0.2980347948689403,
+      "recomputed_signed_rho": 0.2980341082912339,
+      "absolute_rho_difference": 6.865777064102296e-07,
+      "absolute_mse_difference": 2.261594678198975e-08
+    },
+    {
+      "base_seed": 20260921,
+      "test_bearing": "Bearing3_2",
+      "archived_signed_rho": 0.9020760144749572,
+      "recomputed_signed_rho": 0.9020760144749572,
+      "absolute_rho_difference": 0.0,
+      "absolute_mse_difference": 2.9802322387695312e-08
+    },
+    {
+      "base_seed": 20260921,
+      "test_bearing": "Bearing3_3",
+      "archived_signed_rho": -0.5607214533360663,
+      "recomputed_signed_rho": -0.5607214533360663,
+      "absolute_rho_difference": 0.0,
+      "absolute_mse_difference": 3.2613862277486305e-08
+    },
+    {
+      "base_seed": 20260924,
+      "test_bearing": "Bearing3_1",
+      "archived_signed_rho": -0.0872632839614195,
+      "recomputed_signed_rho": -0.08726328396141957,
+      "absolute_rho_difference": 6.938893903907228e-17,
+      "absolute_mse_difference": 8.548499130789367e-09
+    },
+    {
+      "base_seed": 20260924,
+      "test_bearing": "Bearing3_2",
+      "archived_signed_rho": 0.9083859488354284,
+      "recomputed_signed_rho": 0.9083859488354284,
+      "absolute_rho_difference": 0.0,
+      "absolute_mse_difference": 7.641621113663177e-09
+    },
+    {
+      "base_seed": 20260924,
+      "test_bearing": "Bearing3_3",
+      "archived_signed_rho": -0.557713442257732,
+      "recomputed_signed_rho": -0.557713442257732,
+      "absolute_rho_difference": 0.0,
+      "absolute_mse_difference": 4.578793399989678e-09
+    }
+  ],
+  "source_sha256": {
+    "src/state_interpreter/preprocessing/stft.py": "8e3f4c5c26d92d0844cf6aff88ada0c51aa45ba9f7e7ab9b19b191f50e363c50",
+    "src/state_interpreter/encoders/autoencoder.py": "adb435801501e64fa6939c4265bc4ea45dc826d80df310690141c85e364626c4",
+    "src/state_interpreter/data/stft_dataset.py": "ca82f870141d3edd27aa5ccdc4e03e9c52ae26b84e584e770e286e35de75a5b1",
+    "src/state_interpreter/signed_axis.py": "b68d52dac63aaed56ed99a63e2fc0b906789ce774117265c0870161e538fc1ed"
+  },
+  "limits": "Verification of forward extraction and archived metrics, not physical health semantics"
+}
