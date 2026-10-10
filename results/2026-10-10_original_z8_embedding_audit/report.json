@@ -1,0 +1,220 @@
+{
+  "status": "completed",
+  "scope": "original z8 baseline only, first condition, train1_1-3 and already-used validation1_4",
+  "input_sha256": {
+    "best_checkpoint.pt": "6edb626d1961cb1b1a7a2c32c52c9c96b0100cabb712cda4d79ab3c2a2e7695a",
+    "latent_trajectories.csv": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0"
+  },
+  "inputs_unchanged": true,
+  "training_pca_variance_ratio": [
+    0.999202992170543,
+    0.0006927056840718523,
+    4.279316999260691e-05,
+    2.567961342939016e-05,
+    1.2271824835412074e-05,
+    1.0431386663188778e-05,
+    8.179982350266544e-06,
+    4.94616811432633e-06
+  ],
+  "training_effective_rank": 1.0069768480698327,
+  "training_dimension_std": [
+    1.84220964377295,
+    1.4507679255423123,
+    1.8856465202446044,
+    1.9532275204190874,
+    1.766280631048051,
+    1.024567257132658,
+    1.5108600973319035,
+    1.9117422272828506
+  ],
+  "summaries": [
+    {
+      "bearing": "Bearing1_1",
+      "split": "train",
+      "n": 123,
+      "pc1_rms_rho": -0.9933639447446828,
+      "pc1_kurtosis_rho": 0.012001650952522218,
+      "pc1_time_rho": -0.965749184197289,
+      "global_distance_time_rho": 0.9657362861307092,
+      "own_distance_time_rho": 0.9633372457468626,
+      "mse_time_rho": 0.8955256607034605,
+      "mse_median": 0.24966083467006683,
+      "mse_last": 2.859212875366211,
+      "max_movement": 2.3076358612284436,
+      "max_movement_step": 78,
+      "dimension_stds": [
+        1.4660457122079007,
+        1.1646628321554497,
+        1.4858688751033846,
+        1.5132178773607599,
+        1.3820741408449695,
+        0.7697846313448405,
+        1.214989615088936,
+        1.5228397488462513
+      ]
+    },
+    {
+      "bearing": "Bearing1_2",
+      "split": "train",
+      "n": 161,
+      "pc1_rms_rho": -0.9245571658615138,
+      "pc1_kurtosis_rho": 0.24450195537152064,
+      "pc1_time_rho": -0.9783816425120775,
+      "global_distance_time_rho": 0.9824936737980219,
+      "own_distance_time_rho": 0.9863727858293075,
+      "mse_time_rho": 0.982174488152749,
+      "mse_median": 1.0195525884628296,
+      "mse_last": 3.429532527923584,
+      "max_movement": 2.5207453120756655,
+      "max_movement_step": 45,
+      "dimension_stds": [
+        1.9927333706194883,
+        1.5501051449390602,
+        2.046119789260628,
+        2.1543889666825,
+        1.925357839364555,
+        1.1520192421028685,
+        1.6109245660220122,
+        2.0491950458553085
+      ]
+    },
+    {
+      "bearing": "Bearing1_3",
+      "split": "train",
+      "n": 158,
+      "pc1_rms_rho": -0.9919343920141048,
+      "pc1_kurtosis_rho": -0.7664837630579333,
+      "pc1_time_rho": -0.9555828702428961,
+      "global_distance_time_rho": 0.9387701392998345,
+      "own_distance_time_rho": 0.9479158268160929,
+      "mse_time_rho": 0.8011801770417687,
+      "mse_median": 0.20527908951044083,
+      "mse_last": 2.5948967933654785,
+      "max_movement": 1.3334144906454988,
+      "max_movement_step": 131,
+      "dimension_stds": [
+        1.5888743268732242,
+        1.2746500462983235,
+        1.6398721973793706,
+        1.6857339455323757,
+        1.537521865585908,
+        0.8811021763357971,
+        1.3207992957932608,
+        1.6709164342459848
+      ]
+    },
+    {
+      "bearing": "Bearing1_4",
+      "split": "validation",
+      "n": 122,
+      "pc1_rms_rho": -0.9208779298198075,
+      "pc1_kurtosis_rho": -0.7740407969043788,
+      "pc1_time_rho": -0.8476972847224745,
+      "global_distance_time_rho": -0.7989498415509829,
+      "own_distance_time_rho": 0.8733994005703505,
+      "mse_time_rho": -0.8383126088407612,
+      "mse_median": 0.6037309169769287,
+      "mse_last": 0.9906496405601501,
+      "max_movement": 9.006775563631603,
+      "max_movement_step": 121,
+      "dimension_stds": [
+        0.7111059956960859,
+        0.5808671557729491,
+        0.7693477397936679,
+        0.8583831880170153,
+        0.7198746054988197,
+        0.47664275565687986,
+        0.5828120069917838,
+        0.7451966598002198
+      ]
+    }
+  ],
+  "sample_checks": [
+    {
+      "bearing": "Bearing1_1",
+      "step_id": 0,
+      "max_z_difference": 9.5367431640625e-07,
+      "mse_difference": 0.0
+    },
+    {
+      "bearing": "Bearing1_1",
+      "step_id": 61,
+      "max_z_difference": 2.384185791015625e-07,
+      "mse_difference": 0.0
+    },
+    {
+      "bearing": "Bearing1_1",
+      "step_id": 122,
+      "max_z_difference": 7.450580596923828e-08,
+      "mse_difference": 0.0
+    },
+    {
+      "bearing": "Bearing1_2",
+      "step_id": 0,
+      "max_z_difference": 4.76837158203125e-07,
+      "mse_difference": 0.0
+    },
+    {
+      "bearing": "Bearing1_2",
+      "step_id": 80,
+      "max_z_difference": 5.960464477539063e-08,
+      "mse_difference": 0.0
+    },
+    {
+      "bearing": "Bearing1_2",
+      "step_id": 160,
+      "max_z_difference": 5.960464477539063e-08,
+      "mse_difference": 0.0
+    },
+    {
+      "bearing": "Bearing1_3",
+      "step_id": 0,
+      "max_z_difference": 4.76837158203125e-07,
+      "mse_difference": 2.9802322387695312e-08
+    },
+    {
+      "bearing": "Bearing1_3",
+      "step_id": 79,
+      "max_z_difference": 7.152557373046875e-07,
+      "mse_difference": 1.4901161193847656e-08
+    },
+    {
+      "bearing": "Bearing1_3",
+      "step_id": 157,
+      "max_z_difference": 5.960464477539063e-08,
+      "mse_difference": 0.0
+    },
+    {
+      "bearing": "Bearing1_4",
+      "step_id": 0,
+      "max_z_difference": 4.76837158203125e-07,
+      "mse_difference": 0.0
+    },
+    {
+      "bearing": "Bearing1_4",
+      "step_id": 61,
+      "max_z_difference": 1.430511474609375e-06,
+      "mse_difference": 5.960464477539063e-08
+    },
+    {
+      "bearing": "Bearing1_4",
+      "step_id": 121,
+      "max_z_difference": 2.384185791015625e-07,
+      "mse_difference": 0.0
+    }
+  ],
+  "raw_measurements_read": 564,
+  "excluded": [
+    "Bearing1_5",
+    "condition2",
+    "condition3"
+  ],
+  "limitations": [
+    "no health labels",
+    "single checkpoint, no new multiseed claims",
+    "post-hoc descriptive correlations, no p-values",
+    "PCA fit on train only",
+    "reconstruction images horizontal channel only",
+    "sample inference checks not full re-extraction"
+  ]
+}
