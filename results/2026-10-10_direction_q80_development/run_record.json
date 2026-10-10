@@ -1,0 +1,32 @@
+{
+  "status": "completed",
+  "source_sha256": "55d78c2778e2e499598d156bb6c2ae9422a791f6af2e220932fd033361363156",
+  "checkpoint_hashes": {
+    "results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260918\\Bearing3_1_checkpoint.pt": "862332ebe07e66b4138f3b779c9c2694c23480c52c6e4690199f81c6acf2469f",
+    "results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260921\\Bearing3_1_checkpoint.pt": "f5642003c48cce79456ed9a9bd71b27aa6dc4c5d24e1a7371f48baac0b7274ad",
+    "results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260924\\Bearing3_1_checkpoint.pt": "06736a32326e914dd68ea0b8868cbce3c985ccefcd903ce2987458be85d0f42c",
+    "results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260918\\Bearing3_2_checkpoint.pt": "8a330ad6b3042c7ac5106261aad90a34aca0861699b60d99c7109f28c24baae8",
+    "results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260921\\Bearing3_2_checkpoint.pt": "3a2541226528d3ccef6dcf05c3d2ac72c6e2928295651ca19a694a8d01fd3dd7",
+    "results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260924\\Bearing3_2_checkpoint.pt": "ba949e1a3bf72f2ba3c0e62958babf6585026e1fe3dd2910fc2f2211e2b7a853",
+    "results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260918\\Bearing3_3_checkpoint.pt": "b9eee70d80c5ad69dc3ed55c3bbc0fa7c6265b835b0590bc202b6bdad11ce4c6",
+    "results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260921\\Bearing3_3_checkpoint.pt": "144f0382317717fb8669f104ff3a5cd2561ddaee7a49420a4d78fd0e8045f4bf",
+    "results\\2026-09-18_condition3_arm_b_encoder_lobo_seed_20260924\\Bearing3_3_checkpoint.pt": "dab301ef56ef0476c725882838c9969c63e2f959ec9330830bcbfe37dce1cae7"
+  },
+  "quantile": 0.8,
+  "calibration_steps": 15,
+  "temporal_window": 10,
+  "fit_range": [
+    25,
+    65
+  ],
+  "reference_check_range": [
+    65,
+    85
+  ],
+  "evaluation_start": 85,
+  "inputs_unchanged": true,
+  "pilot_reproduction_exact": true,
+  "raw_data_reads": 0,
+  "protected_data_reads": 0,
+  "training": false
+}
