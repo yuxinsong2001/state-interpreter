@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "checkpoint_sha256": "b842d589f7bbef930b7bcead194333ddf5ace00d697297bc5453a9e27016fe7d",
+  "input_sha256": "1fbff8151767b124b68528ea5228f6e76cc391cc9b1ead333080d68e01fb9ec0",
+  "runner_sha256": "88a16289bc475b5b0576b6dbdd218c834a62948160ad28fb7d085ef0c8c7d2c0",
+  "selected_episodes": [
+    "Bearing1_4"
+  ],
+  "total_rows": 122,
+  "ready_rows": 97,
+  "matching_encoder_acknowledged": true,
+  "matching_encoder_automatically_verified": false,
+  "limitations": [
+    "relative proxy, known Level bias retained",
+    "no health threshold or maintenance decision",
+    "unselected rows scanned but z not materialized",
+    "embedding replay, not raw-sensor deployment"
+  ]
+}
